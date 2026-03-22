@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#22292F',
+            secondary: '#232C40',
+            accent: '#E76363',
+          },
+          fontFamily: {
+            serif: ['PT Serif', 'Georgia', 'Cambria', 'serif'],
+            sans: ['PT Sans', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          maxWidth: {
+            'content': '600px',
+            'layout': '860px',
+          },
+          spacing: {
+            'sidebar': '200px',
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+    const saved = localStorage.getItem('theme');
+    const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (saved === 'dark' || (!saved && sysDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply text-primary dark:text-stone-200;
+      }
+    }
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-primary dark:text-stone-100 underline decoration-accent/50 hover:decoration-accent;
+      }
+      .prose strong {
+        @apply font-bold text-primary dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+      .prose a[href^="http"]:not([href*="localhost"])::after {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-left: 3px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23E76363'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'/%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+      }
+      .post-title {
+        @apply font-serif font-normal tracking-tight;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+      }
+      .post-body {
+        @apply font-sans font-normal;
+        font-size: 18px;
+        line-height: 28px;
+      }
+      @screen md {
+        .post-body {
+          font-size: 20px;
+          line-height: 32px;
+        }
+        .post-title-large {
+          font-size: 42px;
+          line-height: 52px;
+          letter-spacing: -0.04em;
+        }
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-primary font-sans">
+  <header class="border-b border-stone-200 dark:border-stone-700">
+  <div class="max-w-layout mx-auto px-4 py-4 flex items-center justify-between">
+
+    
+    <a href="/" id="site-logo" class="flex items-center gap-3">
+      <div class="w-8 h-8 bg-primary dark:bg-stone-100 rounded-full flex items-center justify-center">
+        <span class="text-white dark:text-primary font-bold text-xl leading-none">!</span>
+      </div>
+      <span class="text-xl font-serif font-bold text-primary dark:text-stone-100">Здесь будет название</span>
+    </a>
+
+    
+    <div class="flex items-center gap-6">
+      <a href="/about/" class="text-sm text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 transition-colors">О проекте</a>
+
+      
+      <button id="theme-toggle" class="p-2 text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+        <svg id="theme-icon-light" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg id="theme-icon-dark" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+  
+<div class="min-h-screen">
+
+  
+  <div class="max-w-layout mx-auto px-4">
+    <div class="max-w-content py-8 md:py-12">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 mb-6">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к публикациям
+      </a>
+
+      <time class="block text-sm text-stone-400 dark:text-stone-500 mb-4">
+        15 января 2025
+      </time>
+
+      <h1 class="post-title post-title-large text-3xl md:text-5xl text-primary dark:text-stone-100 mb-6">
+        Права человека
+      </h1>
+
+      
+      <div class="flex flex-wrap gap-2">
+        
+        <a href="/?tag=%d1%88%d0%b0%d1%80%d0%b8%d0%b0%d1%82" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          шариат
+        </a>
+        
+        <a href="/?tag=%d0%ba%d0%b0%d1%84%d0%b8%d1%80" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          кафир
+        </a>
+        
+        <a href="/?tag=%d1%81%d0%bb%d0%be%d0%b2%d0%b0%d1%80%d1%8c" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          словарь
+        </a>
+        
+        <a href="/?tag=%d0%bf%d0%be%d0%bb%d0%b8%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9_%d0%b8%d1%81%d0%bb%d0%b0%d0%bc" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          политический_ислам
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-layout mx-auto px-4 pb-12">
+    <article class="prose prose-stone dark:prose-invert max-w-content post-body text-primary/90 dark:text-stone-300">
+      <p>**Что характеризует права человека в понимании кафиров: **Равные права для всех людей. Основа – <a href="https://www.un.org/ru/documents/decl_conv/declarations/declhr.shtml">Всеобщая декларация прав человека.</a></p>
+<p><strong>Что характеризует права человека в понимании исламской политической доктрины:</strong> все люди **не равны **перед законами шариата. Один свод правил и законов применятся к «своим» и совершенно другой - к «чужим».</p>
+<p>Большинство неисламских стран подписали Всеобщую декларацию прав человека.
+ 
+Большинство исламских стран подписали другую декларацию – Декларацию государств-членов ОИС о правах человека в исламе (до 1990 года называвшуюся <a href="https://european-court-help.ru/kairskaja-deklaracija-prav-cheloveka-ot-05-avgusta-1990-goda/">Каирской декларацией о правах человека в исламе).</a></p>
+<p>Декларация 1990 года открыто и неоднократно указывает на законы шариата как свой единственный источник (слово шариат упомянуто в тексте 18 раз).</p>
+<p>В Приамбуле говорится следующее:</p>
+<p>Государства – члены Организации Исламская конференция,</p>
+<p>вновь подтверждая культурную и историческую миссию исламского мира, сотворенного Господом как лучший из народов, давший человечеству универсальную и всесторонне развитую цивилизацию, в которой достигнута гармония между жизнью на этом свете и на том и знание сочетается с верой;
+и роль, которую исламский мир должен играть в том, чтобы указать путь человечеству, запутавшемуся в противоречивых тенденциях и идеологиях, и найти решение хронических проблем этой материалистической цивилизации,</p>
+<p>стремясь внести свой вклад в усилия человечества по утверждению прав человека, защите человека от эксплуатации и гонений и подтвердить его свободу и право на достойную жизнь в соответствии с исламским шариатом, &hellip;</p>
+<p>В оригинале декларации на арабском языке от 2021 года шариат упоминается трижды (дважды во вступлении и один раз в заключении). Таким образом, декларация, подписанная исламскими странами, руководствуется <a href="https://t.me/c/2154518278/9">Трилогией</a> (<strong>Кораном, Сирой и хадисами</strong>) и положениями шариата, которые выведены на основе основополагающих исламских текстов.
+<a href="https://t.me/+P6ReAiMJNQ1jMjk0">
+Подписаться</a></p>
+<p><a href="">#политический_ислам</a> <a href="">#словарь</a> <a href="">#кафир</a> <a href="">#шариат</a></p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+  <script>
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'serif'],
+            sans: ['system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-stone-900 dark:text-stone-100 underline decoration-stone-400 dark:decoration-stone-500 hover:decoration-stone-900 dark:hover:decoration-stone-300;
+      }
+      .prose strong {
+        @apply font-bold text-stone-900 dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-200 font-sans transition-colors duration-200">
+  
+<div class="min-h-screen">
+
+  
+  <header class="border-b border-stone-200 bg-white dark:bg-stone-900 dark:border-stone-700">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-stone-600 dark:hover:text-stone-300">
+        Здесь будет название
+      </a>
+    </div>
+  </header>
+
+  
+  <div class="border-b border-stone-100 dark:border-stone-800 bg-stone-50 dark:bg-stone-800/50">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 mb-4">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к постам
+      </a>
+      <time class="block text-xs md:text-sm text-stone-500 dark:text-stone-400 mb-2">
+        5 February 2026, 11:45
+      </time>
+      <h1 class="text-2xl md:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">
+        The Toil of Trace and Trail
+      </h1>
+      
+      <div class="flex flex-wrap gap-2 mt-3">
+        
+        <a href="/?tag=journey" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          journey
+        </a>
+        
+        <a href="/?tag=alaska" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          alaska
+        </a>
+        
+        <a href="/?tag=dog" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          dog
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <article class="prose prose-stone dark:prose-invert max-w-none text-stone-700 dark:text-stone-300 leading-relaxed">
+      <p>The toil of trace and trail shaped them all — men and dogs alike. Day after day, they pushed forward through the frozen wilderness, carrying the mail that connected the isolated communities of the North. It was brutal work, but there was a strange beauty in it, a rhythm that became almost meditative.</p>
+<p>Buck led the team with growing confidence. The other dogs fell into line behind him, accepting his authority as they had once accepted Spitz&rsquo;s. The transition was complete; Buck was the undisputed leader, the alpha of the pack.</p>
+<p>The relationship between leader and followers was complex. Buck did not rule through fear alone, though he could be fierce when challenged. He ruled through competence, through the simple demonstration that he knew the trail better, ran faster, and made better decisions than any other dog in the team.</p>
+<p><img src="/images/placeholder-3.svg" alt="On the trail"></p>
+<p>Under Buck&rsquo;s leadership, the team achieved remarkable things. They made the sixty-mile run from Dawson to Skaguay in record time. François boasted of their achievement in every tavern along the route, and their reputation grew with each telling.</p>
+<blockquote>
+<p>&ldquo;It was a record run. Each day for fourteen days they had averaged forty miles.&rdquo;</p>
+</blockquote>
+<p>The pride Buck felt was not vanity; it was something deeper, more primal. He was fulfilling his purpose, doing the work he was born to do. Every muscle, every instinct, every fiber of his being was aligned with the demands of the trail.</p>
+<p>But the toll was heavy. Dogs wore out and were replaced. Men grew exhausted and were rotated out. The mail waited for no one, an endless stream of letters and packages flowing north and south through the frozen arteries of the Yukon.</p>
+<p>The routine became familiar:</p>
+<ul>
+<li>Wake before dawn, shake off the night&rsquo;s accumulation of snow</li>
+<li>Wait impatiently for harness and breakfast</li>
+<li>Hit the trail as the first light touched the peaks</li>
+<li>Run steadily through the short northern day</li>
+<li>Make camp as darkness fell</li>
+<li>Sleep, and dream of the wild</li>
+</ul>
+<p>Each element of this cycle was sacred, repeated with religious devotion. The dogs knew their roles and performed them without complaint. The men knew theirs and did the same. Together, they were a machine, perfectly calibrated for the single purpose of moving mail through the wilderness.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<p>But nothing lasts forever in the North. François and Perrault received new orders; they were being transferred to other duties. The team that had achieved such greatness was to be broken up, sold to the highest bidder. Buck watched them go with something like sadness, though he would never have admitted it.</p>
+<p>The new masters were less capable, less understanding. They treated the dogs as tools rather than partners. The magic of the trail began to fade, replaced by drudgery and exhaustion. But Buck endured, drawing on reserves of strength that seemed bottomless.</p>
+<p>Through it all, the call of the wild grew stronger. In quiet moments, when the camp was asleep and the aurora danced overhead, Buck would lift his head and listen. Somewhere out there, beyond the traces and the trail, something was waiting for him. He could feel it in his bones, a destiny as yet unfulfilled.</p>
+<p>For the beginning of Buck&rsquo;s journey, see <a href="/posts/post-005/">Into the Primitive</a>.</p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+  <script src="/js/theme.js"></script>
+</body>
+</html>

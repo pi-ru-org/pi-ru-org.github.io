@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#22292F',
+            secondary: '#232C40',
+            accent: '#E76363',
+          },
+          fontFamily: {
+            serif: ['PT Serif', 'Georgia', 'Cambria', 'serif'],
+            sans: ['PT Sans', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          maxWidth: {
+            'content': '600px',
+            'layout': '860px',
+          },
+          spacing: {
+            'sidebar': '200px',
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+    const saved = localStorage.getItem('theme');
+    const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (saved === 'dark' || (!saved && sysDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply text-primary dark:text-stone-200;
+      }
+    }
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-primary dark:text-stone-100 underline decoration-accent/50 hover:decoration-accent;
+      }
+      .prose strong {
+        @apply font-bold text-primary dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+      .prose a[href^="http"]:not([href*="localhost"])::after {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-left: 3px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23E76363'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'/%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+      }
+      .post-title {
+        @apply font-serif font-normal tracking-tight;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+      }
+      .post-body {
+        @apply font-sans font-normal;
+        font-size: 18px;
+        line-height: 28px;
+      }
+      @screen md {
+        .post-body {
+          font-size: 20px;
+          line-height: 32px;
+        }
+        .post-title-large {
+          font-size: 42px;
+          line-height: 52px;
+          letter-spacing: -0.04em;
+        }
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-primary font-sans">
+  <header class="border-b border-stone-200 dark:border-stone-700">
+  <div class="max-w-layout mx-auto px-4 py-4 flex items-center justify-between">
+
+    
+    <a href="/" id="site-logo" class="flex items-center gap-3">
+      <div class="w-8 h-8 bg-primary dark:bg-stone-100 rounded-full flex items-center justify-center">
+        <span class="text-white dark:text-primary font-bold text-xl leading-none">!</span>
+      </div>
+      <span class="text-xl font-serif font-bold text-primary dark:text-stone-100">Здесь будет название</span>
+    </a>
+
+    
+    <div class="flex items-center gap-6">
+      <a href="/about/" class="text-sm text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 transition-colors">О проекте</a>
+
+      
+      <button id="theme-toggle" class="p-2 text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+        <svg id="theme-icon-light" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg id="theme-icon-dark" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+  
+<div class="min-h-screen">
+
+  
+  <div class="max-w-layout mx-auto px-4">
+    <div class="max-w-content py-8 md:py-12">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 mb-6">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к публикациям
+      </a>
+
+      <time class="block text-sm text-stone-400 dark:text-stone-500 mb-4">
+        13 июня 2025
+      </time>
+
+      <h1 class="post-title post-title-large text-3xl md:text-5xl text-primary dark:text-stone-100 mb-6">
+        Рабство и [рабы](https://t.me/nationalist_russian/33400)
+      </h1>
+
+      
+      <div class="flex flex-wrap gap-2">
+        
+        <a href="/?tag=%d1%88%d0%b0%d1%80%d0%b8%d0%b0%d1%82" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          шариат
+        </a>
+        
+        <a href="/?tag=%d1%80%d0%b0%d0%b1%d1%81%d1%82%d0%b2%d0%be" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          рабство
+        </a>
+        
+        <a href="/?tag=%d0%bf%d0%be%d0%bb%d0%b8%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9_%d0%b8%d1%81%d0%bb%d0%b0%d0%bc" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          политический_ислам
+        </a>
+        
+        <a href="/?tag=%d0%9c%d1%83%d1%85%d0%b0%d0%bc%d0%bc%d0%b5%d0%b4" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          Мухаммед
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-layout mx-auto px-4 pb-12">
+    <article class="prose prose-stone dark:prose-invert max-w-content post-body text-primary/90 dark:text-stone-300">
+      <p>**
+Если вы не знаете, как связаны политический ислам и рабство, то вы не знаете истории рабовладения как такового. Рабовладение – очень важная часть исламской доктрины, в которой мы нашли свыше <strong>40 терминов в исламском арабском языке по теме рабства.</strong></p>
+<p>Одно из последних государств, отменивших у себя рабство против своей воли, была Саудовская Аравия - колыбель ислама, где рабовладение было запрещено в <strong>1962</strong> году под давлением Великобритании. В Омане это произошло в 1970 году, а в исламской Мавритании - в августе <strong>2007</strong> года.</p>
+<p>Невозможно изучать историю Мухаммеда и основы ислама, не говоря <strong>о роли рабства</strong>. Некоторые думают, что рабство появилось только тогда, когда белые люди приплыли на своих деревянных кораблях к берегам Африки, пришли в джунгли, схватили там рабов и повезли их назад, чтобы продать в Америке. Таково распространённое мнение.</p>
+<p>Доля правды тут есть, но это даже отдалённо не описывает всей мировой истории рабства или хотя бы того, как происходила работорговля в обеих Америках.</p>
+<p>В хадисах и в Сире Мухаммеда сказано, что у него <strong>были рабы</strong>. Рабство <strong>полностью лицензировано</strong> с точки зрения исламской доктрины. Идеальный мусульманин – это раб Аллаха, даже Мухаммед называл себя рабом Аллаха, потому что в исламе не подразумевается свободы воли. Предписано и изложено всё, что тебе нужно делать и знать, а твоя задача как мусульманина - быть рабом Аллаха и следовать всем принципам и законам, также введёнными Мухаммедом при жизни. Идеальный мусульманин – это раб, что отражено в одном из мусульманских имён – Абдаллах. Абд – раб; Абдаллах – раб Аллаха. **А теперь и **<a href="https://t.me/DUM_RF/4258">российскии властям отводится роль рабов Аллаха.</a></p>
+<p>Теперь поговорим о роли Мухаммеда в системе рабовладения. У него в доме были рабы. Его первая жена Хадиджа была рабовладелицей. Кстати, одним из первых людей, обращённых Мухаммедом в ислам, был чёрный раб, и у самого Мухаммеда были чёрные рабы.</p>
+<p>Фактом является и то, что работорговля была одним из основных источников <strong>финансирования джихада</strong>. Мухаммед инициировал убийство мужчин-кафиров, чтобы их <strong>женщин и детей можно было взять в рабство</strong>. Он отправлял за рабами своих джихадистов, давал рабов в подарок, предоставлял рабынь для <a href="https://t.me/politicalislam_russia/381">сексуальных утех</a> своим соратникам, главным военачальникам, присутствовал при избиении рабов и молился в это время, получал рабов в качестве подарков от других правителей.</p>
+<p>Тот помост, с которого проповедовал Мухаммед, был сделан рабом. Некоторые его повара были рабами. Врач Мухаммеда был рабом. У него был раб-портной. Он объявил, что молитвы раба, убежавшего от своего хозяина, не будут услышаны.</p>
+<p>Рабы разных рас использовались для разных целей. Чёрных обычно отправляли на грубую, тяжёлую работу, от которой они зачастую умирали. Быть чёрным рабом на солевых копях Сахары было смертным приговором.</p>
+<p>Белых обычно отправляли на службу, которую можно назвать работой «белых воротничков». Они могли быть даже командирами в армии.</p>
+<p>Но за 1400 лет на невольничьем рынке в Мекке осталось неизменным то, за какого раба давали самую высокую цену. **Самую высокую цену всегда давали за белую женщину. **Отрывки из средневековых исламских документов показывают, что мусульмане свободно и открыто обсуждали, какую расу использовать для каких работ. Например, в качестве рабыни для секса предпочтение <a href="https://archive.org/details/white-gold-the-extraordinary-story-of-thomas-pellow">отдавалось белой женщине,</a> но если ты не мог себе её позволить, поскольку она стоила дороже всего, то следующим лучшим выбором считалась эфиопка, или абиссинка, как они их тогда называли.</p>
+<p>У Мухаммеда были всевозможные рабы, но его любимой сексуальной партнёршей была белая женщина. Её звали Мириам. Она была коптской христианкой. Ну а поскольку Сунна Мухаммеда определяет, каким всё должно быть <strong>в идеале</strong> человеческой жизни, его истинные последователи хотят такую же рабыню, как у Мухаммеда, то есть – белую.</p>
+<p>Так что белым женщинам исламская доктрина сулит <a href="https://t.me/voenkorKotenok/64184">трагичную</a>** судьбу**.</p>
+<p>В этом вся суть подчинения в политическом исламе. Если превратить всех остальных в рабов и держать их в рабстве достаточно долго, они перейдут в ислам, а если нет, то перейдут их дети.</p>
+<p><a href="">#политический_ислам</a>  <a href="">#шариат</a>  <a href="">#рабство</a>  <a href="">#Мухаммед</a></p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+</body>
+</html>

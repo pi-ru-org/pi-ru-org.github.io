@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+  <script>
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'serif'],
+            sans: ['system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-stone-900 dark:text-stone-100 underline decoration-stone-400 dark:decoration-stone-500 hover:decoration-stone-900 dark:hover:decoration-stone-300;
+      }
+      .prose strong {
+        @apply font-bold text-stone-900 dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-200 font-sans transition-colors duration-200">
+  
+<div class="min-h-screen">
+
+  
+  <header class="border-b border-stone-200 bg-white dark:bg-stone-900 dark:border-stone-700">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-stone-600 dark:hover:text-stone-300">
+        Здесь будет название
+      </a>
+    </div>
+  </header>
+
+  
+  <div class="border-b border-stone-100 dark:border-stone-800 bg-stone-50 dark:bg-stone-800/50">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 mb-4">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к постам
+      </a>
+      <time class="block text-xs md:text-sm text-stone-500 dark:text-stone-400 mb-2">
+        6 February 2026, 16:20
+      </time>
+      <h1 class="text-2xl md:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">
+        For the Love of a Man
+      </h1>
+      
+      <div class="flex flex-wrap gap-2 mt-3">
+        
+        <a href="/?tag=dog" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          dog
+        </a>
+        
+        <a href="/?tag=journey" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          journey
+        </a>
+        
+        <a href="/?tag=strength" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          strength
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <article class="prose prose-stone dark:prose-invert max-w-none text-stone-700 dark:text-stone-300 leading-relaxed">
+      <p>For the love of a man, Buck performed what might be considered a miracle. John Thornton saved Buck&rsquo;s life, and in return, Buck gave him something that could not be measured — a devotion so complete, so absolute, that it transcended the ordinary bonds between man and dog.</p>
+<p>They had found each other at the lowest point of Buck&rsquo;s existence. The previous owners, Hal, Charles, and Mercedes, had driven the team to the breaking point. Dogs had died on the trail, worn out by overwork and underfeeding. Buck himself had been near death when Thornton intervened.</p>
+<p>The big man had seen enough. He cut Buck loose from the traces, defying Hal&rsquo;s angry protests. &ldquo;If you strike that dog again, I&rsquo;ll kill you,&rdquo; Thornton said quietly, and something in his eyes told Hal he meant it.</p>
+<p>Minutes later, the ice broke beneath the overloaded sled, and Hal, Charles, Mercedes, and the remaining dogs disappeared into the frigid water. Buck watched without emotion. He felt nothing for those who had treated him so cruelly. But for Thornton, he felt everything.</p>
+<blockquote>
+<p>&ldquo;Love, genuine passionate love, was his for the first time.&rdquo;</p>
+</blockquote>
+<p>The weeks of recovery were a revelation. Thornton asked nothing of Buck except companionship. There was no sled to pull, no mail to deliver, no schedule to keep. For the first time since leaving Judge Miller&rsquo;s place, Buck could simply exist.</p>
+<p>But this was not the comfortable existence of the Southland. This was something different, something wilder. Thornton&rsquo;s camp was deep in the wilderness, far from the settlements and mining camps. Here, Buck could roam freely, exploring the forest and the streams, hunting rabbits and ptarmigan.</p>
+<p>He always returned to Thornton. The pull of the wild was strong, but the love he felt for this man was stronger. When Thornton spoke to him, Buck listened with his whole being. When Thornton was in danger, Buck defended him without hesitation.</p>
+<p>The famous wager came about almost by accident. In a saloon in Dawson, Thornton boasted that Buck could start a thousand-pound load. A mine owner, Matthewson, bet him a thousand dollars that no dog could perform such a feat.</p>
+<p>Buck knew nothing of money or wagers. He knew only that Thornton wanted something from him, something important. When Thornton whispered in his ear and gave the command, Buck threw himself against the traces with everything he had.</p>
+<p>The sled creaked and groaned. The runners, frozen to the ice, resisted with all their might. Buck dug in, his muscles bulging beneath his fur, his claws scraping against the frozen surface. For a long moment, nothing happened.</p>
+<p>Then, slowly, impossibly, the sled began to move. Buck pulled it the required hundred yards, and the crowd erupted in cheers. Thornton fell to his knees, his arms around Buck&rsquo;s neck, tears streaming down his face.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+<p>That night, by the fire, Buck lay at Thornton&rsquo;s feet and dreamed. He dreamed of the wild, of running free beneath the stars, of the pack that waited for him in the forest. But he also dreamed of this man, this human who had shown him what love truly meant.</p>
+<p>The conflict between these two loves would define the rest of Buck&rsquo;s life. For now, though, he was content. He had found something precious in the frozen North — a bond that transcended species, a love that asked nothing and gave everything.</p>
+<p>Learn about Buck&rsquo;s earlier trials in <a href="/posts/post-008/">The Toil of Trace and Trail</a>.</p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+  <script src="/js/theme.js"></script>
+</body>
+</html>

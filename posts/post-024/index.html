@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+  <script>
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'serif'],
+            sans: ['system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-stone-900 dark:text-stone-100 underline decoration-stone-400 dark:decoration-stone-500 hover:decoration-stone-900 dark:hover:decoration-stone-300;
+      }
+      .prose strong {
+        @apply font-bold text-stone-900 dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-200 font-sans transition-colors duration-200">
+  
+<div class="min-h-screen">
+
+  
+  <header class="border-b border-stone-200 bg-white dark:bg-stone-900 dark:border-stone-700">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-stone-600 dark:hover:text-stone-300">
+        Здесь будет название
+      </a>
+    </div>
+  </header>
+
+  
+  <div class="border-b border-stone-100 dark:border-stone-800 bg-stone-50 dark:bg-stone-800/50">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 mb-4">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к постам
+      </a>
+      <time class="block text-xs md:text-sm text-stone-500 dark:text-stone-400 mb-2">
+        19 February 2026, 18:30
+      </time>
+      <h1 class="text-2xl md:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">
+        A Daughter of the Snows
+      </h1>
+      
+      <div class="flex flex-wrap gap-2 mt-3">
+        
+        <a href="/?tag=adventure" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          adventure
+        </a>
+        
+        <a href="/?tag=journey" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          journey
+        </a>
+        
+        <a href="/?tag=gold" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          gold
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <article class="prose prose-stone dark:prose-invert max-w-none text-stone-700 dark:text-stone-300 leading-relaxed">
+      <p>Frona Welse was a daughter of the snows, born and raised in the harsh beauty of the Yukon. While other women of her generation learned needlework and piano, she learned to drive a dog team and shoot a rifle. The wilderness was her classroom, and it had taught her well.</p>
+<p>Her father, Jacob Welse, was one of the great trading post magnates of the North. His empire stretched from Dawson to the coast, and his daughter was its heir apparent. But Frona had no interest in ledgers and inventories. She craved adventure, the kind of adventure that the civilized world could never provide.</p>
+<p>The gold rush brought changes to the Yukon that even Jacob Welse had not anticipated. Thousands of newcomers flooded into the territory, transforming quiet trading posts into boomtowns overnight. Frona watched the transformation with mixed feelings — excited by the energy, troubled by the destruction.</p>
+<blockquote>
+<p>&ldquo;I was born here. The snow was my cradle, and the wind sang me to sleep. This land is part of me in ways that newcomers can never understand.&rdquo;</p>
+</blockquote>
+<p>She had been educated in the States, had spent years in the soft civilization of the South. But it had never felt like home. The moment her steamer docked at St. Michael&rsquo;s, she felt the wilderness calling her back. She was a daughter of the snows, and the snows had claimed her forever.</p>
+<p>Vance Corliss was a mining engineer from Yale, come north to make his fortune. He was everything Frona was not — cultivated, rational, firmly rooted in the modern world. Their meeting was inevitable in the small society of Dawson City, and their attraction was immediate.</p>
+<p>But the path to love was not smooth. Corliss could not understand Frona&rsquo;s fierce independence, her insistence on being treated as an equal rather than a delicate flower. Frona could not accept his assumptions about a woman&rsquo;s proper role. They clashed repeatedly, their arguments as passionate as their reconciliations.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.</p>
+<p>The crisis came when St. Vincent, a rival for Frona&rsquo;s affections, was accused of a terrible crime. The evidence was damning, and most of Dawson City had already convicted him in the court of public opinion. But Frona was not satisfied. She launched her own investigation, determined to find the truth.</p>
+<p>Her search took her into dangerous territory:</p>
+<ul>
+<li>Abandoned mining claims where claim-jumpers lurked</li>
+<li>Native villages where white women were unwelcome</li>
+<li>Back rooms where men plotted murders over whiskey</li>
+<li>Frozen trails where one misstep meant death</li>
+</ul>
+<p>Through it all, she persevered. The daughter of the snows would not be deterred by danger or difficulty. And in the end, she uncovered the truth — not what anyone had expected, but justice served nonetheless.</p>
+<p>The resolution of the mystery changed everything. Corliss finally understood that Frona was not a woman to be protected but a partner to be respected. Their love, forged in the crucible of adversity, emerged stronger than ever.</p>
+<p>They built their life together in the land they both loved. Frona never lost her fierce independence, never became the conventional wife that society expected. She remained what she had always been — a daughter of the snows, wild and free and absolutely herself.</p>
+<p>For more about women&rsquo;s experiences, see <a href="https://en.wikipedia.org/wiki/Klondike_Gold_Rush">Wikipedia on the Klondike Gold Rush</a>.</p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+  <script src="/js/theme.js"></script>
+</body>
+</html>

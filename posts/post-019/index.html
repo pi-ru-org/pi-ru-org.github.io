@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+  <script>
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'serif'],
+            sans: ['system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-stone-900 dark:text-stone-100 underline decoration-stone-400 dark:decoration-stone-500 hover:decoration-stone-900 dark:hover:decoration-stone-300;
+      }
+      .prose strong {
+        @apply font-bold text-stone-900 dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-200 font-sans transition-colors duration-200">
+  
+<div class="min-h-screen">
+
+  
+  <header class="border-b border-stone-200 bg-white dark:bg-stone-900 dark:border-stone-700">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-stone-600 dark:hover:text-stone-300">
+        Здесь будет название
+      </a>
+    </div>
+  </header>
+
+  
+  <div class="border-b border-stone-100 dark:border-stone-800 bg-stone-50 dark:bg-stone-800/50">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 mb-4">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к постам
+      </a>
+      <time class="block text-xs md:text-sm text-stone-500 dark:text-stone-400 mb-2">
+        15 February 2026, 15:20
+      </time>
+      <h1 class="text-2xl md:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">
+        Love of Life
+      </h1>
+      
+      <div class="flex flex-wrap gap-2 mt-3">
+        
+        <a href="/?tag=survival" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          survival
+        </a>
+        
+        <a href="/?tag=journey" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          journey
+        </a>
+        
+        <a href="/?tag=strength" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          strength
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <article class="prose prose-stone dark:prose-invert max-w-none text-stone-700 dark:text-stone-300 leading-relaxed">
+      <p>Love of life — it was stronger than he had ever imagined, this desperate will to continue existing. He had thought he was ready to die. He had made his peace, said his goodbyes to the world. But when death approached, something primal within him rose up in furious resistance.</p>
+<p>His companion had left him. When he twisted his ankle crossing a stream, Bill had looked back once, then continued walking. No words were spoken. No help was offered. They had both known, in that moment, that only one of them would survive this journey, and Bill had chosen himself.</p>
+<p>The man — his name was lost to history, remembered only as &ldquo;the man&rdquo; — found himself alone in the vast wilderness of the Canadian Arctic. He had no food, no weapon, and an injured ankle that made every step an agony. Between him and safety lay hundreds of miles of trackless wilderness.</p>
+<blockquote>
+<p>&ldquo;He was not a man, he was a crawling, broken thing, more nearly dead than alive.&rdquo;</p>
+</blockquote>
+<p>The days blurred together in a haze of pain and hunger. He ate whatever he could find — berries, roots, the carcass of a ptarmigan killed by some other predator. He drank from streams and puddles, knowing the water might kill him but knowing that thirst would kill him faster.</p>
+<p>His body wasted away until he could count every rib, every vertebra. His feet swelled grotesquely in his rotting boots. His mind began to play tricks, showing him visions of rescue that evaporated when he reached for them.</p>
+<p>But still he crawled on, inch by painful inch. The love of life drove him forward when reason said to stop, when every fiber of his being screamed for rest. He would not die. He refused to die. The universe itself would have to drag him kicking and screaming into oblivion.</p>
+<p>The wolf found him on the third week. It was a sick wolf, barely healthier than the man, its fur falling out in patches, its ribs showing through its hide. They regarded each other — two dying creatures, each seeing in the other a potential meal.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p>
+<p>The contest between man and wolf lasted for days. The wolf followed, waiting for the man to die. The man kept crawling, refusing to give up. Neither had the strength to attack the other; they simply waited, patient predators both, for their opponent to weaken.</p>
+<p>In the end, the wolf made its move. It crept close while the man slept, teeth seeking the throat. But the man had not survived this long by being careless. He woke at the last moment and grabbed the wolf by the jaw. What followed was a struggle beyond words — two dying creatures fighting for the right to live.</p>
+<p>The man won. He killed the wolf with his bare hands and drank its blood, feeling strength return to his devastated body. He continued crawling, the wolf&rsquo;s carcass dragging behind him, providing sustenance for the final miles.</p>
+<p>When the scientists from the whaling ship found him, they didn&rsquo;t recognize him as human at first. He was a skeleton covered in skin, more dead than alive, his eyes wild with the madness of survival. They nursed him back to health slowly, marveling at his story, at the incredible endurance that had carried him through.</p>
+<p>He never fully recovered from the ordeal. The memories haunted him, rising unbidden in quiet moments. But he was alive. Against all odds, against all reason, he had survived. The love of life had triumphed over death itself.</p>
+<p>This tale connects to <a href="/posts/post-003/">To Build a Fire</a>.</p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+  <script src="/js/theme.js"></script>
+</body>
+</html>

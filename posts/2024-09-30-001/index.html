@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#22292F',
+            secondary: '#232C40',
+            accent: '#E76363',
+          },
+          fontFamily: {
+            serif: ['PT Serif', 'Georgia', 'Cambria', 'serif'],
+            sans: ['PT Sans', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          maxWidth: {
+            'content': '600px',
+            'layout': '860px',
+          },
+          spacing: {
+            'sidebar': '200px',
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+    const saved = localStorage.getItem('theme');
+    const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (saved === 'dark' || (!saved && sysDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply text-primary dark:text-stone-200;
+      }
+    }
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-primary dark:text-stone-100 underline decoration-accent/50 hover:decoration-accent;
+      }
+      .prose strong {
+        @apply font-bold text-primary dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+      .prose a[href^="http"]:not([href*="localhost"])::after {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-left: 3px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23E76363'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'/%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+      }
+      .post-title {
+        @apply font-serif font-normal tracking-tight;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+      }
+      .post-body {
+        @apply font-sans font-normal;
+        font-size: 18px;
+        line-height: 28px;
+      }
+      @screen md {
+        .post-body {
+          font-size: 20px;
+          line-height: 32px;
+        }
+        .post-title-large {
+          font-size: 42px;
+          line-height: 52px;
+          letter-spacing: -0.04em;
+        }
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-primary font-sans">
+  <header class="border-b border-stone-200 dark:border-stone-700">
+  <div class="max-w-layout mx-auto px-4 py-4 flex items-center justify-between">
+
+    
+    <a href="/" id="site-logo" class="flex items-center gap-3">
+      <div class="w-8 h-8 bg-primary dark:bg-stone-100 rounded-full flex items-center justify-center">
+        <span class="text-white dark:text-primary font-bold text-xl leading-none">!</span>
+      </div>
+      <span class="text-xl font-serif font-bold text-primary dark:text-stone-100">Здесь будет название</span>
+    </a>
+
+    
+    <div class="flex items-center gap-6">
+      <a href="/about/" class="text-sm text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 transition-colors">О проекте</a>
+
+      
+      <button id="theme-toggle" class="p-2 text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+        <svg id="theme-icon-light" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg id="theme-icon-dark" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+  
+<div class="min-h-screen">
+
+  
+  <div class="max-w-layout mx-auto px-4">
+    <div class="max-w-content py-8 md:py-12">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 mb-6">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к публикациям
+      </a>
+
+      <time class="block text-sm text-stone-400 dark:text-stone-500 mb-4">
+        30 сентября 2024
+      </time>
+
+      <h1 class="post-title post-title-large text-3xl md:text-5xl text-primary dark:text-stone-100 mb-6">
+        О чувстве превосходства и халяльной медицине
+      </h1>
+
+      
+      <div class="flex flex-wrap gap-2">
+        
+        <a href="/?tag=%d0%bc%d0%b5%d0%b4%d0%b8%d1%86%d0%b8%d0%bd%d0%b0" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          медицина
+        </a>
+        
+        <a href="/?tag=%d0%bf%d0%be%d0%bb%d0%b8%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9_%d0%b8%d1%81%d0%bb%d0%b0%d0%bc" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          политический_ислам
+        </a>
+        
+        <a href="/?tag=%d1%85%d0%b0%d0%bb%d1%8f%d0%bb%d1%8c" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          халяль
+        </a>
+        
+        <a href="/?tag=%d0%bf%d1%80%d0%b5%d0%b2%d0%be%d1%81%d1%85%d0%be%d0%b4%d1%81%d1%82%d0%b2%d0%be" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          превосходство
+        </a>
+        
+        <a href="/?tag=%d0%bf%d0%be%d0%b4%d1%87%d0%b8%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          подчинение
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-layout mx-auto px-4 pb-12">
+    <article class="prose prose-stone dark:prose-invert max-w-content post-body text-primary/90 dark:text-stone-300">
+      <p>**
+Политический ислам строится на двух принципах - <a href="https://t.me/c/2154518278/71">двойственности</a> и <a href="https://t.me/c/2154518278/27">подчинении.</a> Подчинение - как в самой доктрине, так в практической её реализации в обществе - является естественным следствием <strong>исламской политической позиции, основанной на чувстве превосходства над всем иным</strong>.</p>
+<p>Сборник Бухари, хадис 4557</p>
+<p>Рассказано Абу Хурайрой:
+Строфа [Коран 3:110], которая говорит &ldquo;Вы (истинные мусульмане) - лучшие из людей, когда либо появившиеся для человечества&hellip;&rdquo; означает лучшие из общин для людей, которых вы приводите в оковах на шее, пока они не примут ислам.</p>
+<p>Этот основополагающий исламский принцип играет ключевую роль <strong>в формировании социальной и политической реальности</strong>, частью которой становится политический ислам. Одни из примеров этого - многочисленные случаи адаптации работы светских заведений под исламские нормы. **</p>
+<p>**Одна из сфер, которая стала испытывать на себе значительное исламское давление - здравоохранение. Клиники <a href="https://www.medicina.ru/o-klinike/nagrady-sertifikaty-litsenzii-svidetelstva/halal/">запускают параллельную линию услуг</a> в соответствии с шариатом. Будет интересно наблюдать за работой подобных медицинских учреждений и их каталогом услуг - не будет ли халяльное здравоохранение подразумевать <a href="https://t.me/c/2154518278/36">обрезание для девочек?</a></p>
+<p>Адаптируется не только сфера услуг, но и то, <strong>как про это говорят и пишут</strong>.</p>
+<p>НИИ организации здравоохранения и медицинского менеджмента анонсирует публикацию <a href="https://niioz.ru/news/uchebno-metodicheskoe-posobie-niiozmm-po-rabote-s-arabskimi-patsientami-poluchilo-vysokuyu-otsenku-d/">учебно-методического пособия по работе с арабскими пациентами, исповедующих ислам.</a> Пособие получило высокую оценку Духовного управления мусульман России. Несмотря на светский характер НИИ, на их сайте слово «ислам» пишется с заглавной буквы - «Ислам», <strong>что противоречит правилам русского языка</strong>.</p>
+<p>Удивительно также то, что вплоть до недавнего времени пациенты-мусульмане пользовались медицинскими услугами,** не требуя **никаких специальных условий. Это совершенно приемлемо в исламе и вписывается в концепцию <a href="https://t.me/c/2154518278/35">даруры,</a> которая <strong>освобождает</strong> последователя от исполнения любых исламских норм в зависимости от той социальной среды, в которой он оказывается.</p>
+<p>Так что же поменялось? По какой причине началась масштабная шариатизация здравоохранения и есть ли у неё <strong>разумные пределы</strong>?</p>
+<p><a href="">#политический_ислам</a> <a href="">#халяль</a> <a href="">#медицина</a> <a href="">#превосходство</a> <a href="">#подчинение</a></p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+</body>
+</html>

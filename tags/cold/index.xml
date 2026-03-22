@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cold on Здесь будет название</title>
+    <link>http://localhost:1313/tags/cold/</link>
+    <description>Recent content in Cold on Здесь будет название</description>
+    <generator>Hugo</generator>
+    <language>ru</language>
+    <lastBuildDate>Fri, 20 Feb 2026 09:00:00 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cold/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>To Build a Fire</title>
+      <link>http://localhost:1313/posts/post-003/</link>
+      <pubDate>Fri, 20 Feb 2026 09:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/post-003/</guid>
+      <description>&lt;p&gt;The man turned aside from the main trail. &lt;strong&gt;Fifty degrees below zero&lt;/strong&gt; meant eighty-odd degrees of frost.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;The trouble with him was that he was without imagination.&amp;rdquo;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;He carried:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Matches&lt;/li&gt;&#xA;&lt;li&gt;Birch bark&lt;/li&gt;&#xA;&lt;li&gt;Biscuits&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This connects to themes in &lt;a href=&#34;http://localhost:1313/posts/post-002/&#34;&gt;White Fang&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>In a Far Country</title>
+      <link>http://localhost:1313/posts/post-020/</link>
+      <pubDate>Mon, 16 Feb 2026 12:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/post-020/</guid>
+      <description>&lt;p&gt;In a far country, far from civilization and its comforts, two men faced the long Arctic winter. Carter Weatherbee and Percy Cuthfert were ill-suited for the North — soft men, city men, who had joined the gold rush on a whim without understanding what it would demand of them.&lt;/p&gt;&#xA;&lt;p&gt;The cabin they shared was small and poorly built, hastily constructed before the first snows. It would be their home for eight months, until the spring thaw made travel possible again. Eight months of darkness, cold, and each other&amp;rsquo;s company.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The White Silence</title>
+      <link>http://localhost:1313/posts/post-014/</link>
+      <pubDate>Tue, 10 Feb 2026 14:30:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/post-014/</guid>
+      <description>&lt;p&gt;The white silence of the North was unlike any quiet known to civilization. It was not merely an absence of sound but a presence in itself — vast, ancient, indifferent. Men who traveled through it felt the weight of it pressing down upon them, demanding respect, punishing hubris.&lt;/p&gt;&#xA;&lt;p&gt;Carmen and the kid traveled through this silence, their sled dogs panting in the thin, cold air. The temperature had dropped steadily for three days, and now it hovered somewhere around sixty below. At these temperatures, the very air seemed to crystallize, and breath froze in beards and on eyelashes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fires in the Snow</title>
+      <link>http://localhost:1313/posts/post-012/</link>
+      <pubDate>Sun, 08 Feb 2026 18:45:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/post-012/</guid>
+      <description>&lt;p&gt;Fires in the snow — they were the difference between life and death in the Yukon. A man without fire in the bitter cold was a dead man walking, his doom measured in minutes rather than hours. The old-timers knew this truth in their bones, and they never traveled unprepared.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

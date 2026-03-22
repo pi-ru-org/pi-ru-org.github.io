@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+  <script>
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'serif'],
+            sans: ['system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-stone-900 dark:text-stone-100 underline decoration-stone-400 dark:decoration-stone-500 hover:decoration-stone-900 dark:hover:decoration-stone-300;
+      }
+      .prose strong {
+        @apply font-bold text-stone-900 dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-200 font-sans transition-colors duration-200">
+  
+<div class="min-h-screen">
+
+  
+  <header class="border-b border-stone-200 bg-white dark:bg-stone-900 dark:border-stone-700">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-stone-600 dark:hover:text-stone-300">
+        Здесь будет название
+      </a>
+    </div>
+  </header>
+
+  
+  <div class="border-b border-stone-100 dark:border-stone-800 bg-stone-50 dark:bg-stone-800/50">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 mb-4">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к постам
+      </a>
+      <time class="block text-xs md:text-sm text-stone-500 dark:text-stone-400 mb-2">
+        14 February 2026, 07:45
+      </time>
+      <h1 class="text-2xl md:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">
+        The One Thousand Dozen
+      </h1>
+      
+      <div class="flex flex-wrap gap-2 mt-3">
+        
+        <a href="/?tag=gold" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          gold
+        </a>
+        
+        <a href="/?tag=journey" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          journey
+        </a>
+        
+        <a href="/?tag=adventure" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          adventure
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <article class="prose prose-stone dark:prose-invert max-w-none text-stone-700 dark:text-stone-300 leading-relaxed">
+      <p>David Rasmunsen had a plan — a brilliant plan, he thought, that would make him rich without the backbreaking labor of mining. He would transport one thousand dozen eggs to Dawson City, where fresh eggs sold for outrageous prices. The math was simple: buy low in San Francisco, sell high in the Klondike, and pocket the difference.</p>
+<p>The journey began well enough. Rasmunsen had done his research, calculating shipping costs, estimating travel time, planning every detail with the precision of an accountant. He had even invested in specially designed crates that would protect the fragile cargo from the rigors of Northern travel.</p>
+<p>But the North cares nothing for plans made in comfortable offices. The first setback came at the Chilkoot Pass, where carriers demanded triple the agreed rate to haul the heavy crates. Rasmunsen paid, watching his profit margin shrink with each transaction.</p>
+<blockquote>
+<p>&ldquo;The scheme was perfect. Only the execution remained, and he had no doubt of his ability to execute.&rdquo;</p>
+</blockquote>
+<p>The eggs became his obsession, his reason for existing. He checked them constantly, turning the crates to prevent the yolks from settling, keeping them at optimal temperature, guarding them against the endless threats of the trail. Other stampeders laughed at the egg man, but Rasmunsen paid them no mind.</p>
+<p>The journey north took longer than expected. Rivers froze earlier than predicted. Storms delayed travel for days at a time. Each delay ate into his timeline, bringing him closer to the moment when his eggs would spoil and his investment would become worthless.</p>
+<p>He pushed on relentlessly, driving his dogs and himself beyond the point of exhaustion. The dogs began to fail, their feet raw, their spirits broken. He replaced them and continued. Nothing would stop him from reaching Dawson while his eggs were still fresh.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.</p>
+<p>The final stretch was the worst. A warm spell — unseasonable, unwelcome — threatened to hasten the spoilage of his cargo. Rasmunsen drove through the night, hour after hour, the sled runners hissing on the softening snow.</p>
+<p>He arrived in Dawson at last, exhausted but triumphant. He had done it! One thousand dozen eggs, delivered intact to the hungry goldfields. He could already taste the wealth that awaited him.</p>
+<p>But fate had one final joke to play. During his long journey, a shipment of eggs had arrived by steamer, the first of the season. The market was flooded. Prices had collapsed. His eggs, which he had expected to sell for enormous profit, were worth less than he had paid for them.</p>
+<p>Rasmunsen sat in the muddy street of Dawson, surrounded by crates of eggs that represented months of labor and every dollar he owned. He began to laugh — bitter, helpless laughter that startled the passersby. He laughed until tears streamed down his face, until his sides ached, until he had nothing left.</p>
+<p>The eggs eventually sold, but at a loss. Rasmunsen drifted away from the goldfields, another broken dreamer in a land full of them. His story became a cautionary tale, told in the saloons of Dawson to warn newcomers about the folly of grand schemes.</p>
+<p>For more on the economics of the gold rush, see <a href="/posts/post-013/">The Gold Fever</a>.</p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+  <script src="/js/theme.js"></script>
+</body>
+</html>

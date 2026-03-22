@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#22292F',
+            secondary: '#232C40',
+            accent: '#E76363',
+          },
+          fontFamily: {
+            serif: ['PT Serif', 'Georgia', 'Cambria', 'serif'],
+            sans: ['PT Sans', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          maxWidth: {
+            'content': '600px',
+            'layout': '860px',
+          },
+          spacing: {
+            'sidebar': '200px',
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+    const saved = localStorage.getItem('theme');
+    const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (saved === 'dark' || (!saved && sysDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply text-primary dark:text-stone-200;
+      }
+    }
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-primary dark:text-stone-100 underline decoration-accent/50 hover:decoration-accent;
+      }
+      .prose strong {
+        @apply font-bold text-primary dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+      .prose a[href^="http"]:not([href*="localhost"])::after {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-left: 3px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23E76363'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'/%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+      }
+      .post-title {
+        @apply font-serif font-normal tracking-tight;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+      }
+      .post-body {
+        @apply font-sans font-normal;
+        font-size: 18px;
+        line-height: 28px;
+      }
+      @screen md {
+        .post-body {
+          font-size: 20px;
+          line-height: 32px;
+        }
+        .post-title-large {
+          font-size: 42px;
+          line-height: 52px;
+          letter-spacing: -0.04em;
+        }
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-primary font-sans">
+  <header class="border-b border-stone-200 dark:border-stone-700">
+  <div class="max-w-layout mx-auto px-4 py-4 flex items-center justify-between">
+
+    
+    <a href="/" id="site-logo" class="flex items-center gap-3">
+      <div class="w-8 h-8 bg-primary dark:bg-stone-100 rounded-full flex items-center justify-center">
+        <span class="text-white dark:text-primary font-bold text-xl leading-none">!</span>
+      </div>
+      <span class="text-xl font-serif font-bold text-primary dark:text-stone-100">Здесь будет название</span>
+    </a>
+
+    
+    <div class="flex items-center gap-6">
+      <a href="/about/" class="text-sm text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 transition-colors">О проекте</a>
+
+      
+      <button id="theme-toggle" class="p-2 text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+        <svg id="theme-icon-light" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg id="theme-icon-dark" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+  
+<div class="min-h-screen">
+
+  
+  <div class="max-w-layout mx-auto px-4">
+    <div class="max-w-content py-8 md:py-12">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 mb-6">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к публикациям
+      </a>
+
+      <time class="block text-sm text-stone-400 dark:text-stone-500 mb-4">
+        26 января 2026
+      </time>
+
+      <h1 class="post-title post-title-large text-3xl md:text-5xl text-primary dark:text-stone-100 mb-6">
+        В последнее время в СМИ все чаще поднимается тема халяля, которая реально беспок
+      </h1>
+
+      
+      <div class="flex flex-wrap gap-2">
+        
+        <a href="/?tag=%d0%b1%d0%b5%d0%b7_%d1%82%d0%b5%d0%b3%d0%b0" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          без_тега
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-layout mx-auto px-4 pb-12">
+    <article class="prose prose-stone dark:prose-invert max-w-content post-body text-primary/90 dark:text-stone-300">
+      <p>Как известно, законы ислама предписывают пищевые ограничения и запрещают ростовщичество (рибу). С пищевыми ограничениями не все так просто, но в целом они про мясо и одурманивающие вещества. Разные направления ислама придерживаются разных запретов — например, в одних суннитских направлениях-школах креветок есть можно, а в других нет, но избегание свинины, мертвечины, мяса хищных животных и падальщиков, алкоголя и наркотиков в целом свойственно всем мусульманам. А вот дальше начинаются детали.</p>
+<p>А сколько процентов алкоголя должно быть в напитке, чтобы он перестал быть дозволенным? А спирт можно использовать для дезинфекции или же в парфюмерии? А если дозволенное в пищу животное забито христианином или атеистом, есть его можно? А если происхождение такого мяса вообще неизвестно? Вот на эти вопросы отвечают мусульманские богословы, которые в идеале должны руководствоваться принципом пользы для своей общины. Но в реальной жизни бывает всякое.</p>
+<p>Процитируем <a href="https://muslims.ru/fatwa/bogoslovskoe-zaklyuchenie-%E2%84%96-9-25-logistika-i-kurerskaya-dostavka/">фетву Совета улемов ДУМ РФ по курьерской доставке</a> (после скандала с прокуратурой они ее с сайта сняли, но текст у нас остался): «Доставка очевидно дозволенного разрешена. К этой категории относятся, например, продукты питания, мясо животных, забитых дозволенным способом; крупы; масло и молоко; фрукты, овощи и т. п., непродовольственные товары бытового назначения (одежда, мебель, посуда, канцелярия, электроника), книги, информационные носители, лекарства и медицинские изделия», - совершенно справедливо пишут они в данном случае, хотя, надо признать, не всегда отличаются умом и сообразительностью.</p>
+<p>«А как же тогда халяльная фанера, картон, матрасы, санитайзеры, мыло?», - спросите вы. А это просто мошенничество. «Одна из проблем — сейчас марку халяль недобросовестные предприниматели стали ставить на все подряд, <a href="https://164.ru/text/religion/2025/12/06/76158765">говорит доктор Нидаль Эль-Хих</a>.—«Я видел печенье, воду, рыбу, шампуни, зубные пасты и так далее. Но это изначально разрешенная продукция».</p>
+<p>Для наглядности приведем гипотетический пример такого подхода у православных: «Покупайте наши постные матрасы! Афонский старец Рафаил Керульский благословил Великим постом спать только на них, а иначе грех! А еще у нас есть постный корм для православных котов и линейка косметики «Святой старец». Только она сварена по древним народным рецептам и не содержит жидко-масонских чипов!».</p>
+<p>Продвигающие халяль деятели очень любят лукавить, указывая, что на самом деле это сертификат экологичности, а не религиозной дозволенности. И это прямая ложь. В классических мусульманских текстах экология вообще не упоминается, потому как придумали ее совсем недавно. Заводы и фабрики Индонезии, Пакистана и Бангладеша производят безусловно халяльную продукцию, но вот с экологией там не очень — вода в реках из-за мусора почти не видна. Да и в остальном грязновато.</p>
+<p>Таким образом, через российского флагмана халялизации - ООО МЦСИС «Халяль», основанного ДУМ РФ и фактически возглавляемое дочкой его лидера Аделей Гайнутдиновой, продвигаются крайне сомнительные, но очень выгодные схемы. За 2024 год 12 российских компаний, занимающихся сертификацией халяльных продуктов, <a href="https://postnews.ru/n/46796">заработали 351,1 млн рублей</a>. Из них МЦСИС «Халяль» заработал 225 млн., потому как и <a href="https://dzen.ru/a/Z4fEM65QggTzXUVx">фанерой с пиломатериалами не гнушался</a>. И эти деньги были заложены в стоимость товаров и оплачены потребителями.</p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+</body>
+</html>

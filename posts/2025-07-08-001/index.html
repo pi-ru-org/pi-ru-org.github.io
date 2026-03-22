@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#22292F',
+            secondary: '#232C40',
+            accent: '#E76363',
+          },
+          fontFamily: {
+            serif: ['PT Serif', 'Georgia', 'Cambria', 'serif'],
+            sans: ['PT Sans', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          maxWidth: {
+            'content': '600px',
+            'layout': '860px',
+          },
+          spacing: {
+            'sidebar': '200px',
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+    const saved = localStorage.getItem('theme');
+    const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (saved === 'dark' || (!saved && sysDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply text-primary dark:text-stone-200;
+      }
+    }
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-primary dark:text-stone-100 underline decoration-accent/50 hover:decoration-accent;
+      }
+      .prose strong {
+        @apply font-bold text-primary dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+      .prose a[href^="http"]:not([href*="localhost"])::after {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-left: 3px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23E76363'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'/%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+      }
+      .post-title {
+        @apply font-serif font-normal tracking-tight;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+      }
+      .post-body {
+        @apply font-sans font-normal;
+        font-size: 18px;
+        line-height: 28px;
+      }
+      @screen md {
+        .post-body {
+          font-size: 20px;
+          line-height: 32px;
+        }
+        .post-title-large {
+          font-size: 42px;
+          line-height: 52px;
+          letter-spacing: -0.04em;
+        }
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-primary font-sans">
+  <header class="border-b border-stone-200 dark:border-stone-700">
+  <div class="max-w-layout mx-auto px-4 py-4 flex items-center justify-between">
+
+    
+    <a href="/" id="site-logo" class="flex items-center gap-3">
+      <div class="w-8 h-8 bg-primary dark:bg-stone-100 rounded-full flex items-center justify-center">
+        <span class="text-white dark:text-primary font-bold text-xl leading-none">!</span>
+      </div>
+      <span class="text-xl font-serif font-bold text-primary dark:text-stone-100">Здесь будет название</span>
+    </a>
+
+    
+    <div class="flex items-center gap-6">
+      <a href="/about/" class="text-sm text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 transition-colors">О проекте</a>
+
+      
+      <button id="theme-toggle" class="p-2 text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+        <svg id="theme-icon-light" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg id="theme-icon-dark" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+  
+<div class="min-h-screen">
+
+  
+  <div class="max-w-layout mx-auto px-4">
+    <div class="max-w-content py-8 md:py-12">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-400 dark:text-stone-500 hover:text-primary dark:hover:text-stone-300 mb-6">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к публикациям
+      </a>
+
+      <time class="block text-sm text-stone-400 dark:text-stone-500 mb-4">
+        8 июля 2025
+      </time>
+
+      <h1 class="post-title post-title-large text-3xl md:text-5xl text-primary dark:text-stone-100 mb-6">
+        Впечатляющий обзор расследования исламской стратегии и тактики идеологической ди
+      </h1>
+
+      
+      <div class="flex flex-wrap gap-2">
+        
+        <a href="/?tag=%d0%b1%d0%b5%d0%b7_%d1%82%d0%b5%d0%b3%d0%b0" class="inline-flex items-center text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 px-3 py-1.5 rounded-full hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors capitalize">
+          без_тега
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-layout mx-auto px-4 pb-12">
+    <article class="prose prose-stone dark:prose-invert max-w-content post-body text-primary/90 dark:text-stone-300">
+      <p><strong>В среду на заседании Совета обороны Франции под председательством Эмманюэля Макрона обсуждалась опасность, которую представляет собой движение «Братья-мусульмане». Доклад, на основе которого проходило обсуждение, готовился целый год. Часть его остается секретной, но и то, что стало доступно публике, «подобно взрыву», <strong><a href="https://www.lefigaro.fr/actualite-france/reseaux-tentaculaires-organisation-secrete-quartiers-islamises-le-rapport-choc-sur-les-freres-musulmans-qui-veulent-instaurer-la-charia-en-france-20250520">пишет</a></strong> Figaro.</strong></p>
+<p>Министр внутренних дел Брюно Ретайо, по инициативе которого был составлен доклад, заявил, что конечной целью «Братьев-мусульман» [запрещённые в России] является постепенное <strong>подведение французского общества к законам шариата</strong>.</p>
+<p><strong>Согласно отчету, «Братья-мусульмане» интегрируются в общество, чтобы изменить его изнутри, внедряя свои идеи.</strong></p>
+<p>«Для этого они прибегают к технике двуличия, с помощью которой скрывают свои истинные намерения, заявляя, что разделяют правила и принципы, регулирующие западную коллективную жизнь», — отмечается в документе.</p>
+<p>** «Братья-мусульмане» используют концепцию «исламофобии» для дискредитации мер по борьбе с радикализацией и исламистским сепаратизмом. Их представляют как «государственный расизм», направленный против мусульман.**</p>
+<p>В докладе также говорится, что в стране зарегистрировано 139 мест исламских культовых организаций, связанных с «Мусульманами Франции», главной организацией «Братьев-мусульман» во Франции. К этому нужно добавить еще 68, считающихся близкими к ним.</p>
+<p><strong>Приоритетом французского отделения «Братьев-мусульман» является сфера образования.</strong></p>
+<p>В сентябре 2023 «было выявлено 21 учреждение, связанное с движением «Братья-мусульмане» (18 напрямую и три считаются близкими), которое в текущем году приняло в общей сложности 4200 студентов». Лицей Аверроэса в Лилле описывается как «флагманское учреждение». Он стал предметом проверки, проведенной региональной счетной палатой. Проверка «выявила получение незаконного финансирования в виде займов со списанием долгов от соседних мечетей и Исламского центра, который сам финансируется Кувейтом, Катаром и Египтом».</p>
+<p>В <strong>соцсетях</strong> исламские инфлюэнсеры «стали связующим звеном между исламистскими идеологиями и молодыми франкоговорящими европейцами».</p>
+<p>Документ говорит об «активизме нового поколения проповедников, часто обученных главными религиозными лидерами движения и испытывающими влияние салафизма. «Братья-мусульмане» действуют посредством «30 исламистских благотворительных организаций, включая 16, которые управляются салафитами». Одна из них, Humani&rsquo;terre, созданная в 2018 году для сбора средств для палестинского населения, является объектом расследования по делу о финансировании террористической организации ХАМАС.</p>
+<p>В поиске <strong>респектабельности</strong> «Братья-мусульмане» продвигаются к созданию реальной экономики своей системы. Братство, члены которого вступают в него после прохождения «десятиэтапного процесса», придерживается принципа секретности. В докладе цитируется Шакиб Бенмахлуф, бывший президент Федерации исламских организаций Европы (ныне Совета европейских мусульман), который признает, что европейская правовая база позволяет «представлять модель образцового мусульманина, не привлекая внимания к тому факту, что мы исламизируем Запад».</p>
+<p>** «Знаменем» исламизации сделан хиджаб. **Движение также мобилизовано на создание <strong>халяльного</strong> сектора и продвижение <strong>исламских финансов.</strong> Начиная с 1990-х годов экосистемы «Братьев-мусульман» позволяют «контролировать жизнь мусульманина от рождения до смерти» через ассоциации, а иногда через выборных лиц, связанных с движением.</p>
+<p><em>(продолжение в следующем посте)</em></p>
+<p>** «Братья-мусульмане» – запрещенная в России террористическая организация*</p>
+<p><a href="https://t.me/daily_france/689">Источник</a></p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+</body>
+</html>

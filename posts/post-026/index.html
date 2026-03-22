@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+  <script>
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'serif'],
+            sans: ['system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-stone-900 dark:text-stone-100 underline decoration-stone-400 dark:decoration-stone-500 hover:decoration-stone-900 dark:hover:decoration-stone-300;
+      }
+      .prose strong {
+        @apply font-bold text-stone-900 dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-200 font-sans transition-colors duration-200">
+  
+<div class="min-h-screen">
+
+  
+  <header class="border-b border-stone-200 bg-white dark:bg-stone-900 dark:border-stone-700">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-stone-600 dark:hover:text-stone-300">
+        Здесь будет название
+      </a>
+    </div>
+  </header>
+
+  
+  <div class="border-b border-stone-100 dark:border-stone-800 bg-stone-50 dark:bg-stone-800/50">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 mb-4">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к постам
+      </a>
+      <time class="block text-xs md:text-sm text-stone-500 dark:text-stone-400 mb-2">
+        22 February 2026, 14:00
+      </time>
+      <h1 class="text-2xl md:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">
+        The Wit of Porportuk
+      </h1>
+      
+      <div class="flex flex-wrap gap-2 mt-3">
+        
+        <a href="/?tag=adventure" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          adventure
+        </a>
+        
+        <a href="/?tag=gold" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          gold
+        </a>
+        
+        <a href="/?tag=yukon" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          yukon
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <article class="prose prose-stone dark:prose-invert max-w-none text-stone-700 dark:text-stone-300 leading-relaxed">
+      <p>El-Soo was the most beautiful woman in the Yukon, and Porportuk was the richest man. The collision of these two facts would create a story that the old-timers told for years afterward, shaking their heads at the strange ways of love and money.</p>
+<p>Porportuk had made his fortune in the traditional way — trading with the white men, accumulating wealth while his people grew poorer. He was old and fat and ugly, but he had power, and power in the North meant everything.</p>
+<p>El-Soo was young, beautiful, and proud. She had been educated at the mission school, had learned to read and write, had glimpsed a world beyond the frozen wilderness of her birth. She dreamed of escape, of a life in the cities of the South, of becoming something more than a wife to be bought and sold.</p>
+<blockquote>
+<p>&ldquo;A woman is not a beaver pelt, to be traded for blankets and beads. I am El-Soo, and I belong to no one but myself.&rdquo;</p>
+</blockquote>
+<p>But the old ways were strong, and her father had debts — debts to Porportuk, debts that could only be paid in one way. El-Soo was to be sold, auctioned to the highest bidder at the great potlatch. Porportuk had already made clear his intention to win her.</p>
+<p>The auction drew crowds from every village on the river. This was more than a simple sale; it was a contest between the old ways and the new, between tradition and rebellion. El-Soo stood on the platform, her head high, her eyes blazing with defiance.</p>
+<p>Porportuk opened the bidding at a hundred blankets. Other men bid, but he topped each offer easily. His wealth was vast, his determination absolute. The bids climbed higher and higher, reaching levels that seemed impossible.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
+<p>But El-Soo had a plan. As the bidding reached its peak, she spoke. She would add her own dowry to the auction, she announced — everything she owned, everything she could earn. The total price would be astronomical, more than even Porportuk could pay.</p>
+<p>The old man was clever, but El-Soo was cleverer. She understood that Porportuk&rsquo;s wealth was not infinite, that his pride would not allow him to be outbid. She kept adding to the price, condition after condition, until Porportuk had pledged everything he owned.</p>
+<p>When he finally won the auction, he discovered the true wit of El-Soo. She had driven the price so high that he was now a pauper. His fortune was gone, spent on a wife who had never intended to stay with him. And by the customs he himself had invoked, he had no recourse.</p>
+<p>El-Soo walked away free. She had used the old ways against themselves, had found loopholes in the traditions that were meant to enslave her. She headed south, toward the cities and the life she had dreamed of, leaving Porportuk behind to contemplate his defeat.</p>
+<p>The story spread quickly:</p>
+<ol>
+<li>How El-Soo had outwitted the richest man in the territory</li>
+<li>How she had used tradition to destroy tradition</li>
+<li>How a woman&rsquo;s cleverness had trumped a man&rsquo;s wealth</li>
+<li>How the old ways could be turned against themselves</li>
+<li>How freedom could be won by those bold enough to seize it</li>
+</ol>
+<p>Porportuk lived out his days in poverty, a cautionary tale about the limits of wealth. He had believed that money could buy anything, and El-Soo had proved him wrong. In the end, the wit of a clever woman was worth more than all the gold in the Klondike.</p>
+<p>This connects to themes in <a href="/posts/post-024/">A Daughter of the Snows</a>.</p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+  <script src="/js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+  <script>
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'serif'],
+            sans: ['system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-stone-900 dark:text-stone-100 underline decoration-stone-400 dark:decoration-stone-500 hover:decoration-stone-900 dark:hover:decoration-stone-300;
+      }
+      .prose strong {
+        @apply font-bold text-stone-900 dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-200 font-sans transition-colors duration-200">
+  
+<div class="min-h-screen">
+
+  
+  <header class="border-b border-stone-200 bg-white dark:bg-stone-900 dark:border-stone-700">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-stone-600 dark:hover:text-stone-300">
+        Здесь будет название
+      </a>
+    </div>
+  </header>
+
+  
+  <div class="border-b border-stone-100 dark:border-stone-800 bg-stone-50 dark:bg-stone-800/50">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 mb-4">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к постам
+      </a>
+      <time class="block text-xs md:text-sm text-stone-500 dark:text-stone-400 mb-2">
+        16 February 2026, 12:00
+      </time>
+      <h1 class="text-2xl md:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">
+        In a Far Country
+      </h1>
+      
+      <div class="flex flex-wrap gap-2 mt-3">
+        
+        <a href="/?tag=winter" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          winter
+        </a>
+        
+        <a href="/?tag=cold" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          cold
+        </a>
+        
+        <a href="/?tag=survival" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          survival
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <article class="prose prose-stone dark:prose-invert max-w-none text-stone-700 dark:text-stone-300 leading-relaxed">
+      <p>In a far country, far from civilization and its comforts, two men faced the long Arctic winter. Carter Weatherbee and Percy Cuthfert were ill-suited for the North — soft men, city men, who had joined the gold rush on a whim without understanding what it would demand of them.</p>
+<p>The cabin they shared was small and poorly built, hastily constructed before the first snows. It would be their home for eight months, until the spring thaw made travel possible again. Eight months of darkness, cold, and each other&rsquo;s company.</p>
+<p>At first, they made an effort. They divided the work fairly, kept the cabin clean, maintained a pretense of civilization. But as the days shortened and the cold intensified, their cooperation began to fray.</p>
+<p><img src="/images/placeholder-1.svg" alt="The lonely cabin"></p>
+<p>Small irritations became major grievances. The way Cuthfert chewed his food. The way Weatherbee snored. The endless sameness of their meals, their conversations, their lives. The cabin, which had seemed adequate in autumn, now felt like a prison cell.</p>
+<blockquote>
+<p>&ldquo;The winter claimed them, as it had claimed so many before and would claim so many after.&rdquo;</p>
+</blockquote>
+<p>The first real fight came over wood. Bringing in firewood was hard work, exhausting work, and neither man wanted to do more than his share. They began to keep account, measuring each other&rsquo;s contributions with bitter precision. When Weatherbee brought in three loads to Cuthfert&rsquo;s two, he demanded compensation. The negotiation turned ugly.</p>
+<p>After that, they stopped speaking except when absolutely necessary. They divided the cabin down the middle, each man retreating to his territory. Meals were eaten in silence, their backs turned to each other. The fire — they still shared the fire, for they would both die without it — was tended according to a strict schedule that minimized contact.</p>
+<p>The days grew darker until there was no day at all, only endless night. The cold deepened until the cabin walls groaned with it. And the two men, trapped together, began to go mad.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+<p>The symptoms of cabin fever manifested differently in each man. Weatherbee became paranoid, convinced that Cuthfert was plotting against him. Cuthfert grew violent, his rage erupting at the slightest provocation. They circled each other like wolves, waiting for the moment to strike.</p>
+<p>The end came on a night like any other. What triggered it — a look, a word, a gesture — was never recorded. They fought with whatever weapons came to hand: an axe, a hunting knife, their bare hands. The cabin filled with screams and the smell of blood.</p>
+<p>When it was over, both men lay dying. They had destroyed each other as thoroughly as the winter had destroyed their sanity. The fire went out, and the cold crept in, claiming what little remained.</p>
+<p>They were found in the spring by a party of prospectors. The cabin had collapsed under the weight of snow, burying its terrible secret. The prospectors dug down and found the bodies, frozen solid, still locked in their final embrace of mutual destruction.</p>
+<p>The North kept such secrets well. It had witnessed countless tragedies, would witness countless more. For those who could not bend, it broke. And in a far country, far from anyone who had known them, Carter Weatherbee and Percy Cuthfert became just another cautionary tale.</p>
+<p>This connects to themes in <a href="/posts/post-014/">The White Silence</a>.</p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+  <script src="/js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,3652 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta name="generator" content="Hugo 0.157.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Политический ислам. Россия.</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#22292F',
+            secondary: '#232C40',
+            accent: '#E76363',
+          },
+          fontFamily: {
+            sans: ['Inter', 'Helvetica', 'sans-serif'],
+          },
+          maxWidth: {
+            'content': '800px',
+            'layout': '860px',
+          },
+          spacing: {
+            'sidebar': '200px',
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+    const saved = localStorage.getItem('theme');
+    const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (saved === 'dark' || (!saved && sysDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply bg-white text-gray-900;
+        font-family: 'Inter', Helvetica, sans-serif;
+        line-height: 1.3;
+      }
+      .dark body {
+        @apply bg-black text-gray-100;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Inter', Helvetica, sans-serif;
+      }
+      .prose {
+        line-height: 1.3;
+      }
+    }
+    @layer utilities {
+      .prose p {
+        @apply mb-4;
+      }
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400 my-4;
+      }
+      .prose a {
+        @apply text-primary dark:text-stone-100 underline decoration-accent/50 hover:decoration-accent;
+      }
+      .prose strong {
+        @apply font-semibold;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose .post-images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        @apply mb-4;
+      }
+      .prose .post-images a {
+        display: block;
+        height: 160px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .prose .post-images img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        margin: 0;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      @media (min-width: 768px) {
+        .prose .post-images a {
+          height: 220px;
+        }
+      }
+       
+      article.single-post .prose a[href^="http"] {
+        @apply no-underline;
+        color: #8B0000;
+      }
+      article.single-post .prose a[href^="http"]:hover {
+        color: #5C0000;
+      }
+      .dark article.single-post .prose a[href^="http"] {
+        color: #CD5C5C;
+      }
+      .dark article.single-post .prose a[href^="http"]:hover {
+        color: #E57373;
+      }
+      article.single-post .prose a[href^="http"]::after {
+        content: "↗";
+        @apply ml-0.5 text-xs;
+        position: relative;
+        top: -4px;
+      }
+
+       
+      .post-preview a, .post-card a, article:not(.single-post) .prose a {
+        @apply no-underline;
+        color: inherit;
+        pointer-events: none;
+      }
+      .post-preview a::after, .post-card a::after, article:not(.single-post) .prose a::after {
+        content: none;
+      }
+      .post-title {
+        @apply font-serif font-normal tracking-tight;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+      }
+      .post-body {
+        @apply font-sans font-normal;
+        font-size: 18px;
+        line-height: 28px;
+      }
+      @screen md {
+        .post-body {
+          font-size: 20px;
+          line-height: 32px;
+        }
+        .post-title-large {
+          font-size: 42px;
+          line-height: 52px;
+          letter-spacing: -0.04em;
+        }
+      }
+
+       
+      .tag-link, .tag-item, .tag-filter, .post-tags a, .sidebar-tags a, .sidebar-tags button {
+        display: inline-flex;
+        align-items: center;
+        height: 40px;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 0.8rem;
+        border-radius: 9999px;
+        background-color: #f3f4f6;
+        color: #444444;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+      .tag-link:hover, .tag-item:hover, .tag-filter:hover, .post-tags a:hover, .sidebar-tags a:hover, .sidebar-tags button:hover {
+        background-color: #e5e7eb;
+      }
+      .dark .tag-link, .dark .tag-item, .dark .tag-filter, .dark .post-tags a, .dark .sidebar-tags a, .dark .sidebar-tags button {
+        background-color: #374151;
+        color: #d1d5db;
+      }
+      .dark .tag-link:hover, .dark .tag-item:hover, .dark .tag-filter:hover, .dark .post-tags a:hover, .dark .sidebar-tags a:hover, .dark .sidebar-tags button:hover {
+        background-color: #4b5563;
+      }
+
+      .tag-count {
+        font-size: 0.7rem;
+        color: #9ca3af;
+        margin-left: 4px;
+      }
+      .dark .tag-count {
+        color: #6b7280;
+      }
+
+      .post-tags {
+        @apply flex flex-wrap gap-2;
+        margin-top: 32px;
+      }
+
+       
+      .post-nav {
+        @apply grid grid-cols-2 gap-4;
+        margin-top: 48px;
+        margin-bottom: 52px;
+      }
+      .post-nav-link {
+        @apply flex flex-col items-center text-center p-4 rounded-lg border border-gray-200 hover:border-gray-400 transition-colors;
+      }
+      .dark .post-nav-link {
+        @apply border-gray-800 hover:border-gray-600;
+      }
+      .post-nav-arrow {
+        @apply text-3xl text-gray-400 mb-2;
+      }
+      .post-nav-title {
+        @apply text-sm font-medium line-clamp-2;
+      }
+
+       
+      .dark input::placeholder {
+        color: #6b7280;
+      }
+
+       
+      .back-link {
+        @apply inline-flex items-center gap-2 text-base font-medium text-gray-600 hover:text-gray-900 mb-8;
+      }
+      .dark .back-link {
+        @apply text-gray-400 hover:text-gray-100;
+      }
+
+       
+      .prose .post-images.single-image a {
+        height: auto;
+        max-height: 400px;
+      }
+      .prose .post-images.single-image img {
+        height: auto;
+        max-height: 400px;
+        width: auto;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+</head>
+<body class="font-sans">
+  <header class="w-full border-b border-gray-200 dark:border-gray-800">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center gap-6">
+
+    
+    <a href="/" class="flex items-center gap-3 flex-shrink-0">
+      <img src="/favicon.svg" class="w-8 h-8" alt="">
+      <span class="font-semibold text-lg text-gray-900 dark:text-gray-100">Политический ислам. Россия.</span>
+    </a>
+
+    
+    <div class="hidden md:flex items-center gap-2">
+      <div class="relative">
+        <input type="text" id="search-input" placeholder="Поиск..."
+          class="w-[260px] px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-gray-400">
+        <button id="search-icon-btn" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+          <svg id="search-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <svg id="clear-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <div id="search-results" class="hidden absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto">
+        </div>
+      </div>
+
+      
+      <div class="relative">
+        <button id="calendar-toggle" class="p-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+        </button>
+        <div id="calendar-dropdown" class="hidden absolute left-0 mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50 p-4 w-72">
+          <div id="calendar-grid"></div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="flex-1"></div>
+
+    
+    <a href="/about/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">О проекте</a>
+
+    <button id="theme-toggle" class="p-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+      <svg id="theme-icon-light" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+      </svg>
+      <svg id="theme-icon-dark" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+      </svg>
+    </button>
+
+  </div>
+</header>
+
+  
+<div class="max-w-layout mx-auto px-4">
+
+  
+  <div class="py-6 flex flex-wrap items-center gap-4">
+    
+    <div class="relative flex-1 md:flex-none md:w-80">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Поиск по тексту или тегам..."
+        class="w-full pl-4 pr-10 py-2 text-sm border border-stone-300 dark:border-stone-600 rounded-lg bg-white dark:bg-stone-800 text-primary dark:text-stone-100 focus:outline-none focus:border-stone-500 focus:ring-1 focus:ring-stone-500"
+      >
+      
+      <button id="search-icon-btn" class="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600 dark:hover:text-stone-300">
+        <svg id="search-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <svg id="clear-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <div id="search-results" class="hidden absolute top-full left-0 right-0 mt-1 bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto">
+      </div>
+    </div>
+
+    
+    <div class="relative">
+      <button id="calendar-toggle" class="p-2 border border-stone-300 dark:border-stone-600 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors text-stone-700 dark:text-stone-300">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+      </button>
+      <div id="calendar-dropdown" class="hidden absolute left-0 mt-1 bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg shadow-lg z-50 p-4 w-72">
+        <div id="calendar-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="md:hidden mb-6 -mx-4 px-4 overflow-x-auto">
+    <div class="flex gap-2 pb-2">
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="CAIR">
+        CAIR <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Австралия">
+        Австралия <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Азан">
+        Азан <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Азербайджан">
+        Азербайджан <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Аллаху_акбар">
+        Аллаху_акбар <span class="tag-count">3</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Аль_азхар">
+        Аль_азхар <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Анклавы">
+        Анклавы <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Аргументы">
+        Аргументы <span class="tag-count">5</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Астраханская_область">
+        Астраханская_область <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Афганистан">
+        Афганистан <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Африка">
+        Африка <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Без_тега">
+        Без_тега <span class="tag-count">49</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Беларусь">
+        Беларусь <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Беслан">
+        Беслан <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Брак">
+        Брак <span class="tag-count">6</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Вакф">
+        Вакф <span class="tag-count">13</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Ваххабиты">
+        Ваххабиты <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Великобритания">
+        Великобритания <span class="tag-count">4</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Википедия">
+        Википедия <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Вопросы_и_ответы">
+        Вопросы_и_ответы <span class="tag-count">6</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Время">
+        Время <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Дава">
+        Дава <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Дарура">
+        Дарура <span class="tag-count">7</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Двойственность">
+        Двойственность <span class="tag-count">12</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Демократия">
+        Демократия <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Дети">
+        Дети <span class="tag-count">10</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Джизья">
+        Джизья <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Джихад">
+        Джихад <span class="tag-count">63</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Джихад_слова">
+        Джихад_слова <span class="tag-count">4</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Дискуссия">
+        Дискуссия <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Доктрина">
+        Доктрина <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="ДУМ">
+        ДУМ <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="ДУМ_РФ">
+        ДУМ_РФ <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Евреи">
+        Евреи <span class="tag-count">13</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Ердоган">
+        Ердоган <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Женское_обрезание">
+        Женское_обрезание <span class="tag-count">3</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Женщины">
+        Женщины <span class="tag-count">17</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Жинщины">
+        Жинщины <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Закят">
+        Закят <span class="tag-count">6</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Зимми">
+        Зимми <span class="tag-count">8</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Изнасилования">
+        Изнасилования <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Израиль">
+        Израиль <span class="tag-count">3</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Имена">
+        Имена <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Иммиграция">
+        Иммиграция <span class="tag-count">9</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Ирак">
+        Ирак <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Иран">
+        Иран <span class="tag-count">4</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Искусственный_интеллект">
+        Искусственный_интеллект <span class="tag-count">3</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Исламисты">
+        Исламисты <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Исламофобия">
+        Исламофобия <span class="tag-count">4</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Исламские_центры">
+        Исламские_центры <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="История">
+        История <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Карты">
+        Карты <span class="tag-count">26</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Карты_организаций">
+        Карты_организаций <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Кафир">
+        Кафир <span class="tag-count">9</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Кафиры">
+        Кафиры <span class="tag-count">18</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Коран">
+        Коран <span class="tag-count">26</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Крокус">
+        Крокус <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Крым">
+        Крым <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Мамдани">
+        Мамдани <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Медицина">
+        Медицина <span class="tag-count">5</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Мечети">
+        Мечети <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Мечеть">
+        Мечеть <span class="tag-count">21</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Мир">
+        Мир <span class="tag-count">4</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Мифы">
+        Мифы <span class="tag-count">7</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Многоженство">
+        Многоженство <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Многожёнство">
+        Многожёнство <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Молитва">
+        Молитва <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Молитвы">
+        Молитвы <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Москва">
+        Москва <span class="tag-count">3</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Мухаммед">
+        Мухаммед <span class="tag-count">26</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Намаз">
+        Намаз <span class="tag-count">4</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Насилие">
+        Насилие <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Наука">
+        Наука <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Недвижимость">
+        Недвижимость <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Нигерия">
+        Нигерия <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Никаб">
+        Никаб <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Новый_год">
+        Новый_год <span class="tag-count">3</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Обман">
+        Обман <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Омская_область">
+        Омская_область <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Опрос">
+        Опрос <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Организации">
+        Организации <span class="tag-count">19</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Отступничество">
+        Отступничество <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Пакистан">
+        Пакистан <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Пакт_Умара">
+        Пакт_Умара <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Палестина">
+        Палестина <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Подчинение">
+        Подчинение <span class="tag-count">5</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Полигамия">
+        Полигамия <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Политический">
+        Политический <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Политический_ислам">
+        Политический_ислам <span class="tag-count">336</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Право">
+        Право <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Праздники">
+        Праздники <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Превосходство">
+        Превосходство <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Призыв">
+        Призыв <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Психология">
+        Психология <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Рабство">
+        Рабство <span class="tag-count">5</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Рамадан">
+        Рамадан <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Реформа">
+        Реформа <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Реформирование">
+        Реформирование <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Рождество">
+        Рождество <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Россия">
+        Россия <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Самарская_область">
+        Самарская_область <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Свердловская_область">
+        Свердловская_область <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Светскость">
+        Светскость <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Сибирь">
+        Сибирь <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Сира">
+        Сира <span class="tag-count">5</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Сирия">
+        Сирия <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Словарь">
+        Словарь <span class="tag-count">11</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Статистика">
+        Статистика <span class="tag-count">4</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Суды">
+        Суды <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="США">
+        США <span class="tag-count">6</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Таджикистан">
+        Таджикистан <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Такия">
+        Такия <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Тактики">
+        Тактики <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Татарстан">
+        Татарстан <span class="tag-count">3</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Терпение">
+        Терпение <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Территории">
+        Территории <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Территория">
+        Территория <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Терроризм">
+        Терроризм <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Течения">
+        Течения <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Типология">
+        Типология <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Толкование">
+        Толкование <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Трилогия">
+        Трилогия <span class="tag-count">3</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Турция">
+        Турция <span class="tag-count">5</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Тюрьмы">
+        Тюрьмы <span class="tag-count">5</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Узбекистан">
+        Узбекистан <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Ульяновская_область">
+        Ульяновская_область <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Учебники">
+        Учебники <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Фай">
+        Фай <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Фетва">
+        Фетва <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Финансы">
+        Финансы <span class="tag-count">22</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Франция">
+        Франция <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Хабаровск">
+        Хабаровск <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Хавала">
+        Хавала <span class="tag-count">5</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Хадисы">
+        Хадисы <span class="tag-count">5</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Халяль">
+        Халяль <span class="tag-count">25</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Хиджаб">
+        Хиджаб <span class="tag-count">12</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Хиджра">
+        Хиджра <span class="tag-count">10</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="ХМАО">
+        ХМАО <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Храм">
+        Храм <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Христиане">
+        Христиане <span class="tag-count">18</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Христианство">
+        Христианство <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Церкви">
+        Церкви <span class="tag-count">4</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Чита">
+        Чита <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Шариат">
+        Шариат <span class="tag-count">42</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Шариатские_суды">
+        Шариатские_суды <span class="tag-count">2</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Школы">
+        Школы <span class="tag-count">7</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Экономика">
+        Экономика <span class="tag-count">4</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Экспорт">
+        Экспорт <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Экстремизм">
+        Экстремизм <span class="tag-count">1</span>
+      </button>
+      
+      
+      
+      <button class="tag-filter flex-shrink-0" data-tag="Эрдоган">
+        Эрдоган <span class="tag-count">1</span>
+      </button>
+      
+      
+    </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row gap-8 justify-center">
+
+    
+    <main class="w-full md:w-[680px] md:flex-shrink-0 order-2 md:order-1">
+
+      
+      <div id="filter-status" class="hidden mb-6 p-4 bg-stone-100 dark:bg-stone-800 rounded-lg flex items-center justify-between">
+        <span id="filter-status-text" class="text-sm text-stone-700 dark:text-stone-300"></span>
+        <button id="filter-reset" class="text-sm text-stone-400 hover:text-primary dark:hover:text-stone-100 flex items-center gap-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+          Сбросить
+        </button>
+      </div>
+
+      
+      <div id="empty-state" class="hidden py-12 text-center">
+        <div class="text-4xl mb-4">🔍</div>
+        <p class="text-stone-500 dark:text-stone-400">Публикаций не найдено</p>
+        <button id="empty-reset" class="mt-4 text-sm text-stone-600 dark:text-stone-300 hover:text-primary dark:hover:text-stone-100 underline">
+          Сбросить фильтры
+        </button>
+      </div>
+
+      <div class="space-y-2">
+        
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="политический_ислам,карты,организации" data-date="2025-04-18" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-04-18-215\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Количество исламских организаций в Санкт-Петербурге Количество исламских организаций в Москве Динами...
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              18 апр 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="карты">карты</span>
+            
+            
+            
+            <span class="tag-item" data-tag="организации">организации</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Динамика роста исламских организаций** в Московской области Динамика роста исламских организаций в Свердловской области Исламская стратегическая инфраструктура
+
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="без_тега" data-date="2025-04-17" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-04-17-214\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              https://tass.ru/politika/23710915
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              17 апр 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="хиджаб,политический_ислам,никаб" data-date="2025-04-17" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-04-17-213\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              51% текста Корана, хадисов аль-Бухари и биографии Мухаммеда – основополагающих текстов в исламе – со...
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              17 апр 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="хиджаб">хиджаб</span>
+            
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="никаб">никаб</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            В предыдущих публикациях мы рассматривали политический символизм и исламские атрибуты в женской одежде, которые в неисламских обществах служат маркером, разделяющим людей на «своих» и «чужих». Такое разделение имеет колоссальное значение в контексте шариата, поскольку …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="без_тега" data-date="2025-04-16" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-04-16-212\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Дорогие мои!
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              16 апр 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Буквально в субботу общался с одной прихожанкой, которая рассказала о своём наблюдении за навязчивой методикой исламизации русских людей.
+Мы уже привыкли, что таксисты по команде извне начали навязчиво предлагать принять ислам или у метро раздача агитационных листовок. Но, как …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="зимми,политический_ислам,христиане,евреи" data-date="2025-04-15" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-04-15-211\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              История возникновения статуса «зимми»
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              15 апр 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="зимми">зимми</span>
+            
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="христиане">христиане</span>
+            
+            
+            
+            <span class="tag-item" data-tag="евреи">евреи</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Мухаммед переехал в Медину из Мекки в 622 г. н.э., показав таким образом своим последователем пример иммиграции. Медина была наполовину заселена евреями, и он подчинил их. Затем он обратил своё внимание на богатых евреев поселения Хайбара, атаковал и разгромил их. Евреи Хайбара …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="хиджра,Пакистан,иммиграция,политический_ислам,Беларусь" data-date="2025-04-14" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-04-14-210\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Президент Белоруси Александр Лукашенко заявил о готовности принять до 150 тыс. специалистов из Пакис...
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              14 апр 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="хиджра">хиджра</span>
+            
+            
+            
+            <span class="tag-item" data-tag="Пакистан">Пакистан</span>
+            
+            
+            
+            <span class="tag-item" data-tag="иммиграция">иммиграция</span>
+            
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="Беларусь">Беларусь</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Президент отметил особую заинтересованность в привлечении пакистанских специалистов к работе на Барановичском ПХБО. Сейчас белорусская сторона прорабатывает вопрос численности и профессиональной принадлежности тех, кто необходим для работы на предприятии.
+&ldquo;Беларусь …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="политический_ислам" data-date="2025-04-11" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-04-11-209\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Пять принципов политического ислама
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              11 апр 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Что означает «мир» в политике ислама?
+Официальное обращениеМ. Горбачеву от Аятолла Хомейни с призывом принять ислам
+Война и мир (нужное подчеркнуть). Двойственность политического ислама
+
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="политический_ислам,джихад,мечеть" data-date="2025-04-10" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-04-10-208\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Функции мечетей и молельных домов
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              10 апр 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="джихад">джихад</span>
+            
+            
+            
+            <span class="tag-item" data-tag="мечеть">мечеть</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Совет муфтиев ДУМ РФ утверждает, что в стране свыше 7000 мечетей на апрель 2024 года, при этом констатируя их &ldquo;острую нехватку&rdquo;. Давайте ещё раз вспомним, что представляют из себя эти 7000+ учреждений по своей функции.
+Когда Мухаммеда изгнали из Мекки, он отправился в …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="евреи,политический_ислам,христиане" data-date="2025-04-07" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-04-07-207\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Миф о трёх авраамических религиях
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              7 апр 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="евреи">евреи</span>
+            
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="христиане">христиане</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Часто утверждается, что ислам относится к группе «авраамических религий». Христиане и иудеи называются в исламе людьми Писания. Отталкиваясь от общей идеи единобожия, многие склонны считать христианство, иудаизм и ислам религиями-побратимами.
+Однако, прочитав основополагающие …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="политический_ислам" data-date="2025-04-04" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-04-04-206\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Как джихад слова реализуется на практике
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              4 апр 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Жевательная резинка «Love is» со вкусом шариата
+Как осуществляется подчинение кафиров? Ктоявляется авторитетом в вопросах ислама?
+
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="мухаммед,кафиры,политический_ислам,коран,джихад" data-date="2025-04-03" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-04-03-205\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Агрессоры и защитники с точки зрения исламской логики
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              3 апр 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="мухаммед">мухаммед</span>
+            
+            
+            
+            <span class="tag-item" data-tag="кафиры">кафиры</span>
+            
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="коран">коран</span>
+            
+            
+            
+            <span class="tag-item" data-tag="джихад">джихад</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Исламская политическая логика диктует, что кафиры первыми посягнули на ислам, отвергнув послания Аллаха и Мухаммеда. Кафиры являются виновными по определению, по причине своего неверия. Поэтому, с точки зрения политического ислама, убивая и грабя, джихадисты защищают ислам. Это …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="без_тега" data-date="2025-04-02" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-04-02-204\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Вы задумывались, зачем в российских регионах, где немусульманское население составляет свыше 90%, а ...
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              2 апр 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Для начала необходимо отметить, что даже на официальном уровне в разговорах и выступлениях активно используется понятие «мусульманский регион», но вот понятия «православный регион» НЕ используется. Об этом просто не говорят. Зато постоянно звучат слова про многонациональное …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="политический_ислам,Турция,мечеть" data-date="2025-04-02" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-04-02-203\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              О политическом потенциале мечетей – где встречаются доктрина, история и современность
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              2 апр 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="Турция">Турция</span>
+            
+            
+            
+            <span class="tag-item" data-tag="мечеть">мечеть</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+             Любопытным примером политической трансформации мечетей является попытка военного переворота в Турции 15 июля 2016 года, когда именно мечети предотвратили свержение Р. Эрдогана с поста президента и смену власти, мобилизовав значительную часть населения.
+Мечети спасали «своего» – …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="политический_ислам,анклавы" data-date="2025-04-01" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-04-01-202\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Замсекретарь Совбеза высказал опасение относительно того, что в России есть риск возникновения мигра...
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              1 апр 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="анклавы">анклавы</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Конечно, в какой-то степени можно понять тех, кто эмоционально и необоснованно высказывается в пользу теорий заговора и искусственного нагнетания обстановки. Они – просто люди, которые не хотят признавать то, насколько страшное недалёкое будущее ждёт всех и каждого в России в …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="политический_ислам,мухаммед,молитвы" data-date="2025-03-31" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-31-201\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Ранее мы уже писали о том, что в самой исламской доктрине заложен принцип необязательности, который ...
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              31 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="мухаммед">мухаммед</span>
+            
+            
+            
+            <span class="tag-item" data-tag="молитвы">молитвы</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Сам пророк Мухаммед пропускал обязательные молитвы, а затем восполнял. Он же подчёркивал, что те, кто молятся в нестандартное время, единственные на земле молящиеся в этот момент, что осчастливило последователей:
+Хадисы аль-Бухари том 1, книга 10, хадис 542 Рассказано Абу …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="кафир,политический_ислам,женщины,двойственность,хиджаб" data-date="2025-03-28" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-28-200\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Что исламская доктрина говорит про женщин?
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              28 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="кафир">кафир</span>
+            
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="женщины">женщины</span>
+            
+            
+            
+            <span class="tag-item" data-tag="двойственность">двойственность</span>
+            
+            
+            
+            <span class="tag-item" data-tag="хиджаб">хиджаб</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+             Двойственность политического ислама выделяет женщин в отдельную категорию. В Коране и хадисах имеются целые разделы, посвящённые тому, что с женщинами нужно обращаться не так, как с мужчинами.
+Обратимся к статистике:*
+71% текста Корана и более 92% текста сборника хадисов Бухари, …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="политический_ислам,вопросы_и_ответы,хиджра,иммиграция" data-date="2025-03-27" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-27-199\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              В чем причины исламской иммиграции?
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              27 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="вопросы_и_ответы">вопросы_и_ответы</span>
+            
+            
+            
+            <span class="tag-item" data-tag="хиджра">хиджра</span>
+            
+            
+            
+            <span class="tag-item" data-tag="иммиграция">иммиграция</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+             Согласно примеру исламского пророка Мухаммеда хиджра, или политическая иммиграция, является эффективной тактикой и в Коране напрямую связана с исполнением джихада.
+Коран 8:74 Те, которые уверовали, совершили переселение и сражались на пути Аллаха, а также те, которые дали …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="политический_ислам,дети,брак" data-date="2025-03-26" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-26-198\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Девочки-невесты. Сравнительно-правовой анализ фетв по теме ранних браков.
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              26 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="дети">дети</span>
+            
+            
+            
+            <span class="tag-item" data-tag="брак">брак</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            В 2003 г. муфтии опубликовали фетву Министерства пожертвований и исламских вопросов Катара, согласно которой детский брак допустим. Согласие несовершеннолетней девочки не является необходимым для заключения брака, достаточно согласия её опекуна.
+В фетве за основу был взят …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="вакф,политический_ислам,карты,Крым" data-date="2025-03-25" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-25-197\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              История исламских территориальных претензий на Крым
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              25 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="вакф">вакф</span>
+            
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="карты">карты</span>
+            
+            
+            
+            <span class="tag-item" data-tag="Крым">Крым</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Почти триста лет Крым является частью России, но в политическом исламе то, что было когда-то исламским, считается исламским навсегда. Поэтому исламские территориальные претензии на Крым не прекращаются и сейчас.
+На недавнем семинаре политологов нашей команде исследователей …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="вопросы_и_ответы,аргументы" data-date="2025-03-24" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-24-196\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              А вы говорите на арабском?
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              24 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="вопросы_и_ответы">вопросы_и_ответы</span>
+            
+            
+            
+            <span class="tag-item" data-tag="аргументы">аргументы</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Когда вам говорят, что без знания арабского вы не можете разобраться в сути ислама, знайте – это манипуляция, чтобы заставить вас замолчать и лишить вас уверенности в своих знаниях.
+Не поддавайтесь и аргументируйте в ответ:
+▪️В Коране утверждается, что он (Коран) – всеобъемлющее …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="политический_ислам,джихад,Крокус" data-date="2025-03-22" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-22-195\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Что такое терроризм с точки зрения исламских ученых?
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              22 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="джихад">джихад</span>
+            
+            
+            
+            <span class="tag-item" data-tag="Крокус">Крокус</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Антитеррористический законСаудовской Аравии от 2017 года предусматривает уголовную ответственность для «любого, кто прямо или косвенно бросает вызов религии или справедливости короля или наследного принца», подкрепляя это постановлением от 25 января того же года, которое …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="политический_ислам,джихад,кафиры,Мухаммед" data-date="2025-03-21" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-21-194\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Кто настоящие жертвы терактов?
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              21 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="джихад">джихад</span>
+            
+            
+            
+            <span class="tag-item" data-tag="кафиры">кафиры</span>
+            
+            
+            
+            <span class="tag-item" data-tag="Мухаммед">Мухаммед</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            После некоторых крупно-масштабных джихадистских атак читатели СМИ вдруг сталкиваются с такой риторикой: «Настоящие жертвы атаки – мусульмане. На самом деле от произошедшего пострадали в первую очередь они».
+Подобная пиар-кампания в точности повторяет то, что делал Мухаммед ещё в …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="словарь,политический_ислам,джихад" data-date="2025-03-20" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-20-193\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Виды джихада
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              20 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="словарь">словарь</span>
+            
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="джихад">джихад</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Доктрина джихада в политическом исламе поражает разнообразием тактик, как насильственных, так и не ненасильственных. В современной классификации конфликтов такой подход соответствует модели гибридного конфликта (гибридной войны), целью которого всегда является полное уничтожение …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="политический_ислам,отступничество,кафиры" data-date="2025-03-19" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-19-192\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              О свободе вероисповедания в исламе
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              19 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="отступничество">отступничество</span>
+            
+            
+            
+            <span class="tag-item" data-tag="кафиры">кафиры</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Вероотступничество в исламе жестоко наказуемо. Вероотступник – худшее существо, нежели кафир. Хадисы гласят, что вероотступничество наказуемо смертной казнью.
+Сборник Бухари, хадис 6922 Сообщается, что ‘Икрима сказал: «(Однажды) к Али привели нескольких вероотступников, и он …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="мифы,толкование,политический_ислам,двойственность,джихад" data-date="2025-03-18" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-18-191\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Разрушение мифов. Миф 1.
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              18 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="мифы">мифы</span>
+            
+            
+            
+            <span class="tag-item" data-tag="толкование">толкование</span>
+            
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="двойственность">двойственность</span>
+            
+            
+            
+            <span class="tag-item" data-tag="джихад">джихад</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            &ldquo;Ислам задумывался как чистое учение о боге. То, что из него делают сейчас – это неверное толкование Корана.&rdquo;** Мухаммед – главный авторитет по толкованию Корана, и что бы ни говорили другие – это не имеет значения. Его жизнь – это идеальный пример человека, который …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="вакф,политический_ислам,хавала,халяль,финансы,закят" data-date="2025-03-17" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-17-190\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Бессрочное право на недвижимость и территорию в политическом исламе
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              17 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="вакф">вакф</span>
+            
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="хавала">хавала</span>
+            
+            
+            
+            <span class="tag-item" data-tag="халяль">халяль</span>
+            
+            
+            
+            <span class="tag-item" data-tag="финансы">финансы</span>
+            
+            
+            
+            <span class="tag-item" data-tag="закят">закят</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            Взаимосвязь между халяльным производством, ростом выплат закята и потенциальным финансированием джихада **действительно существует
+Эти** инструменты исламской экономики **внедряются прямо сейчас
+Сбербанк вышел на рынок с** портфолио финансовых продуктов, **соответствующих нормам …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="политический_ислам,медицина,халяль,финансы" data-date="2025-03-14" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-14-189\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Халяль. Придуманная традиция и средство исламизации Халяльная фанера из ЧереповцаПищевая сода тоже х...
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              14 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="медицина">медицина</span>
+            
+            
+            
+            <span class="tag-item" data-tag="халяль">халяль</span>
+            
+            
+            
+            <span class="tag-item" data-tag="финансы">финансы</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="без_тега" data-date="2025-03-12" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-12-188\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              В Госдуму внесли законопроект о продлении исламского банкинга 💰
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              12 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+             Законопроект о продлении эксперимента по партнерскому финансированию до 1 сентября 2028 года находится на рассмотрении в ГД. Соответствующий документ был опубликован на сайте нижней палаты Федерального Собрания.
+Один из соавторов законопроекта, депутат госдумы от Республики …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="без_тега" data-date="2025-03-10" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-10-187\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              🇬🇷.tgs)📸 🇸🇾🇬🇷.webp) Депутат Европарламента от Греции Николас Фарантурис, член Комитета Европейского ...
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              10 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+             🟡 «Достоверные данные свидетельствуют о гибели 7000 христиан и алавитов и беспрецедентных зверствах против мирных жителей. Христианские и другие общины с тысячелетним присутствием в этом регионе находятся под угрозой исчезновения». 🟡 «Новый исламский режим превращает Сирию в …
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+        <article class="post-item post-preview group pb-4 cursor-pointer rounded-lg -mx-4 px-4 py-4 hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-colors" data-tags="политический_ислам,карты,мухаммед,кафиры" data-date="2025-03-07" onclick="window.location='http:\/\/localhost:1313\/posts\/2025-03-07-186\/'">
+
+          
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h2 class="text-base md:text-lg font-serif font-bold text-primary dark:text-stone-100 group-hover:text-accent transition-colors">
+              Политический ислам в США. Барак Обама. Картограмма роста числа исламских организаций в Испании.Графи...
+            </h2>
+            <time class="text-xs text-stone-400 dark:text-stone-500 flex-shrink-0">
+              7 мар 2025
+            </time>
+          </div>
+
+          
+          
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            
+            
+            <span class="tag-item" data-tag="политический_ислам">политический_ислам</span>
+            
+            
+            
+            <span class="tag-item" data-tag="карты">карты</span>
+            
+            
+            
+            <span class="tag-item" data-tag="мухаммед">мухаммед</span>
+            
+            
+            
+            <span class="tag-item" data-tag="кафиры">кафиры</span>
+            
+            
+          </div>
+          
+
+          
+          <div class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-2">
+            
+          </div>
+
+          
+          <span class="inline-flex items-center gap-1 text-sm text-stone-400 dark:text-stone-500 group-hover:text-accent transition-colors">
+            Читать полностью
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+
+        </article>
+        
+      </div>
+
+      
+      
+      
+      <nav id="pagination-nav" class="mt-12 pt-8">
+        <div class="flex items-center justify-center gap-2">
+          
+          <a href="/page/6/" class="px-4 py-2 text-sm border border-stone-300 dark:border-stone-600 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300">←</a>
+          
+          <span class="px-4 py-2 text-sm text-stone-500 dark:text-stone-400">
+            Страница 7 из 14
+          </span>
+          
+          <a href="/page/8/" class="px-4 py-2 text-sm border border-stone-300 dark:border-stone-600 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300">→</a>
+          
+        </div>
+      </nav>
+      
+    </main>
+
+    
+    <aside class="hidden md:block md:w-[320px] md:flex-shrink-0 order-1 md:order-2">
+      <div>
+        <h3 class="text-sm font-bold text-primary dark:text-stone-100 uppercase tracking-wide mb-4">Теги</h3>
+        <div class="flex flex-wrap gap-2">
+          
+          
+          <button class="tag-filter" data-tag="CAIR">
+            CAIR <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Австралия">
+            Австралия <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Азан">
+            Азан <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Азербайджан">
+            Азербайджан <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Аллаху_акбар">
+            Аллаху_акбар <span class="tag-count">3</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Аль_азхар">
+            Аль_азхар <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Анклавы">
+            Анклавы <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Аргументы">
+            Аргументы <span class="tag-count">5</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Астраханская_область">
+            Астраханская_область <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Афганистан">
+            Афганистан <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Африка">
+            Африка <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Без_тега">
+            Без_тега <span class="tag-count">49</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Беларусь">
+            Беларусь <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Беслан">
+            Беслан <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Брак">
+            Брак <span class="tag-count">6</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Вакф">
+            Вакф <span class="tag-count">13</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Ваххабиты">
+            Ваххабиты <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Великобритания">
+            Великобритания <span class="tag-count">4</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Википедия">
+            Википедия <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Вопросы_и_ответы">
+            Вопросы_и_ответы <span class="tag-count">6</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Время">
+            Время <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Дава">
+            Дава <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Дарура">
+            Дарура <span class="tag-count">7</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Двойственность">
+            Двойственность <span class="tag-count">12</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Демократия">
+            Демократия <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Дети">
+            Дети <span class="tag-count">10</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Джизья">
+            Джизья <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Джихад">
+            Джихад <span class="tag-count">63</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Джихад_слова">
+            Джихад_слова <span class="tag-count">4</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Дискуссия">
+            Дискуссия <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Доктрина">
+            Доктрина <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="ДУМ">
+            ДУМ <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="ДУМ_РФ">
+            ДУМ_РФ <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Евреи">
+            Евреи <span class="tag-count">13</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Ердоган">
+            Ердоган <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Женское_обрезание">
+            Женское_обрезание <span class="tag-count">3</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Женщины">
+            Женщины <span class="tag-count">17</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Жинщины">
+            Жинщины <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Закят">
+            Закят <span class="tag-count">6</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Зимми">
+            Зимми <span class="tag-count">8</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Изнасилования">
+            Изнасилования <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Израиль">
+            Израиль <span class="tag-count">3</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Имена">
+            Имена <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Иммиграция">
+            Иммиграция <span class="tag-count">9</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Ирак">
+            Ирак <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Иран">
+            Иран <span class="tag-count">4</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Искусственный_интеллект">
+            Искусственный_интеллект <span class="tag-count">3</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Исламисты">
+            Исламисты <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Исламофобия">
+            Исламофобия <span class="tag-count">4</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Исламские_центры">
+            Исламские_центры <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="История">
+            История <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Карты">
+            Карты <span class="tag-count">26</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Карты_организаций">
+            Карты_организаций <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Кафир">
+            Кафир <span class="tag-count">9</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Кафиры">
+            Кафиры <span class="tag-count">18</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Коран">
+            Коран <span class="tag-count">26</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Крокус">
+            Крокус <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Крым">
+            Крым <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Мамдани">
+            Мамдани <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Медицина">
+            Медицина <span class="tag-count">5</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Мечети">
+            Мечети <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Мечеть">
+            Мечеть <span class="tag-count">21</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Мир">
+            Мир <span class="tag-count">4</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Мифы">
+            Мифы <span class="tag-count">7</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Многоженство">
+            Многоженство <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Многожёнство">
+            Многожёнство <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Молитва">
+            Молитва <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Молитвы">
+            Молитвы <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Москва">
+            Москва <span class="tag-count">3</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Мухаммед">
+            Мухаммед <span class="tag-count">26</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Намаз">
+            Намаз <span class="tag-count">4</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Насилие">
+            Насилие <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Наука">
+            Наука <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Недвижимость">
+            Недвижимость <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Нигерия">
+            Нигерия <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Никаб">
+            Никаб <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Новый_год">
+            Новый_год <span class="tag-count">3</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Обман">
+            Обман <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Омская_область">
+            Омская_область <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Опрос">
+            Опрос <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Организации">
+            Организации <span class="tag-count">19</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Отступничество">
+            Отступничество <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Пакистан">
+            Пакистан <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Пакт_Умара">
+            Пакт_Умара <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Палестина">
+            Палестина <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Подчинение">
+            Подчинение <span class="tag-count">5</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Полигамия">
+            Полигамия <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Политический">
+            Политический <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Политический_ислам">
+            Политический_ислам <span class="tag-count">336</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Право">
+            Право <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Праздники">
+            Праздники <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Превосходство">
+            Превосходство <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Призыв">
+            Призыв <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Психология">
+            Психология <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Рабство">
+            Рабство <span class="tag-count">5</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Рамадан">
+            Рамадан <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Реформа">
+            Реформа <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Реформирование">
+            Реформирование <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Рождество">
+            Рождество <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Россия">
+            Россия <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Самарская_область">
+            Самарская_область <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Свердловская_область">
+            Свердловская_область <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Светскость">
+            Светскость <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Сибирь">
+            Сибирь <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Сира">
+            Сира <span class="tag-count">5</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Сирия">
+            Сирия <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Словарь">
+            Словарь <span class="tag-count">11</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Статистика">
+            Статистика <span class="tag-count">4</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Суды">
+            Суды <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="США">
+            США <span class="tag-count">6</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Таджикистан">
+            Таджикистан <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Такия">
+            Такия <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Тактики">
+            Тактики <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Татарстан">
+            Татарстан <span class="tag-count">3</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Терпение">
+            Терпение <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Территории">
+            Территории <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Территория">
+            Территория <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Терроризм">
+            Терроризм <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Течения">
+            Течения <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Типология">
+            Типология <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Толкование">
+            Толкование <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Трилогия">
+            Трилогия <span class="tag-count">3</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Турция">
+            Турция <span class="tag-count">5</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Тюрьмы">
+            Тюрьмы <span class="tag-count">5</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Узбекистан">
+            Узбекистан <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Ульяновская_область">
+            Ульяновская_область <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Учебники">
+            Учебники <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Фай">
+            Фай <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Фетва">
+            Фетва <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Финансы">
+            Финансы <span class="tag-count">22</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Франция">
+            Франция <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Хабаровск">
+            Хабаровск <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Хавала">
+            Хавала <span class="tag-count">5</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Хадисы">
+            Хадисы <span class="tag-count">5</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Халяль">
+            Халяль <span class="tag-count">25</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Хиджаб">
+            Хиджаб <span class="tag-count">12</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Хиджра">
+            Хиджра <span class="tag-count">10</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="ХМАО">
+            ХМАО <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Храм">
+            Храм <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Христиане">
+            Христиане <span class="tag-count">18</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Христианство">
+            Христианство <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Церкви">
+            Церкви <span class="tag-count">4</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Чита">
+            Чита <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Шариат">
+            Шариат <span class="tag-count">42</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Шариатские_суды">
+            Шариатские_суды <span class="tag-count">2</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Школы">
+            Школы <span class="tag-count">7</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Экономика">
+            Экономика <span class="tag-count">4</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Экспорт">
+            Экспорт <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Экстремизм">
+            Экстремизм <span class="tag-count">1</span>
+          </button>
+          
+          
+          
+          <button class="tag-filter" data-tag="Эрдоган">
+            Эрдоган <span class="tag-count">1</span>
+          </button>
+          
+          
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+</div>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      document.querySelectorAll('.prose').forEach(function(prose) {
+        const images = prose.querySelectorAll('p > a.glightbox');
+        let currentGroup = null;
+        let groupImages = [];
+
+        images.forEach(function(link, index) {
+          const p = link.parentElement;
+          if (p.tagName === 'P' && p.children.length === 1) {
+            if (!currentGroup) {
+              currentGroup = document.createElement('div');
+              currentGroup.className = 'post-images';
+              p.parentNode.insertBefore(currentGroup, p);
+              groupImages = [];
+            }
+            currentGroup.appendChild(link);
+            groupImages.push(link);
+            p.remove();
+          }
+        });
+
+        
+        document.querySelectorAll('.post-images').forEach(function(group) {
+          if (group.children.length === 1) {
+            group.classList.add('single-image');
+          }
+        });
+      });
+
+      
+      GLightbox({ selector: '.glightbox' });
+    });
+  </script>
+</body>
+</html>

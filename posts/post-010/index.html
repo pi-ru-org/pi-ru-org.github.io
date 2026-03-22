@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+  <script>
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'serif'],
+            sans: ['system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-stone-900 dark:text-stone-100 underline decoration-stone-400 dark:decoration-stone-500 hover:decoration-stone-900 dark:hover:decoration-stone-300;
+      }
+      .prose strong {
+        @apply font-bold text-stone-900 dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-200 font-sans transition-colors duration-200">
+  
+<div class="min-h-screen">
+
+  
+  <header class="border-b border-stone-200 bg-white dark:bg-stone-900 dark:border-stone-700">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-stone-600 dark:hover:text-stone-300">
+        Здесь будет название
+      </a>
+    </div>
+  </header>
+
+  
+  <div class="border-b border-stone-100 dark:border-stone-800 bg-stone-50 dark:bg-stone-800/50">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 mb-4">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к постам
+      </a>
+      <time class="block text-xs md:text-sm text-stone-500 dark:text-stone-400 mb-2">
+        7 February 2026, 08:30
+      </time>
+      <h1 class="text-2xl md:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">
+        The Sounding of the Call
+      </h1>
+      
+      <div class="flex flex-wrap gap-2 mt-3">
+        
+        <a href="/?tag=wild" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          wild
+        </a>
+        
+        <a href="/?tag=wolf" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          wolf
+        </a>
+        
+        <a href="/?tag=nature" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          nature
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <article class="prose prose-stone dark:prose-invert max-w-none text-stone-700 dark:text-stone-300 leading-relaxed">
+      <p>The sounding of the call came more frequently now, and Buck found it increasingly difficult to resist. It came in the howling of wolves on distant ridges. It came in the rustle of wind through ancient spruces. It came in dreams that left him restless and yearning for something he could not name.</p>
+<p>John Thornton understood, in his way. He watched Buck disappear into the forest for hours at a time, and he did not try to stop him. He knew that Buck was not an ordinary dog, that something ancient and wild lived within him. The bond between them was strong enough to survive these absences.</p>
+<p>But each time Buck returned, he seemed different. There was a wildness in his eyes that had not been there before. His movements became more fluid, more predatory. He was becoming something that existed between two worlds — the world of men and the world of wolves.</p>
+<blockquote>
+<p>&ldquo;The blood-longing became stronger than ever before. He was a killer, a thing that preyed, living on the things that lived, unaided, alone, by virtue of his own strength and prowess.&rdquo;</p>
+</blockquote>
+<p>The first wolf came to him on a moonlit night. It was a lean timber wolf, gaunt with hunger but proud in bearing. Buck met him without fear, and after a moment of tension, they touched noses in greeting.</p>
+<p>They ran together through the forest, and Buck felt a joy unlike anything he had known. This was the life he was meant to live — running free with his own kind, hunting, howling at the moon. The wolf seemed to feel it too, and when they parted at dawn, Buck knew they would meet again.</p>
+<p>But always, he returned to Thornton. The love he felt for the man was too strong to abandon completely. And Thornton always welcomed him back, never questioning, never reproaching. He simply scratched Buck behind the ears and spoke gentle words, and Buck would curl up by the fire as if he had never left.</p>
+<p>The gold hunt took them deeper into the wilderness. Thornton and his partners, Hans and Pete, were following the legend of a lost mine, a vein of gold so rich that it had driven men mad with greed. Buck didn&rsquo;t understand the allure of the yellow metal, but he followed where Thornton led.</p>
+<p>The journey took months. They traveled through country where no white man had set foot before. They lived off the land, hunting and fishing, sleeping under the stars. It was a good life, and Buck thrived in it.</p>
+<p>The wolves came more often now. Sometimes Buck would spend days with them, learning their ways:</p>
+<ul>
+<li>The hierarchy of the pack</li>
+<li>The strategies of the hunt</li>
+<li>The language of howls and body postures</li>
+<li>The ancient laws that governed their lives</li>
+</ul>
+<p>He was accepted among them, though he was different. His size and strength earned their respect. His intelligence earned their wonder. And when he threw back his head and howled, the wolves answered in chorus.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>But the call of the wild was not the only voice in the wilderness. Other sounds reached Buck&rsquo;s ears — the sounds of danger and death. The Yeehats were on the warpath, and they had found Thornton&rsquo;s camp.</p>
+<p>Buck returned to find devastation. Thornton was dead, along with Hans and Pete. The Yeehats were still there, celebrating their victory. What happened next was a reckoning — Buck&rsquo;s terrible vengeance for the death of the man he loved.</p>
+<p>When it was over, Buck stood alone in the ruined camp. The last bond holding him to the world of men had been severed. There was nothing left but the wild, and the call that had never stopped sounding.</p>
+<p>For Buck&rsquo;s relationship with Thornton, see <a href="/posts/post-009/">For the Love of a Man</a>.</p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+  <script src="/js/theme.js"></script>
+</body>
+</html>

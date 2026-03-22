@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+  <script>
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'serif'],
+            sans: ['system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-stone-900 dark:text-stone-100 underline decoration-stone-400 dark:decoration-stone-500 hover:decoration-stone-900 dark:hover:decoration-stone-300;
+      }
+      .prose strong {
+        @apply font-bold text-stone-900 dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-200 font-sans transition-colors duration-200">
+  
+<div class="min-h-screen">
+
+  
+  <header class="border-b border-stone-200 bg-white dark:bg-stone-900 dark:border-stone-700">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-stone-600 dark:hover:text-stone-300">
+        Здесь будет название
+      </a>
+    </div>
+  </header>
+
+  
+  <div class="border-b border-stone-100 dark:border-stone-800 bg-stone-50 dark:bg-stone-800/50">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 mb-4">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к постам
+      </a>
+      <time class="block text-xs md:text-sm text-stone-500 dark:text-stone-400 mb-2">
+        8 February 2026, 18:45
+      </time>
+      <h1 class="text-2xl md:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">
+        Fires in the Snow
+      </h1>
+      
+      <div class="flex flex-wrap gap-2 mt-3">
+        
+        <a href="/?tag=fire" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          fire
+        </a>
+        
+        <a href="/?tag=cold" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          cold
+        </a>
+        
+        <a href="/?tag=survival" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          survival
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <article class="prose prose-stone dark:prose-invert max-w-none text-stone-700 dark:text-stone-300 leading-relaxed">
+      <p>Fires in the snow — they were the difference between life and death in the Yukon. A man without fire in the bitter cold was a dead man walking, his doom measured in minutes rather than hours. The old-timers knew this truth in their bones, and they never traveled unprepared.</p>
+<p>The day was clear and cold when the man set out on the Henderson Creek trail. Seventy-five below, the old-timer at Sulphur Creek had warned him. Too cold for traveling alone. But the man was young and confident, contemptuous of the old-timer&rsquo;s caution.</p>
+<p>He had the dog with him, a big native husky, and he carried matches in a waterproof pouch against his chest. What could go wrong? The trail was clearly marked, the daylight would last long enough, and the boys would have a fire waiting at camp.</p>
+<p><img src="/images/placeholder-1.svg" alt="Fire in the wilderness"></p>
+<p>The first sign of trouble came at the creek crossing. The ice looked solid enough, but water bubbled up through hidden springs, creating treacherous thin spots. The man broke through up to his knees, soaking his moccasins and the lower part of his legs.</p>
+<blockquote>
+<p>&ldquo;The cold of space smote the unprotected tip of the planet, and he, being on that unprotected tip, received the full force of the blow.&rdquo;</p>
+</blockquote>
+<p>Now fire was essential, not optional. He gathered twigs and branches, his fingers already numbing inside his mittens. The matches were still dry — thank God for that. He built the fire carefully, following the procedure he had learned.</p>
+<p>But he made a critical error. He built the fire under a spruce tree, where snow lay heavily on the branches above. As the heat rose, the snow melted and fell, extinguishing the flames in a great hissing cloud of steam.</p>
+<p>The man stared at the ruined fire in disbelief. His fingers were wooden things now, barely able to grip. He fumbled for more matches, dropping half of them in the snow. When he finally managed to light one, his numb hands could not hold it steady. It went out.</p>
+<p>Again and again he tried, but each attempt was more futile than the last. The cold was robbing him of sensation, of dexterity, of the ability to save himself. The dog watched with intelligent eyes, sensing that something was terribly wrong.</p>
+<p>The man&rsquo;s thoughts grew fuzzy and confused. He tried running to restore circulation, but his legs would not obey. He fell, rose, fell again. The white silence of the wilderness pressed in around him, patient and eternal.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+<p>The dog waited until the man stopped moving, then approached cautiously. It sniffed the strange scent of death, whimpered once, and then turned away. The camp was somewhere ahead, with other fire-providers, other men who understood the law of the North.</p>
+<p>It trotted off along the trail, leaving the man behind. The wilderness covered him with a blanket of snow, hiding the evidence of his folly. By spring, there would be nothing left but bones and a cautionary tale.</p>
+<p>The fire that could have saved him required only simple knowledge:</p>
+<ol>
+<li>Never build under a snow-laden tree</li>
+<li>Gather plenty of fuel before lighting</li>
+<li>Protect the flames from wind</li>
+<li>Keep matches in multiple locations</li>
+<li>Know when conditions are too dangerous for travel</li>
+</ol>
+<p>The man had known none of these things, or he had known them and ignored them. Either way, the result was the same. The cold was impartial, taking the foolish and the unlucky without distinction.</p>
+<p>This story connects to themes in <a href="/posts/post-003/">To Build a Fire</a>.</p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+  <script src="/js/theme.js"></script>
+</body>
+</html>

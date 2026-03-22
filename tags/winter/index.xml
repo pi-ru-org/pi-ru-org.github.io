@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Winter on Здесь будет название</title>
+    <link>http://localhost:1313/tags/winter/</link>
+    <description>Recent content in Winter on Здесь будет название</description>
+    <generator>Hugo</generator>
+    <language>ru</language>
+    <lastBuildDate>Mon, 16 Feb 2026 12:00:00 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/winter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>In a Far Country</title>
+      <link>http://localhost:1313/posts/post-020/</link>
+      <pubDate>Mon, 16 Feb 2026 12:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/post-020/</guid>
+      <description>&lt;p&gt;In a far country, far from civilization and its comforts, two men faced the long Arctic winter. Carter Weatherbee and Percy Cuthfert were ill-suited for the North — soft men, city men, who had joined the gold rush on a whim without understanding what it would demand of them.&lt;/p&gt;&#xA;&lt;p&gt;The cabin they shared was small and poorly built, hastily constructed before the first snows. It would be their home for eight months, until the spring thaw made travel possible again. Eight months of darkness, cold, and each other&amp;rsquo;s company.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Northern Lights</title>
+      <link>http://localhost:1313/posts/post-016/</link>
+      <pubDate>Thu, 12 Feb 2026 20:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/post-016/</guid>
+      <description>&lt;p&gt;The northern lights danced across the sky in ribbons of green and purple, a celestial display that never failed to inspire awe. The miners stopped their work to watch. The dogs lifted their heads from their paws. Even the most hardened sourdoughs felt something stir in their chests at the sight.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The White Silence</title>
+      <link>http://localhost:1313/posts/post-014/</link>
+      <pubDate>Tue, 10 Feb 2026 14:30:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/post-014/</guid>
+      <description>&lt;p&gt;The white silence of the North was unlike any quiet known to civilization. It was not merely an absence of sound but a presence in itself — vast, ancient, indifferent. Men who traveled through it felt the weight of it pressing down upon them, demanding respect, punishing hubris.&lt;/p&gt;&#xA;&lt;p&gt;Carmen and the kid traveled through this silence, their sled dogs panting in the thin, cold air. The temperature had dropped steadily for three days, and now it hovered somewhere around sixty below. At these temperatures, the very air seemed to crystallize, and breath froze in beards and on eyelashes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

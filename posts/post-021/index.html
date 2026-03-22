@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+  <script>
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'serif'],
+            sans: ['system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-stone-900 dark:text-stone-100 underline decoration-stone-400 dark:decoration-stone-500 hover:decoration-stone-900 dark:hover:decoration-stone-300;
+      }
+      .prose strong {
+        @apply font-bold text-stone-900 dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-200 font-sans transition-colors duration-200">
+  
+<div class="min-h-screen">
+
+  
+  <header class="border-b border-stone-200 bg-white dark:bg-stone-900 dark:border-stone-700">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-stone-600 dark:hover:text-stone-300">
+        Здесь будет название
+      </a>
+    </div>
+  </header>
+
+  
+  <div class="border-b border-stone-100 dark:border-stone-800 bg-stone-50 dark:bg-stone-800/50">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 mb-4">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к постам
+      </a>
+      <time class="block text-xs md:text-sm text-stone-500 dark:text-stone-400 mb-2">
+        17 February 2026, 08:30
+      </time>
+      <h1 class="text-2xl md:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">
+        The Sun-Dog Trail
+      </h1>
+      
+      <div class="flex flex-wrap gap-2 mt-3">
+        
+        <a href="/?tag=journey" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          journey
+        </a>
+        
+        <a href="/?tag=dog" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          dog
+        </a>
+        
+        <a href="/?tag=alaska" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          alaska
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <article class="prose prose-stone dark:prose-invert max-w-none text-stone-700 dark:text-stone-300 leading-relaxed">
+      <p>The sun-dog trail stretched across the frozen landscape, named for the optical phenomena that appeared on bright winter days — false suns flanking the real one, created by ice crystals in the atmosphere. The old-timers took sun dogs as a sign, though they disagreed about what the sign meant.</p>
+<p>Sitka Charley was running the mail that winter, a hundred pounds of letters and packages destined for the mining camps along the Yukon. He was a native man, one of the few trusted with this crucial work, his knowledge of the land unmatched by any white man in the territory.</p>
+<p>His dogs were the finest team in the North — twelve huskies bred for endurance and speed, led by a massive gray male named Dozer. Together, they had set records that stood for years, traversing routes that other mushers considered impossible.</p>
+<p>The trail to Dyea was particularly demanding. It crossed three mountain passes, followed frozen rivers that could break without warning, and passed through territory where wolves and weather competed to claim the unwary. But Sitka Charley ran it as casually as another man might walk to town.</p>
+<blockquote>
+<p>&ldquo;The dogs knew the trail better than he did. He trusted them with his life, and they had never failed him.&rdquo;</p>
+</blockquote>
+<p>On this particular run, the sun dogs appeared early on the second day — bright spots of light flanking the winter sun, beautiful and ominous. Sitka Charley noted them without comment. The trail ahead was long, and he had no time for superstition.</p>
+<p>The first sign of trouble came at noon. Dozer slowed without command, his nose testing the air. The other dogs picked up his tension, their ears pricking forward, their tails straightening. Something was wrong ahead.</p>
+<p>Sitka Charley trusted his lead dog. He called a halt and went forward on snowshoes to investigate. He found the danger quickly — a section of trail that had collapsed into a hidden crevasse. If they had continued at speed, the whole team would have plunged to their deaths.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+<p>Finding an alternate route took hours, but Sitka Charley was patient. Better to arrive late than not at all. He led the team around the danger, testing every foot of snow with his pole before committing the sled and dogs.</p>
+<p>The remainder of the journey passed without incident. They arrived in Dyea at dusk, the dogs tired but proud, the mail intact. The men at the post were glad to see them — they had begun to worry when the scheduled arrival time passed.</p>
+<p>That night, warming himself by the fire, Sitka Charley reflected on the sun dogs and their warning:</p>
+<ol>
+<li>The trail was not to be trusted</li>
+<li>Even familiar routes held hidden dangers</li>
+<li>The dogs knew things that humans did not</li>
+<li>Patience and caution saved lives</li>
+<li>Arriving late was better than not arriving at all</li>
+</ol>
+<p>The sun-dog trail would claim other victims in the years to come. The crevasse that Sitka Charley had avoided would trap two other teams before spring made the route impassable. But Sitka Charley would not be among the victims. He knew the ways of the North, respected its dangers, and lived to run another day.</p>
+<p>For more about sled dogs, see <a href="/posts/post-015/">Sons of the Wolf</a>.</p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+  <script src="/js/theme.js"></script>
+</body>
+</html>

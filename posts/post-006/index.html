@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здесь будет название</title>
+  <script>
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'serif'],
+            sans: ['system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400;
+      }
+      .prose a {
+        @apply text-stone-900 dark:text-stone-100 underline decoration-stone-400 dark:decoration-stone-500 hover:decoration-stone-900 dark:hover:decoration-stone-300;
+      }
+      .prose strong {
+        @apply font-bold text-stone-900 dark:text-stone-100;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1;
+      }
+      .prose ol {
+        @apply list-decimal pl-6 space-y-1;
+      }
+      .prose img {
+        @apply rounded-lg my-6 w-full;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-200 font-sans transition-colors duration-200">
+  
+<div class="min-h-screen">
+
+  
+  <header class="border-b border-stone-200 bg-white dark:bg-stone-900 dark:border-stone-700">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-stone-600 dark:hover:text-stone-300">
+        Здесь будет название
+      </a>
+    </div>
+  </header>
+
+  
+  <div class="border-b border-stone-100 dark:border-stone-800 bg-stone-50 dark:bg-stone-800/50">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 mb-4">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Назад к постам
+      </a>
+      <time class="block text-xs md:text-sm text-stone-500 dark:text-stone-400 mb-2">
+        3 February 2026, 14:00
+      </time>
+      <h1 class="text-2xl md:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">
+        The Dominant Primordial Beast
+      </h1>
+      
+      <div class="flex flex-wrap gap-2 mt-3">
+        
+        <a href="/?tag=wild" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          wild
+        </a>
+        
+        <a href="/?tag=dog" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          dog
+        </a>
+        
+        <a href="/?tag=strength" class="text-xs bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300 px-2 py-1 rounded hover:bg-stone-300 dark:hover:bg-stone-600 transition-colors">
+          strength
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <article class="prose prose-stone dark:prose-invert max-w-none text-stone-700 dark:text-stone-300 leading-relaxed">
+      <p>The dominant primordial beast was strong in Buck, and under the fierce conditions of trail life it grew and grew. Yet it was a secret growth. His newborn cunning gave him poise and control. He was too busy adjusting himself to the new life to feel at ease, and not only did he not pick fights, but he avoided them whenever possible.</p>
+<p>This was the wisdom of the wild, learned through harsh experience. A fight meant injury, and injury meant weakness, and weakness meant death. Better to wait, to watch, to grow strong in secret while others expended their energy in pointless conflicts.</p>
+<blockquote>
+<p>&ldquo;Deep in the forest a call was sounding, and as often as he heard this call, mysteriously thrilling and luring, he felt compelled to turn his back upon the fire and the beaten earth around it.&rdquo;</p>
+</blockquote>
+<p>The call grew stronger with each passing day. It came in dreams — visions of ancient forests, of running free beneath the stars, of hunting with the pack in the endless wilderness. Buck would wake from these dreams with his heart pounding, a strange longing filling his chest.</p>
+<p>But there was work to be done. The mail must go through, and Buck threw himself into the labor with savage joy. He learned the tricks of the trade:</p>
+<ol>
+<li>How to break trail through deep snow</li>
+<li>When to give way to the swing dogs</li>
+<li>The proper rhythm for long-distance running</li>
+<li>How to conserve energy on difficult stretches</li>
+<li>The art of sleeping while standing in traces</li>
+</ol>
+<p>These skills served him well, and François took notice. &ldquo;Dat Buck, him pool lak two devils,&rdquo; he said to Perrault. &ldquo;Nevaire such a dog as dat Buck.&rdquo;</p>
+<p>The praise meant nothing to Buck, but the increased rations did. Food was everything in the North — fuel for the endless miles, warmth against the bitter cold. He learned to eat quickly, before others could steal his portion. He learned to steal from others when the opportunity arose. There was no shame in it; it was simply survival.</p>
+<p><img src="/images/placeholder-2.svg" alt="The frozen trail"></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcies nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+<p>Spitz watched Buck&rsquo;s development with growing unease. The white dog was experienced enough to recognize a threat when he saw one. Buck was not just adapting to the North; he was thriving in it, growing stronger and more confident with each passing day.</p>
+<p>The first real confrontation came over a nest. Buck had dug himself a comfortable hollow in the snow, only to find Spitz occupying it when he returned from eating. The rage that filled Buck was not the civilized anger of the Southland. It was something older, more primal — the fury of the beast defending its territory.</p>
+<p>They circled each other, hackles raised, teeth bared. The other dogs gathered to watch, forming a ring around the combatants. This was the way of things, the ancient ritual of dominance and submission that had played out countless times since the first wolves roamed the earth.</p>
+<p>But the fight was interrupted by the sudden arrival of starving huskies from an Indian camp. The wild dogs descended upon the camp like a plague, stealing food and attacking the team dogs. In the confusion, the challenge between Buck and Spitz was postponed — but not forgotten.</p>
+<p>The incident left its mark on Buck. He had tasted the fury of battle, felt the hot joy of combat singing through his veins. The primordial beast within him had awakened fully, and it would not sleep again.</p>
+<p>Learn more about Buck&rsquo;s origins in <a href="/posts/post-001/">The Call of the Wild</a>.</p>
+
+    </article>
+  </main>
+
+</div>
+
+  <script src="/js/filter.js"></script>
+  <script src="/js/calendar.js"></script>
+  <script src="/js/theme.js"></script>
+</body>
+</html>
