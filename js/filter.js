@@ -1,10 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Elements
+  // Elements - Desktop
   const searchInput = document.getElementById('search-input');
   const searchResults = document.getElementById('search-results');
   const searchIcon = document.getElementById('search-icon');
   const clearIcon = document.getElementById('clear-icon');
   const searchIconBtn = document.getElementById('search-icon-btn');
+
+  // Elements - Mobile
+  const mobileSearchInput = document.getElementById('mobile-search-input');
+  const mobileSearchResults = document.getElementById('mobile-search-results');
+
   const tagFilters = document.querySelectorAll('.tag-filter');
   const tagItems = document.querySelectorAll('.tag-item');
   const posts = document.querySelectorAll('.post-item');
@@ -16,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const siteLogo = document.getElementById('site-logo');
   const paginationNav = document.getElementById('pagination-nav');
 
-  if (!searchInput) return;
+  if (!searchInput && !mobileSearchInput) return;
 
   let activeFilter = { type: null, value: null };
   let selectedResultIndex = -1;
@@ -30,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Update search icon
   function updateSearchIcon() {
-    const hasValue = searchInput.value.length > 0;
+    const hasValue = searchInput && searchInput.value.length > 0;
     if (searchIcon && clearIcon) {
       searchIcon.classList.toggle('hidden', hasValue);
       clearIcon.classList.toggle('hidden', !hasValue);
@@ -100,6 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (searchInput) searchInput.value = '';
     if (searchResults) searchResults.classList.add('hidden');
+    if (mobileSearchInput) mobileSearchInput.value = '';
+    if (mobileSearchResults) mobileSearchResults.classList.add('hidden');
 
     posts.forEach(post => post.style.display = 'block');
 
@@ -116,6 +123,8 @@ document.addEventListener('DOMContentLoaded', function() {
   function filterByTag(tag) {
     if (searchInput) searchInput.value = '';
     if (searchResults) searchResults.classList.add('hidden');
+    if (mobileSearchInput) mobileSearchInput.value = '';
+    if (mobileSearchResults) mobileSearchResults.classList.add('hidden');
     updateSearchIcon();
 
     const lowerTag = tag ? tag.toLowerCase() : '';
@@ -139,6 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function filterByText(query) {
     updateTagButtons('');
     if (searchResults) searchResults.classList.add('hidden');
+    if (mobileSearchResults) mobileSearchResults.classList.add('hidden');
 
     const lowerQuery = query.toLowerCase();
     posts.forEach(post => {
@@ -154,6 +164,8 @@ document.addEventListener('DOMContentLoaded', function() {
   window.filterByDateWithStatus = function(dateKey, displayDate) {
     if (searchInput) searchInput.value = '';
     if (searchResults) searchResults.classList.add('hidden');
+    if (mobileSearchInput) mobileSearchInput.value = '';
+    if (mobileSearchResults) mobileSearchResults.classList.add('hidden');
     updateTagButtons('');
     updateSearchIcon();
 
@@ -203,6 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Highlight search result
   function highlightResult(index) {
+    if (!searchResults) return;
     const items = searchResults.querySelectorAll('.search-result-item');
     items.forEach((item, i) => {
       item.classList.toggle('bg-stone-100', i === index);
@@ -211,106 +224,108 @@ document.addEventListener('DOMContentLoaded', function() {
     selectedResultIndex = index;
   }
 
-  // Search input
-  searchInput.addEventListener('input', function(e) {
-    const query = e.target.value.trim();
-    updateSearchIcon();
-    selectedResultIndex = -1;
-
-    if (query.length < 2) {
-      searchResults.classList.add('hidden');
-      if (query.length === 0) resetFilters();
-      return;
-    }
-
-    const lowerQuery = query.toLowerCase();
-    const results = [];
-
-    allTags.forEach(tag => {
-      if (tag.toLowerCase().includes(lowerQuery)) {
-        results.push({ type: 'tag', value: tag });
-      }
-    });
-
-    results.push({ type: 'text', value: query });
-
-    searchResults.innerHTML = results.map((r, i) => {
-      const baseClass = 'search-result-item block w-full text-left px-4 py-2 text-sm text-stone-700 dark:text-stone-300 cursor-pointer';
-      if (r.type === 'tag') {
-        return `<div class="${baseClass}" data-type="tag" data-value="${r.value}" data-index="${i}">
-          <span class="text-stone-400 dark:text-stone-500">Тег:</span> ${r.value}
-        </div>`;
-      } else {
-        return `<div class="${baseClass}" data-type="text" data-value="${r.value}" data-index="${i}">
-          <span class="text-stone-400 dark:text-stone-500">Искать:</span> "${r.value}"
-        </div>`;
-      }
-    }).join('');
-
-    searchResults.classList.remove('hidden');
-
-    // Click handlers
-    searchResults.querySelectorAll('.search-result-item').forEach(item => {
-      item.addEventListener('click', () => {
-        selectResult(item);
-      });
-      item.addEventListener('mouseenter', () => {
-        highlightResult(parseInt(item.dataset.index));
-      });
-    });
-  });
-
-  // Select result
+  // Select result (desktop)
   function selectResult(item) {
     const type = item.dataset.type;
     const value = item.dataset.value;
 
     if (type === 'tag') {
       filterByTag(value);
-      searchInput.value = '';
+      if (searchInput) searchInput.value = '';
     } else {
       filterByText(value);
-      searchInput.value = value;
+      if (searchInput) searchInput.value = value;
     }
-    searchResults.classList.add('hidden');
+    if (searchResults) searchResults.classList.add('hidden');
     updateSearchIcon();
   }
 
-  // Keyboard navigation
-  searchInput.addEventListener('keydown', function(e) {
-    const items = searchResults.querySelectorAll('.search-result-item');
-    if (items.length === 0 || searchResults.classList.contains('hidden')) {
-      if (e.key === 'Enter' && searchInput.value.trim().length >= 2) {
-        filterByText(searchInput.value.trim());
-      }
-      return;
-    }
-
-    if (e.key === 'ArrowDown') {
-      e.preventDefault();
-      const newIndex = selectedResultIndex < items.length - 1 ? selectedResultIndex + 1 : 0;
-      highlightResult(newIndex);
-    } else if (e.key === 'ArrowUp') {
-      e.preventDefault();
-      const newIndex = selectedResultIndex > 0 ? selectedResultIndex - 1 : items.length - 1;
-      highlightResult(newIndex);
-    } else if (e.key === 'Enter') {
-      e.preventDefault();
-      if (selectedResultIndex >= 0 && items[selectedResultIndex]) {
-        selectResult(items[selectedResultIndex]);
-      } else {
-        // Default to text search
-        filterByText(searchInput.value.trim());
-        searchResults.classList.add('hidden');
-      }
-    } else if (e.key === 'Escape') {
-      searchResults.classList.add('hidden');
+  // Desktop search input
+  if (searchInput && searchResults) {
+    searchInput.addEventListener('input', function(e) {
+      const query = e.target.value.trim();
+      updateSearchIcon();
       selectedResultIndex = -1;
-    }
-  });
 
-  // Clear button click
-  if (searchIconBtn) {
+      if (query.length < 2) {
+        searchResults.classList.add('hidden');
+        if (query.length === 0) resetFilters();
+        return;
+      }
+
+      const lowerQuery = query.toLowerCase();
+      const results = [];
+
+      allTags.forEach(tag => {
+        if (tag.toLowerCase().includes(lowerQuery)) {
+          results.push({ type: 'tag', value: tag });
+        }
+      });
+
+      results.push({ type: 'text', value: query });
+
+      searchResults.innerHTML = results.map((r, i) => {
+        const baseClass = 'search-result-item block w-full text-left px-4 py-2 text-sm text-stone-700 dark:text-stone-300 cursor-pointer';
+        if (r.type === 'tag') {
+          return `<div class="${baseClass}" data-type="tag" data-value="${r.value}" data-index="${i}">
+            <span class="text-stone-400 dark:text-stone-500">Тег:</span> ${r.value}
+          </div>`;
+        } else {
+          return `<div class="${baseClass}" data-type="text" data-value="${r.value}" data-index="${i}">
+            <span class="text-stone-400 dark:text-stone-500">Искать:</span> "${r.value}"
+          </div>`;
+        }
+      }).join('');
+
+      searchResults.classList.remove('hidden');
+
+      // Click handlers
+      searchResults.querySelectorAll('.search-result-item').forEach(item => {
+        item.addEventListener('click', () => {
+          selectResult(item);
+        });
+        item.addEventListener('mouseenter', () => {
+          highlightResult(parseInt(item.dataset.index));
+        });
+      });
+    });
+
+    // Keyboard navigation (desktop)
+    searchInput.addEventListener('keydown', function(e) {
+      const items = searchResults.querySelectorAll('.search-result-item');
+      if (items.length === 0 || searchResults.classList.contains('hidden')) {
+        if (e.key === 'Enter' && searchInput.value.trim().length >= 2) {
+          filterByText(searchInput.value.trim());
+        }
+        return;
+      }
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        const newIndex = selectedResultIndex < items.length - 1 ? selectedResultIndex + 1 : 0;
+        highlightResult(newIndex);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const newIndex = selectedResultIndex > 0 ? selectedResultIndex - 1 : items.length - 1;
+        highlightResult(newIndex);
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (selectedResultIndex >= 0 && items[selectedResultIndex]) {
+          selectResult(items[selectedResultIndex]);
+        } else {
+          // Default to text search
+          filterByText(searchInput.value.trim());
+          searchResults.classList.add('hidden');
+        }
+      } else if (e.key === 'Escape') {
+        searchResults.classList.add('hidden');
+        selectedResultIndex = -1;
+      }
+    });
+  }
+
+  // Clear button click (desktop)
+  if (searchIconBtn && searchInput) {
     searchIconBtn.addEventListener('click', () => {
       if (searchInput.value.length > 0) {
         resetFilters();
@@ -320,11 +335,86 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Close dropdown on outside click
   document.addEventListener('click', (e) => {
-    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+    if (searchInput && searchResults && !searchInput.contains(e.target) && !searchResults.contains(e.target)) {
       searchResults.classList.add('hidden');
       selectedResultIndex = -1;
     }
+    if (mobileSearchInput && mobileSearchResults && !mobileSearchInput.contains(e.target) && !mobileSearchResults.contains(e.target)) {
+      mobileSearchResults.classList.add('hidden');
+    }
   });
+
+  // === Mobile Search ===
+  if (mobileSearchInput && mobileSearchResults) {
+    mobileSearchInput.addEventListener('input', function(e) {
+      const query = e.target.value.trim();
+
+      if (query.length < 2) {
+        mobileSearchResults.classList.add('hidden');
+        return;
+      }
+
+      const lowerQuery = query.toLowerCase();
+      const results = [];
+
+      allTags.forEach(tag => {
+        if (tag.toLowerCase().includes(lowerQuery)) {
+          results.push({ type: 'tag', value: tag });
+        }
+      });
+
+      results.push({ type: 'text', value: query });
+
+      mobileSearchResults.innerHTML = results.map((r, i) => {
+        const baseClass = 'search-result-item block w-full text-left px-4 py-3 text-base text-stone-700 dark:text-stone-300 cursor-pointer border-b border-gray-100 dark:border-gray-700 last:border-0';
+        if (r.type === 'tag') {
+          return `<div class="${baseClass}" data-type="tag" data-value="${r.value}" data-index="${i}">
+            <span class="text-stone-400 dark:text-stone-500">Тег:</span> ${r.value}
+          </div>`;
+        } else {
+          return `<div class="${baseClass}" data-type="text" data-value="${r.value}" data-index="${i}">
+            <span class="text-stone-400 dark:text-stone-500">Искать:</span> "${r.value}"
+          </div>`;
+        }
+      }).join('');
+
+      mobileSearchResults.classList.remove('hidden');
+
+      // Click handlers for mobile results
+      mobileSearchResults.querySelectorAll('.search-result-item').forEach(item => {
+        item.addEventListener('click', () => {
+          const type = item.dataset.type;
+          const value = item.dataset.value;
+
+          if (type === 'tag') {
+            filterByTag(value);
+            mobileSearchInput.value = '';
+          } else {
+            filterByText(value);
+            mobileSearchInput.value = value;
+          }
+          mobileSearchResults.classList.add('hidden');
+          // Скрыть панель поиска
+          const searchPanel = document.getElementById('mobile-search-panel');
+          if (searchPanel) searchPanel.classList.add('hidden');
+        });
+      });
+    });
+
+    // Enter key for mobile search
+    mobileSearchInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        const query = mobileSearchInput.value.trim();
+        if (query.length >= 2) {
+          filterByText(query);
+          mobileSearchResults.classList.add('hidden');
+          // Скрыть панель поиска
+          const searchPanel = document.getElementById('mobile-search-panel');
+          if (searchPanel) searchPanel.classList.add('hidden');
+        }
+      }
+    });
+  }
 
   // Tag filter clicks
   tagFilters.forEach(btn => {
@@ -355,5 +445,12 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     });
+  }
+
+  // Проверяем URL параметр ?tag= при загрузке страницы
+  const urlParams = new URLSearchParams(window.location.search);
+  const tagFromUrl = urlParams.get('tag');
+  if (tagFromUrl) {
+    filterByTag(tagFromUrl);
   }
 });
