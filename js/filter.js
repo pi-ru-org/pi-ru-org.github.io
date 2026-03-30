@@ -26,11 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
   let activeFilter = { type: null, value: null };
   let selectedResultIndex = -1;
 
-  // Collect all tags
+  // Collect all tags (exclude "без_тега")
   const allTags = new Set();
   posts.forEach(post => {
     const tags = post.dataset.tags ? post.dataset.tags.split(',') : [];
-    tags.forEach(tag => { if (tag) allTags.add(tag); });
+    tags.forEach(tag => {
+      if (tag && tag.toLowerCase() !== 'без_тега') allTags.add(tag);
+    });
   });
 
   // Update search icon
