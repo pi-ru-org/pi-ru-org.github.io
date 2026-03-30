@@ -1,23 +1,37 @@
-<!doctype html><html lang=ru><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Политический ислам. Россия.</title><link rel=icon type=image/svg+xml href=../../favicon.svg><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel=stylesheet><script src=https://cdn.tailwindcss.com></script><script>tailwind.config={darkMode:"class",theme:{extend:{colors:{primary:"#22292F",secondary:"#232C40",accent:"#E76363"},fontFamily:{sans:["Inter","Helvetica","sans-serif"]},maxWidth:{content:"800px",layout:"860px"},spacing:{sidebar:"200px"}}}}</script><script>const saved=localStorage.getItem("theme"),sysDark=window.matchMedia("(prefers-color-scheme: dark)").matches;(saved==="dark"||!saved&&sysDark)&&document.documentElement.classList.add("dark")</script><style type=text/tailwindcss>
+<!doctype html><html lang=ru><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Политический ислам. Россия.</title><link rel=icon type=image/svg+xml href=../../favicon.svg><script src=https://cdn.tailwindcss.com></script><script>tailwind.config={darkMode:"class",theme:{extend:{colors:{primary:"#22292F",secondary:"#232C40",accent:"#E76363"},fontFamily:{sans:["-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","sans-serif"]},maxWidth:{content:"800px",layout:"1100px"},spacing:{sidebar:"200px"}}}}</script><script>const saved=localStorage.getItem("theme"),sysDark=window.matchMedia("(prefers-color-scheme: dark)").matches;(saved==="dark"||!saved&&sysDark)&&document.documentElement.classList.add("dark")</script><style type=text/tailwindcss>
     @layer base {
+      html, body {
+        overflow-x: hidden;
+        max-width: 100vw;
+      }
       body {
-        @apply bg-white text-gray-900;
-        font-family: 'Inter', Helvetica, sans-serif;
+        @apply bg-white text-gray-900 font-sans;
         line-height: 1.3;
       }
       .dark body {
         @apply bg-black text-gray-100;
       }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Inter', Helvetica, sans-serif;
-      }
       .prose {
-        line-height: 1.3;
+        line-height: 1.6;
+      }
+       
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
       }
     }
     @layer utilities {
       .prose p {
         @apply mb-4;
+      }
+      .prose h2 {
+        @apply text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4;
+      }
+      .prose h2:first-child {
+        @apply mt-0;
       }
       .prose blockquote {
         @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400 my-4;
@@ -29,10 +43,15 @@
         @apply font-semibold;
       }
       .prose ul {
-        @apply list-disc pl-6 space-y-1;
+        @apply list-disc pl-6 space-y-1 mb-4;
       }
       .prose ol {
-        @apply list-decimal pl-6 space-y-1;
+        list-style-type: decimal;
+        padding-left: 1rem;
+        padding-bottom: 16px;
+      }
+      .prose ol li {
+        padding-left: 8px;
       }
       .prose .post-images {
         display: flex;
@@ -60,35 +79,39 @@
         }
       }
        
-      article.single-post .prose a[href^="http"] {
+      article.single-post .prose a {
         @apply no-underline;
         color: #dc2626;
       }
-      article.single-post .prose a[href^="http"]:hover {
+      article.single-post .prose a:hover {
         color: #b91c1c;
       }
-      .dark article.single-post .prose a[href^="http"] {
+      .dark article.single-post .prose a {
         color: #ef4444;
       }
-      .dark article.single-post .prose a[href^="http"]:hover {
+      .dark article.single-post .prose a:hover {
         color: #f87171;
       }
-      article.single-post .prose a[href^="http"]::after {
+      article.single-post .prose a::after {
         content: none;
       }
 
        
-      .post-preview a, .post-card a, article:not(.single-post) .prose a {
+      a.post-preview {
+        @apply no-underline;
+        color: inherit;
+      }
+       
+      .post-preview .prose a {
         @apply no-underline;
         color: inherit;
         pointer-events: none;
       }
-      .post-preview a::after, .post-card a::after, article:not(.single-post) .prose a::after {
+      .post-preview .prose a::after {
         content: none;
       }
       .post-title {
-        @apply font-serif font-normal tracking-tight;
-        font-feature-settings: 'pnum' on, 'lnum' on;
+        @apply font-sans font-normal tracking-tight;
       }
       .post-body {
         @apply font-sans font-normal;
@@ -111,15 +134,23 @@
       .tag-link, .tag-item, .tag-filter, .post-tags a, .sidebar-tags a, .sidebar-tags button {
         display: inline-flex;
         align-items: center;
-        height: 40px;
-        padding-left: 16px;
-        padding-right: 16px;
-        font-size: 0.8rem;
+        height: 32px;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 0.75rem;
         border-radius: 9999px;
         background-color: #f3f4f6;
         color: #444444;
         cursor: pointer;
         transition: background-color 0.2s;
+      }
+      @media (min-width: 768px) {
+        .tag-link, .tag-item, .tag-filter, .post-tags a, .sidebar-tags a, .sidebar-tags button {
+          height: 40px;
+          padding-left: 16px;
+          padding-right: 16px;
+          font-size: 0.8rem;
+        }
       }
       .tag-link:hover, .tag-item:hover, .tag-filter:hover, .post-tags a:hover, .sidebar-tags a:hover, .sidebar-tags button:hover {
         background-color: #e5e7eb;
@@ -143,19 +174,36 @@
 
       .post-tags {
         @apply flex flex-wrap gap-2;
-        margin-top: 32px;
+        margin-top: 24px;
+      }
+      @media (min-width: 768px) {
+        .post-tags {
+          margin-top: 32px;
+        }
       }
 
        
       .post-nav {
-        @apply grid grid-cols-2 gap-4;
-        margin-top: 48px;
-        margin-bottom: 52px;
+        @apply grid grid-cols-2 gap-2;
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+      @media (min-width: 768px) {
+        .post-nav {
+          gap: 16px;
+          margin-top: 48px;
+          margin-bottom: 52px;
+        }
       }
       .post-nav-link {
         @apply flex rounded-lg border border-gray-200 hover:border-gray-400 transition-colors;
         flex-direction: column;
-        padding: 16px;
+        padding: 12px;
+      }
+      @media (min-width: 768px) {
+        .post-nav-link {
+          padding: 16px;
+        }
       }
       .dark .post-nav-link {
         @apply border-gray-800 hover:border-gray-600;
@@ -169,9 +217,16 @@
         text-align: right;
       }
       .post-nav-arrow {
-        width: 40px;
-        height: 40px;
-        @apply mb-2;
+        width: 28px;
+        height: 28px;
+        @apply mb-1;
+      }
+      @media (min-width: 768px) {
+        .post-nav-arrow {
+          width: 40px;
+          height: 40px;
+          @apply mb-2;
+        }
       }
       .post-nav-arrow svg {
         width: 100%;
@@ -182,7 +237,12 @@
         stroke: #ffffff;
       }
       .post-nav-title {
-        @apply text-sm font-medium line-clamp-2;
+        @apply text-xs font-medium line-clamp-2;
+      }
+      @media (min-width: 768px) {
+        .post-nav-title {
+          @apply text-sm;
+        }
       }
 
        
@@ -192,7 +252,12 @@
 
        
       .back-link {
-        @apply inline-flex items-center gap-2 text-base font-medium text-gray-600 hover:text-gray-900 mb-8;
+        @apply inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 mb-4;
+      }
+      @media (min-width: 768px) {
+        .back-link {
+          @apply text-base mb-8;
+        }
       }
       .dark .back-link {
         @apply text-gray-400 hover:text-gray-100;
@@ -210,87 +275,154 @@
       }
 
        
-      header {
-        height: 90px;
-        background-color: #ffffff !important;
+      header > div:first-child {
+        height: 60px;
       }
-      .dark header {
-        background-color: #000000 !important;
-      }
-
-       
-      body {
-        background-color: #ffffff !important;
-      }
-      .dark body {
-        background-color: #000000 !important;
+      @media (min-width: 768px) {
+        header > div:first-child {
+          height: 80px;
+        }
       }
 
        
-      #search-input::placeholder {
-        font-size: 0.8rem;
+      #search-input::placeholder,
+      #mobile-search-input::placeholder {
         color: #9ca3af;
       }
-
-       
-      .tag-filter {
-        height: 36px !important;
-        padding-left: 14px !important;
-        padding-right: 14px !important;
+      .dark #search-input::placeholder,
+      .dark #mobile-search-input::placeholder {
+        color: #6b7280;
       }
 
        
-      .post-preview .tag-item, article.post-preview .tag-item {
-        height: 20px !important;
-        padding-left: 8px !important;
-        padding-right: 8px !important;
-        font-size: 0.65rem !important;
-        color: #9ca3af !important;
-        background-color: #f3f4f6 !important;
-        pointer-events: none;
-        cursor: default;
+      .post-preview .tag-item {
+        height: 24px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 0.7rem;
+        color: #9ca3af;
+        background-color: #f3f4f6;
       }
       .dark .post-preview .tag-item {
-        color: #6b7280 !important;
-        background-color: #1f2937 !important;
+        color: #6b7280;
+        background-color: #1f2937;
       }
 
        
-      .post-preview h2, article.post-preview h2 {
-        font-size: 1.2rem;
-        line-height: 1.6;
+      .post-preview h2 {
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+      @media (min-width: 768px) {
+        .post-preview h2 {
+          font-size: 1.2rem;
+          line-height: 1.5;
+        }
       }
 
        
       main, .main-content {
-        padding-top: 60px;
+        padding-top: 16px;
       }
-
-       
-      #search-input {
-        font-size: 0.8rem;
-      }
-
-       
-      article.single-post .prose {
-        font-size: 1.0625rem;  
-        line-height: 1.45;
+      @media (min-width: 768px) {
+        main, .main-content {
+          padding-top: 40px;
+        }
       }
 
        
       aside, .sidebar, .tags-sidebar {
-        padding-top: 60px;
+        padding-top: 16px;
+      }
+      @media (min-width: 768px) {
+        aside, .sidebar, .tags-sidebar {
+          padding-top: 40px;
+        }
+      }
+
+       
+      .footnote {
+        margin-top: 32px;
+        padding-top: 0;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: #6b7280;
+      }
+      .dark .footnote {
+        color: #9ca3af;
+      }
+      .footnote p {
+        margin-bottom: 0.5rem;
+      }
+       
+      .prose hr + .footnote {
+        margin-top: 0;
+      }
+      .prose hr:has(+ .footnote),
+      .prose hr:last-of-type {
+        display: none;
+      }
+
+       
+      .posts-list .post-preview {
+        position: relative;
+      }
+      .posts-list .post-preview::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 16px;
+        right: 16px;
+        height: 1px;
+        background-color: #ebebeb;
+      }
+      .dark .posts-list .post-preview::after {
+        background-color: #2a2a2a;
+      }
+      .posts-list .post-preview:last-child::after {
+        display: none;
       }
     }
-  </style><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css></head><body class=font-sans><header class="w-full border-b border-gray-200 dark:border-gray-800"><div class="mx-auto px-[54px] h-full flex items-center gap-6" style=max-width:1920px><a href=../../ class="flex items-center gap-3 flex-shrink-0"><img src=../../favicon.svg class="w-8 h-8" alt>
-<span class="font-semibold text-lg text-gray-900 dark:text-gray-100">Политический ислам. Россия.</span></a><div class=flex-1></div><div class="hidden md:flex items-center gap-4"><div class=relative><input type=text id=search-input placeholder="Поиск публикаций" class="w-[260px] px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-gray-400">
-<button id=search-icon-btn class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+  </style><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css></head><body class=font-sans><header class="w-full border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50 bg-white dark:bg-black"><div class="mx-auto px-4 md:px-12 h-full flex items-center gap-3 md:gap-6 max-w-7xl"><a href=../../ class="flex items-center gap-2 md:gap-3 flex-shrink-0" aria-label="На главную"><img src=../../logo-light-mode.svg class="w-8 h-8 block dark:hidden" alt>
+<img src=../../logo-dark-mode.svg class="w-8 h-8 hidden dark:block" alt>
+<span class="md:hidden font-semibold text-[0.75rem] leading-tight text-gray-900 dark:text-gray-100">Политический ислам.<br>Россия
+</span><span class="hidden md:block font-semibold text-lg text-gray-900 dark:text-gray-100">Политический ислам. Россия.</span></a><div class=flex-1></div><nav class="flex md:hidden items-center"><button id=mobile-menu-toggle class="w-11 h-11 flex items-center justify-center text-gray-600 dark:text-gray-400" aria-label=Меню>
+<svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+<svg id="close-menu-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"/></svg></button></nav><nav class="hidden md:flex items-center gap-4"><div class=relative><input type=text id=search-input placeholder="Поиск публикаций" class="w-64 px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 text-sm">
+<button id=search-icon-btn class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-label="Очистить поиск">
 <svg id="search-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5A7 7 0 113 10a7 7 0 0114 0z"/></svg>
-<svg id="clear-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"/></svg></button><div id=search-results class="hidden absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto"></div></div><div class=relative><button id=calendar-toggle class="p-2 text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></button><div id=calendar-dropdown class="hidden absolute right-0 mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50 p-4 w-72"><div id=calendar-grid></div></div></div><a href=../../about/ class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">О проекте</a>
-<button id=theme-toggle class="p-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
-<svg id="theme-icon-light" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364-.707-.707M6.343 6.343l-.707-.707m12.728.0-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-<svg id="theme-icon-dark" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003.0 0012 21a9.003 9.003.0 008.354-5.646z"/></svg></button></div></div></header><div class="max-w-layout mx-auto px-4 py-8"><a href=../../ class=back-link><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m7 7-7-7 7-7"/></svg>
-Все публикации</a><article class=single-post><header class=mb-8><h1 class="text-3xl md:text-4xl font-serif font-bold mb-4">Хиджаб в школе?</h1><time class=text-gray-500>6 ноя 2024</time></header><div class="prose prose-content"><p>В предыдущих публикациях мы писали о том, <a href=https://t.me/c/2154518278/56>почему хиджаб</a> – это в первую очередь политический символ.</p><p>В свете <a href=https://t.me/c/2154518278/131>законопроекта</a> во Владимирской области, который посвящён данной теме в общеобразовательной среде, мы приводим цитаты из книги «Что происходит в наших школах?». Её автор – Кристиан Кляр, директор общеобразовательной школы во Флоридсдорфе (Вена, с 2012 года). Наблюдая за тем, насколько быстро происходит шариатизация школьной среды под прикрытием религиозной свободы, он решил написать об этом.</p><blockquote><p>Несколько лет назад, когда девочки вдруг стали приходить в школу в хиджабах, мы уже тогда беспокоились о том, действительно ли они делают это добровольно, или же им велели это сделать отцы, братья или, возможно, кто-то из знакомых или друзей…</p></blockquote><p>Продолжение <a href=https://telegra.ph/Hidzhab-v-shkolebezopasnost-11-04>смотрите в статье</a></p></div><div class=post-tags><a href="../../?tag=%d0%bf%d0%be%d0%bb%d0%b8%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9_%d0%b8%d1%81%d0%bb%d0%b0%d0%bc" class=tag-link>политический_ислам</a>
+<svg id="clear-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"/></svg></button><div id=search-results class="hidden absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto"></div></div><div class=relative><button id=calendar-toggle class="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded-lg" aria-label=Календарь>
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2"/><line x1="16" y1="2" x2="16" y2="6" stroke-width="2"/><line x1="8" y1="2" x2="8" y2="6" stroke-width="2"/><line x1="3" y1="10" x2="21" y2="10" stroke-width="2"/></svg></button><div id=calendar-dropdown class="hidden absolute right-0 mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50 p-4 w-72"><div id=calendar-grid></div></div></div><a href=../../about/ class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded px-2 py-1">О проекте</a>
+<button onclick=openSubscribeModal() class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded px-2 py-1">Подписаться</button></nav></div><div id=mobile-search-panel class="hidden md:hidden border-t border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-black"><div class=relative><input type=text id=mobile-search-input placeholder="Поиск публикаций" class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 text-base"><div id=mobile-search-results class="hidden absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto"></div></div></div></header><div id=mobile-menu-overlay class="fixed inset-0 bg-black/50 z-[60] hidden md:hidden opacity-0 transition-opacity duration-300"></div><div id=mobile-menu-panel class="fixed top-0 right-0 h-full w-[70%] max-w-[280px] bg-white dark:bg-gray-900 z-[70] transform translate-x-full transition-transform duration-300 md:hidden shadow-xl"><nav class="flex flex-col pt-4"><button id=mobile-menu-search class="flex items-center gap-3 px-5 py-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 border-b border-gray-100 dark:border-gray-800">
+<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5A7 7 0 113 10a7 7 0 0114 0z"/></svg>
+<span class=text-sm>Поиск</span>
+</button>
+<button id=theme-toggle-mobile class="flex items-center justify-between px-5 py-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 border-b border-gray-100 dark:border-gray-800"><div class="flex items-center gap-3"><svg class="w-5 h-5 flex-shrink-0" id="theme-icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display:none"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364-.707-.707M6.343 6.343l-.707-.707m12.728.0-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+<svg class="w-5 h-5 flex-shrink-0" id="theme-icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003.0 0012 21a9.003 9.003.0 008.354-5.646z"/></svg>
+<span class=text-sm>Тёмная тема</span></div><div class="relative w-11 h-6 bg-gray-300 dark:bg-green-500 rounded-full transition-colors"><div class="absolute top-0.5 left-0.5 dark:left-[22px] w-5 h-5 bg-white rounded-full shadow transition-all"></div></div></button>
+<a href=../../about/ class="flex items-center gap-3 px-5 py-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 border-b border-gray-100 dark:border-gray-800"><svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12A9 9 0 113 12a9 9 0 0118 0z"/></svg>
+<span class=text-sm>О проекте</span>
+</a><button onclick='openSubscribeModal(),document.getElementById("mobile-menu-toggle").click()' class="flex items-center gap-3 px-5 py-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 border-b border-gray-100 dark:border-gray-800 w-full text-left">
+<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22.0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5A2 2 0 003 7v10a2 2 0 002 2z"/></svg>
+<span class=text-sm>Подписаться на рассылку</span>
+</button>
+<a href=../../privacy/ class="flex items-center gap-3 px-5 py-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"><svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955.0 0112 2.944a11.955 11.955.0 01-8.618 3.04A12.02 12.02.0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622.0-1.042-.133-2.052-.382-3.016z"/></svg>
+<span class=text-sm>Конфиденциальность</span></a></nav></div><div class="max-w-layout mx-auto px-4 py-4 md:py-12"><div class="max-w-content mx-auto"><a href=../../ class=back-link><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="md:w-5 md:h-5"><path d="M19 12H5m7 7-7-7 7-7"/></svg>
+Все публикации</a><article class=single-post><div class=mb-6><h1 class="text-[1.1rem] leading-[1.4] md:text-4xl md:leading-normal font-bold mb-2 md:mb-4 text-primary dark:text-stone-100">Хиджаб в школе?</h1><time class="block text-gray-500 text-[0.8rem] md:text-base">6 ноя 2024</time></div><div class="prose prose-stone dark:prose-invert text-primary/90 dark:text-stone-300"><p>В предыдущих публикациях мы писали о том, <a href=https://t.me/c/2154518278/56>почему хиджаб</a> – это в первую очередь политический символ.</p><p>В свете <a href=https://t.me/c/2154518278/131>законопроекта</a> во Владимирской области, который посвящён данной теме в общеобразовательной среде, мы приводим цитаты из книги «Что происходит в наших школах?». Её автор – Кристиан Кляр, директор общеобразовательной школы во Флоридсдорфе (Вена, с 2012 года). Наблюдая за тем, насколько быстро происходит шариатизация школьной среды под прикрытием религиозной свободы, он решил написать об этом.</p><blockquote><p>Несколько лет назад, когда девочки вдруг стали приходить в школу в хиджабах, мы уже тогда беспокоились о том, действительно ли они делают это добровольно, или же им велели это сделать отцы, братья или, возможно, кто-то из знакомых или друзей…</p></blockquote><p>Продолжение <a href=https://telegra.ph/Hidzhab-v-shkolebezopasnost-11-04>смотрите в статье</a></p></div><div class=post-tags><a href="../../?tag=%d0%bf%d0%be%d0%bb%d0%b8%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9_%d0%b8%d1%81%d0%bb%d0%b0%d0%bc" class=tag-link>политический_ислам</a>
 <a href="../../?tag=%d1%88%d0%ba%d0%be%d0%bb%d1%8b" class=tag-link>школы</a>
-<a href="../../?tag=%d1%85%d0%b8%d0%b4%d0%b6%d0%b0%d0%b1" class=tag-link>хиджаб</a></div><nav class=post-nav><a href=../../posts/2024-11-05-076/ class="post-nav-link post-nav-prev"><div class=post-nav-arrow><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m7 7-7-7 7-7"/></svg></div><div class=post-nav-title>Рынок труда под шариатом</div></a><a href=../../posts/2024-11-07-078/ class="post-nav-link post-nav-next"><div class=post-nav-arrow><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class=post-nav-title>В Москве зарегестрировано 322 исламские организации согласно данным ЕГРЮЛ РФ</div></a></nav></article></div><script src=../../js/theme.js></script><script src=../../js/filter.js></script><script src=../../js/calendar.js></script><script src=https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".prose").forEach(function(e){const s=e.querySelectorAll("p > a.glightbox");let t=null,n=[];s.forEach(function(e){const o=e.parentElement;o.tagName==="P"&&o.children.length===1&&(t||(t=document.createElement("div"),t.className="post-images",o.parentNode.insertBefore(t,o),n=[]),t.appendChild(e),n.push(e),o.remove())}),document.querySelectorAll(".post-images").forEach(function(e){e.children.length===1&&e.classList.add("single-image")})}),GLightbox({selector:".glightbox"})})</script></body></html>
+<a href="../../?tag=%d1%85%d0%b8%d0%b4%d0%b6%d0%b0%d0%b1" class=tag-link>хиджаб</a></div><div class="mt-8 md:mt-12 p-5 md:p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50"><div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"><div><h3 class="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-1">Подпишитесь на рассылку</h3><p class="text-sm text-gray-600 dark:text-gray-400">Получайте актуальную информацию о политическом исламе</p></div><button onclick=openSubscribeModal() class="flex-shrink-0 px-5 py-2.5 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-sm font-medium rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors">
+Подписаться</button></div></div><div class="related-posts mt-8 md:mt-12"><h3 class="text-[0.95rem] md:text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Похожие публикации</h3><div class=space-y-3><a href=../../posts/2025-09-08-311/ class="block p-5 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-colors no-underline"><div class="text-[0.85rem] md:text-base font-medium text-gray-900 dark:text-gray-100 mb-2">«Мама, я теперь мусульманка» — как девочки с розовым Кораном обращаются в ислам</div><div class="text-[0.75rem] md:text-[0.85rem] text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 mb-2">Позади первая неделя нового учебного года, поэтому мы решили освежить пару предыдущих постов о том, что происходит в светских школах под давлением шариата. Вдобавок к …</div><div class="text-[0.65rem] md:text-xs text-gray-400 dark:text-gray-500">8 сен 2025</div></a><a href=../../posts/2024-10-28-069/ class="block p-5 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-colors no-underline"><div class="text-[0.85rem] md:text-base font-medium text-gray-900 dark:text-gray-100 mb-2">В предыдущих публикациях мы рассматривали политический символизм и исламские атрибуты в женской одеж...</div><div class="text-[0.75rem] md:text-[0.85rem] text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 mb-2">Приказ Министерства образования и молодежной политики о религиозной одежде в общеобразовательной среде во Владимирской области направлен на защиту всех граждан от влияния шариата. …</div><div class="text-[0.65rem] md:text-xs text-gray-400 dark:text-gray-500">28 окт 2024</div></a><a href=../../posts/2026-01-14-370/ class="block p-5 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-colors no-underline"><div class="text-[0.85rem] md:text-base font-medium text-gray-900 dark:text-gray-100 mb-2">Австралия: как изменить подход к изучению ислама в школах</div><div class="text-[0.75rem] md:text-[0.85rem] text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 mb-2">Пробелы в учебных программах Австралии по изучению ислама обусловлены академической монополией исламских теологов и страхом бюрократов перед обвинениями в исламофобии. И эти …</div><div class="text-[0.65rem] md:text-xs text-gray-400 dark:text-gray-500">14 янв 2026</div></a><a href=../../posts/2025-09-16-317/ class="block p-5 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-colors no-underline"><div class="text-[0.85rem] md:text-base font-medium text-gray-900 dark:text-gray-100 mb-2">Насилие против несовершеннолетних со стороны выходцев из исламских стран не случайность и не внезапн...</div><div class="text-[0.75rem] md:text-[0.85rem] text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 mb-2">Мы наблюдаем очередное доказательство того, что хиджаб - это именно политический атрибут. Он делит всех женщин на две категории, к каждой из которых в Коране и, соответственно, в …</div><div class="text-[0.65rem] md:text-xs text-gray-400 dark:text-gray-500">16 сен 2025</div></a><a href=../../posts/2025-05-13-233/ class="block p-5 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-colors no-underline"><div class="text-[0.85rem] md:text-base font-medium text-gray-900 dark:text-gray-100 mb-2">Контроль над женщинами как одно из средств формирования исламских анклавов</div><div class="text-[0.75rem] md:text-[0.85rem] text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 mb-2">В исламских обществах важно, чтобы дети происходили от «своих» мужчин, иначе под угрозу ставится наследование, статус и структура рода. Контроль над женской сексуальностью …</div><div class="text-[0.65rem] md:text-xs text-gray-400 dark:text-gray-500">13 мая 2025</div></a></div></div></article></div></div><footer class="w-full border-t border-gray-200 dark:border-gray-800 py-6 md:py-8"><div class="max-w-layout mx-auto px-4 text-center"><nav class="text-xs text-gray-400 dark:text-gray-500"><span>Политический ислам. Россия</span>
+<span class=mx-2>·</span>
+<a href=../../about/ class="hover:text-gray-600 dark:hover:text-gray-300">О проекте</a>
+<span class=mx-2>·</span>
+<button onclick=openSubscribeModal() class="hover:text-gray-600 dark:hover:text-gray-300">Подписаться на рассылку</button>
+<span class=mx-2>·</span>
+<a href=../../privacy/ class="hover:text-gray-600 dark:hover:text-gray-300">Политика конфиденциальности</a></nav></div></footer><div id=subscribe-modal class="fixed inset-0 z-[100] hidden"><div id=subscribe-modal-overlay class="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300"></div><div class="flex items-center justify-center min-h-screen p-4"><div id=subscribe-modal-content class="relative bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-md p-6 md:p-8 transform scale-95 opacity-0 transition-all duration-300"><button id=subscribe-modal-close class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label=Закрыть>
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"/></svg></button><h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3 pr-8">Присоединяйтесь к нашей рассылке</h2><p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-6">Подпишитесь на нашу рассылку, чтобы получать актуальную и полезную информацию о политическом исламе.</p><form id=subscribe-form class=space-y-4><div><label for=subscribe-email class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Ваш email</label>
+<input type=email id=subscribe-email name=email required disabled class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 text-base cursor-not-allowed opacity-60" placeholder=example@email.com></div><div class="flex items-start gap-3"><input type=checkbox id=subscribe-consent name=consent required disabled class="mt-1 w-4 h-4 rounded border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:ring-gray-400 cursor-not-allowed opacity-60">
+<label for=subscribe-consent class="text-sm text-gray-600 dark:text-gray-400 cursor-not-allowed opacity-60">Я согласен(-на) получать рассылку на указанный адрес электронной почты.</label></div><p class="text-xs text-gray-500 dark:text-gray-500">Мы бережно относимся к вашим данным. Подробнее — в нашей <a href=../../privacy/ class="underline hover:text-gray-700 dark:hover:text-gray-300">Политике конфиденциальности</a>.</p><p class="text-xs text-gray-500 dark:text-gray-500">Вы можете в любой момент отозвать своё согласие — через ссылку в письме или написав нам по электронной почте.</p><div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3"><p class="text-sm text-amber-700 dark:text-amber-400 flex items-center gap-2"><svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54.0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464.0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+Форма находится в разработке</p></div><button type=submit disabled class="w-full py-3 px-4 bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-400 font-medium rounded-lg cursor-not-allowed">
+Подписаться</button></form></div></div></div><script>(function(){const s=document.getElementById("subscribe-modal"),e=document.getElementById("subscribe-modal-overlay"),t=document.getElementById("subscribe-modal-content"),o=document.getElementById("subscribe-modal-close");function i(){s.classList.remove("hidden"),document.body.style.overflow="hidden",requestAnimationFrame(()=>{e.classList.remove("opacity-0"),e.classList.add("opacity-100"),t.classList.remove("scale-95","opacity-0"),t.classList.add("scale-100","opacity-100")})}function n(){e.classList.remove("opacity-100"),e.classList.add("opacity-0"),t.classList.remove("scale-100","opacity-100"),t.classList.add("scale-95","opacity-0"),setTimeout(()=>{s.classList.add("hidden"),document.body.style.overflow=""},300)}o.addEventListener("click",n),e.addEventListener("click",n),document.addEventListener("keydown",e=>{e.key==="Escape"&&!s.classList.contains("hidden")&&n()}),window.openSubscribeModal=i,window.closeSubscribeModal=n})()</script><button id=scroll-to-top class="fixed bottom-4 right-4 w-11 h-11 bg-stone-800 dark:bg-stone-200 text-white dark:text-stone-800 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-stone-700 dark:hover:bg-stone-300 focus:outline-none z-40" aria-label=Наверх>
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+</button>
+<script src=../../js/theme.js></script><script src=../../js/filter.js></script><script src=../../js/calendar.js></script><script src=https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".prose").forEach(function(e){const s=e.querySelectorAll("p > a.glightbox");let t=null,n=[];s.forEach(function(e){const o=e.parentElement;o.tagName==="P"&&o.children.length===1&&(t||(t=document.createElement("div"),t.className="post-images",o.parentNode.insertBefore(t,o),n=[]),t.appendChild(e),n.push(e),o.remove())}),document.querySelectorAll(".post-images").forEach(function(e){e.children.length===1&&e.classList.add("single-image")})}),GLightbox({selector:".glightbox"})}),function(){const e=document.getElementById("scroll-to-top");if(!e)return;const t=1500;function n(){window.scrollY>t?(e.classList.remove("opacity-0","invisible"),e.classList.add("opacity-100","visible")):(e.classList.remove("opacity-100","visible"),e.classList.add("opacity-0","invisible"))}window.addEventListener("scroll",n,{passive:!0}),e.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})})}()</script></body></html>
