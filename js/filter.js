@@ -19,12 +19,44 @@ document.addEventListener('DOMContentLoaded', function() {
   const emptyState = document.getElementById('empty-state');
   const emptyReset = document.getElementById('empty-reset');
   const siteLogo = document.getElementById('site-logo');
-  const paginationNav = document.getElementById('pagination-nav');
+  const loadMoreBtn = document.getElementById('load-more-btn');
 
   if (!searchInput && !mobileSearchInput) return;
 
   let activeFilter = { type: null, value: null };
   let selectedResultIndex = -1;
+
+  // === Пагинация «Показать ещё» ===
+  const PAGE_SIZE = 30;
+  let visibleCount = PAGE_SIZE;
+  let matchPredicate = () => true;
+  let lastMatched = posts.length;
+
+  // Рендер: среди совпадающих постов показываем первые visibleCount, остальные прячем.
+  function render() {
+    let shown = 0, matched = 0;
+    posts.forEach(post => {
+      if (matchPredicate(post)) {
+        matched++;
+        if (shown < visibleCount) { post.style.display = 'block'; shown++; }
+        else { post.style.display = 'none'; }
+      } else {
+        post.style.display = 'none';
+      }
+    });
+    lastMatched = matched;
+    if (loadMoreBtn) {
+      loadMoreBtn.classList.toggle('hidden', shown >= matched);
+    }
+    return matched;
+  }
+
+  // Установить фильтр (предикат) и сбросить пагинацию на первую страницу.
+  function setFilter(predicate) {
+    matchPredicate = predicate;
+    visibleCount = PAGE_SIZE;
+    return render();
+  }
 
   // Collect all tags (exclude "без_тега")
   const allTags = new Set();
@@ -44,11 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Count visible posts
-  function countVisiblePosts() {
-    return Array.from(posts).filter(p => p.style.display !== 'none').length;
-  }
-
   // Format count text
   function formatCount(count) {
     if (count === 1) return '1 публикация';
@@ -56,15 +83,15 @@ document.addEventListener('DOMContentLoaded', function() {
     return `${count} публикаций`;
   }
 
-  // Show filter status
+  // Show filter status (count = всего совпадений, не только видимых)
   function showFilterStatus(type, value, displayValue) {
     activeFilter = { type, value };
 
-    const count = countVisiblePosts();
+    const count = lastMatched;
     let text = '';
 
     if (type === 'tag') {
-      text = `${formatCount(count)} по тегу <strong>${displayValue}</strong>`;
+      text = `${formatCount(count)} по тегу <strong>${displayValue.replace(/_/g, ' ')}</strong>`;
     } else if (type === 'text') {
       text = `${formatCount(count)} по запросу <strong>${displayValue}</strong>`;
     } else if (type === 'date') {
@@ -75,28 +102,18 @@ document.addEventListener('DOMContentLoaded', function() {
       filterStatusText.innerHTML = text;
       filterStatus.classList.remove('hidden');
     }
-
-    if (paginationNav) paginationNav.classList.add('hidden');
   }
 
   // Hide filter status
   function hideFilterStatus() {
     activeFilter = { type: null, value: null };
-
     if (filterStatus) filterStatus.classList.add('hidden');
-    if (paginationNav) paginationNav.classList.remove('hidden');
   }
 
   // Check empty state
   function checkEmptyState() {
-    const visiblePosts = countVisiblePosts();
-
     if (emptyState) {
-      if (visiblePosts === 0 && activeFilter.type) {
-        emptyState.classList.remove('hidden');
-      } else {
-        emptyState.classList.add('hidden');
-      }
+      emptyState.classList.toggle('hidden', !(lastMatched === 0 && activeFilter.type));
     }
   }
 
@@ -110,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileSearchInput) mobileSearchInput.value = '';
     if (mobileSearchResults) mobileSearchResults.classList.add('hidden');
 
-    posts.forEach(post => post.style.display = 'block');
+    setFilter(() => true);
 
     hideFilterStatus();
     updateTagButtons('');
@@ -130,9 +147,10 @@ document.addEventListener('DOMContentLoaded', function() {
     updateSearchIcon();
 
     const lowerTag = tag ? tag.toLowerCase() : '';
-    posts.forEach(post => {
+    setFilter(post => {
+      if (!tag) return true;
       const postTags = post.dataset.tags ? post.dataset.tags.toLowerCase().split(',') : [];
-      post.style.display = (!tag || postTags.includes(lowerTag)) ? 'block' : 'none';
+      return postTags.includes(lowerTag);
     });
 
     updateTagButtons(tag);
@@ -153,10 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileSearchResults) mobileSearchResults.classList.add('hidden');
 
     const lowerQuery = query.toLowerCase();
-    posts.forEach(post => {
-      const text = post.textContent.toLowerCase();
-      post.style.display = text.includes(lowerQuery) ? 'block' : 'none';
-    });
+    setFilter(post => post.textContent.toLowerCase().includes(lowerQuery));
 
     showFilterStatus('text', query, query);
     checkEmptyState();
@@ -171,13 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateTagButtons('');
     updateSearchIcon();
 
-    posts.forEach(post => {
-      if (!dateKey) {
-        post.style.display = 'block';
-        return;
-      }
-      post.style.display = post.dataset.date === dateKey ? 'block' : 'none';
-    });
+    setFilter(post => !dateKey || post.dataset.date === dateKey);
 
     if (dateKey) {
       showFilterStatus('date', dateKey, displayDate);
@@ -259,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const results = [];
 
       allTags.forEach(tag => {
-        if (tag.toLowerCase().includes(lowerQuery)) {
+        if (tag.toLowerCase().replace(/_/g, " ").includes(lowerQuery) || tag.toLowerCase().includes(lowerQuery)) {
           results.push({ type: 'tag', value: tag });
         }
       });
@@ -270,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const baseClass = 'search-result-item block w-full text-left px-4 py-2 text-sm text-stone-700 dark:text-stone-300 cursor-pointer';
         if (r.type === 'tag') {
           return `<div class="${baseClass}" data-type="tag" data-value="${r.value}" data-index="${i}">
-            <span class="text-stone-400 dark:text-stone-500">Тег:</span> ${r.value}
+            <span class="text-stone-400 dark:text-stone-500">Тег:</span> ${r.value.replace(/_/g, ' ')}
           </div>`;
         } else {
           return `<div class="${baseClass}" data-type="text" data-value="${r.value}" data-index="${i}">
@@ -360,7 +369,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const results = [];
 
       allTags.forEach(tag => {
-        if (tag.toLowerCase().includes(lowerQuery)) {
+        if (tag.toLowerCase().replace(/_/g, " ").includes(lowerQuery) || tag.toLowerCase().includes(lowerQuery)) {
           results.push({ type: 'tag', value: tag });
         }
       });
@@ -371,7 +380,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const baseClass = 'search-result-item block w-full text-left px-4 py-3 text-base text-stone-700 dark:text-stone-300 cursor-pointer border-b border-gray-100 dark:border-gray-700 last:border-0';
         if (r.type === 'tag') {
           return `<div class="${baseClass}" data-type="tag" data-value="${r.value}" data-index="${i}">
-            <span class="text-stone-400 dark:text-stone-500">Тег:</span> ${r.value}
+            <span class="text-stone-400 dark:text-stone-500">Тег:</span> ${r.value.replace(/_/g, ' ')}
           </div>`;
         } else {
           return `<div class="${baseClass}" data-type="text" data-value="${r.value}" data-index="${i}">
@@ -448,6 +457,17 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+  // Кнопка «Показать ещё»
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      visibleCount += PAGE_SIZE;
+      render();
+    });
+  }
+
+  // Стартовый рендер первой страницы
+  render();
 
   // Проверяем URL параметр ?tag= при загрузке страницы
   const urlParams = new URLSearchParams(window.location.search);
