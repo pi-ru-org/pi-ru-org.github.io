@@ -35,15 +35,19 @@ document.addEventListener('DOMContentLoaded', function() {
   // Рендер: среди совпадающих постов показываем первые visibleCount, остальные прячем.
   function render() {
     let shown = 0, matched = 0;
+    let lastShown = null;
     posts.forEach(post => {
+      post.classList.remove('last-visible');
       if (matchPredicate(post)) {
         matched++;
-        if (shown < visibleCount) { post.style.display = 'block'; shown++; }
+        if (shown < visibleCount) { post.style.display = 'block'; shown++; lastShown = post; }
         else { post.style.display = 'none'; }
       } else {
         post.style.display = 'none';
       }
     });
+    // Последний видимый пост — без нижнего разделителя (иначе двойная линия у футера)
+    if (lastShown) lastShown.classList.add('last-visible');
     lastMatched = matched;
     if (loadMoreBtn) {
       loadMoreBtn.classList.toggle('hidden', shown >= matched);
