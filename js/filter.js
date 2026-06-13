@@ -473,10 +473,16 @@ document.addEventListener('DOMContentLoaded', function() {
   // Стартовый рендер первой страницы
   render();
 
-  // Проверяем URL параметр ?tag= при загрузке страницы
+  // Проверяем URL параметры при загрузке страницы
   const urlParams = new URLSearchParams(window.location.search);
   const tagFromUrl = urlParams.get('tag');
+  const dateFromUrl = urlParams.get('date');
   if (tagFromUrl) {
     filterByTag(tagFromUrl);
+  } else if (dateFromUrl && window.filterByDateWithStatus) {
+    const m = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
+    const p = dateFromUrl.split('-');
+    const display = p.length === 3 ? `${parseInt(p[2])} ${m[parseInt(p[1]) - 1]} ${p[0]}` : dateFromUrl;
+    window.filterByDateWithStatus(dateFromUrl, display);
   }
 });
