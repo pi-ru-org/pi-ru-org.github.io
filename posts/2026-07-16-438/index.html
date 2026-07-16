@@ -1,0 +1,461 @@
+<!doctype html><html lang=ru><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Политический ислам. Россия.</title><link rel=icon type=image/svg+xml href=/favicon.svg><script src=https://cdn.tailwindcss.com></script><script>tailwind.config={darkMode:"class",theme:{extend:{colors:{primary:"#22292F",secondary:"#232C40",accent:"#E76363"},fontFamily:{sans:["-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","sans-serif"]},maxWidth:{content:"800px",layout:"1100px"},spacing:{sidebar:"200px"}}}}</script><script>const isMobile=window.innerWidth<768;if(isMobile){const e=localStorage.getItem("theme"),t=window.matchMedia("(prefers-color-scheme: dark)").matches;(e==="dark"||!e&&t)&&document.documentElement.classList.add("dark")}</script><script>(function(){var t=[.9,1,1.1,1.2,1.3],e=parseInt(localStorage.getItem("fontScale"),10);isNaN(e)&&(e=1),e=Math.max(0,Math.min(t.length-1,e)),document.documentElement.style.setProperty("--fs",t[e])})()</script><style type=text/tailwindcss>
+    @layer base {
+      html, body {
+        overflow-x: hidden;
+        max-width: 100vw;
+      }
+      body {
+        @apply bg-white text-gray-900 font-sans;
+        line-height: 1.3;
+      }
+      .dark body {
+        @apply bg-black text-gray-100;
+      }
+      .prose {
+        line-height: 1.6;
+      }
+       
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    @layer utilities {
+      .prose p {
+        @apply mb-4;
+      }
+       
+      .prose p:has(> strong:only-child) {
+        @apply mt-8 mb-2;
+      }
+      .prose p:has(> strong:only-child):first-child {
+        @apply mt-0;
+      }
+      .prose h2 {
+        @apply text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4;
+      }
+      .prose h2:first-child {
+        @apply mt-0;
+      }
+      .prose blockquote {
+        @apply border-l-4 border-stone-300 dark:border-stone-600 pl-4 italic text-stone-600 dark:text-stone-400 my-4;
+      }
+      .prose a {
+        @apply text-primary dark:text-stone-100 underline decoration-accent/50 hover:decoration-accent;
+      }
+      .prose strong {
+        @apply font-semibold;
+      }
+      .prose ul {
+        @apply list-disc pl-6 space-y-1 mb-4;
+      }
+      .prose ol {
+        list-style-type: decimal;
+        padding-left: 1rem;
+        padding-bottom: 16px;
+      }
+      .prose ol li {
+        padding-left: 8px;
+      }
+      .prose .post-images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        @apply mb-4;
+      }
+      .prose .post-images a {
+        display: block;
+        height: 160px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .prose .post-images img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        margin: 0;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      @media (min-width: 768px) {
+        .prose .post-images a {
+          height: 220px;
+        }
+      }
+       
+      article.single-post .prose a {
+        @apply no-underline;
+        color: #dc2626;
+      }
+      article.single-post .prose a:hover {
+        color: #b91c1c;
+      }
+      .dark article.single-post .prose a {
+        color: #ff8888;
+      }
+      .dark article.single-post .prose a:hover {
+        color: #ffaaaa;
+      }
+      article.single-post .prose a::after {
+        content: none;
+      }
+
+       
+      a.post-preview {
+        @apply no-underline;
+        color: inherit;
+      }
+       
+      .post-preview .prose a {
+        @apply no-underline;
+        color: inherit;
+        pointer-events: none;
+      }
+      .post-preview .prose a::after {
+        content: none;
+      }
+      .post-title {
+        @apply font-sans font-normal tracking-tight;
+      }
+      .post-body {
+        @apply font-sans font-normal;
+        font-size: 18px;
+        line-height: 28px;
+      }
+      @screen md {
+        .post-body {
+          font-size: 20px;
+          line-height: 32px;
+        }
+        .post-title-large {
+          font-size: 42px;
+          line-height: 52px;
+          letter-spacing: -0.04em;
+        }
+      }
+
+       
+      .tags-cloud .tag-link {
+        height: 38px;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 0.8rem;
+      }
+       
+      .tag-link, .tag-item, .tag-filter, .post-tags a, .sidebar-tags a, .sidebar-tags button {
+        display: inline-flex;
+        align-items: center;
+        height: 32px;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 0.75rem;
+        border-radius: 9999px;
+        background-color: #f3f4f6;
+        color: #444444;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+      @media (min-width: 768px) {
+        .tag-link, .tag-item, .tag-filter, .post-tags a, .sidebar-tags a, .sidebar-tags button {
+          height: 40px;
+          padding-left: 16px;
+          padding-right: 16px;
+          font-size: 0.8rem;
+        }
+      }
+      .tag-link:hover, .tag-item:hover, .tag-filter:hover, .post-tags a:hover, .sidebar-tags a:hover, .sidebar-tags button:hover {
+        background-color: #e5e7eb;
+      }
+      .dark .tag-link, .dark .tag-item, .dark .tag-filter, .dark .post-tags a, .dark .sidebar-tags a, .dark .sidebar-tags button {
+        background-color: #1c2027;
+        color: #d1d5db;
+      }
+      .dark .tag-link:hover, .dark .tag-item:hover, .dark .tag-filter:hover, .dark .post-tags a:hover, .dark .sidebar-tags a:hover, .dark .sidebar-tags button:hover {
+        background-color: #4b5563;
+      }
+
+      .tag-count {
+        font-size: 0.7rem;
+        color: #9ca3af;
+        margin-left: 4px;
+      }
+      .dark .tag-count {
+        color: #6b7280;
+      }
+
+      .post-tags {
+        @apply flex flex-wrap gap-2;
+        margin-top: 24px;
+      }
+      @media (min-width: 768px) {
+        .post-tags {
+          margin-top: 32px;
+        }
+      }
+
+       
+      .post-nav {
+        @apply grid grid-cols-2 gap-2;
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+      @media (min-width: 768px) {
+        .post-nav {
+          gap: 16px;
+          margin-top: 48px;
+          margin-bottom: 52px;
+        }
+      }
+      .post-nav-link {
+        @apply flex rounded-lg border border-gray-200 hover:border-gray-400 transition-colors;
+        flex-direction: column;
+        padding: 12px;
+      }
+      @media (min-width: 768px) {
+        .post-nav-link {
+          padding: 16px;
+        }
+      }
+      .dark .post-nav-link {
+        @apply border-gray-800 hover:border-gray-600;
+      }
+      .post-nav-prev {
+        align-items: flex-start;
+        text-align: left;
+      }
+      .post-nav-next {
+        align-items: flex-end;
+        text-align: right;
+      }
+      .post-nav-arrow {
+        width: 28px;
+        height: 28px;
+        @apply mb-1;
+      }
+      @media (min-width: 768px) {
+        .post-nav-arrow {
+          width: 40px;
+          height: 40px;
+          @apply mb-2;
+        }
+      }
+      .post-nav-arrow svg {
+        width: 100%;
+        height: 100%;
+        stroke: #000000;
+      }
+      .dark .post-nav-arrow svg {
+        stroke: #ffffff;
+      }
+      .post-nav-title {
+        @apply text-xs font-medium line-clamp-2;
+      }
+      @media (min-width: 768px) {
+        .post-nav-title {
+          @apply text-sm;
+        }
+      }
+
+       
+      .dark input::placeholder {
+        color: #6b7280;
+      }
+
+       
+      .back-link {
+        @apply inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 mb-4;
+      }
+      @media (min-width: 768px) {
+        .back-link {
+          @apply text-base mb-8;
+        }
+      }
+      .dark .back-link {
+        @apply text-gray-400 hover:text-gray-100;
+      }
+
+       
+      .prose .post-images.single-image a {
+        height: auto;
+        max-height: 400px;
+      }
+      .prose .post-images.single-image img {
+        height: auto;
+        max-height: 400px;
+        width: auto;
+      }
+
+       
+      header > div:first-child {
+        height: 60px;
+      }
+      @media (min-width: 768px) {
+        header > div:first-child {
+          height: 80px;
+        }
+      }
+
+       
+      #search-input::placeholder,
+      #mobile-search-input::placeholder {
+        color: #9ca3af;
+      }
+      .dark #search-input::placeholder,
+      .dark #mobile-search-input::placeholder {
+        color: #6b7280;
+      }
+
+       
+      .post-preview .tag-item {
+        height: 24px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 0.7rem;
+        color: #9ca3af;
+        background-color: #f3f4f6;
+      }
+      .dark .post-preview .tag-item {
+        color: #6b7280;
+        background-color: #1f2937;
+      }
+
+       
+      .post-preview h2 {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      @media (min-width: 768px) {
+        .post-preview h2 {
+          font-size: 1.2rem;
+          line-height: 1.5;
+        }
+      }
+
+       
+      main, .main-content {
+        padding-top: 16px;
+      }
+      @media (min-width: 768px) {
+        main, .main-content {
+          padding-top: 40px;
+        }
+      }
+
+       
+      aside, .sidebar, .tags-sidebar {
+        padding-top: 16px;
+      }
+      @media (min-width: 768px) {
+        aside, .sidebar, .tags-sidebar {
+          padding-top: 40px;
+        }
+      }
+
+       
+      .footnote {
+        margin-top: 32px;
+        padding-top: 0;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: #6b7280;
+      }
+      .dark .footnote {
+        color: #9ca3af;
+      }
+      .footnote p {
+        margin-bottom: 0.5rem;
+      }
+       
+      .prose hr + .footnote {
+        margin-top: 0;
+      }
+      .prose hr:has(+ .footnote),
+      .prose hr:last-of-type {
+        display: none;
+      }
+
+       
+      .posts-list .post-preview {
+        position: relative;
+      }
+      .posts-list .post-preview::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 16px;
+        right: 16px;
+        height: 1px;
+        background-color: #ebebeb;
+      }
+      .dark .posts-list .post-preview::after {
+        background-color: #2a2a2a;
+      }
+      .posts-list .post-preview:last-child::after,
+      .posts-list .post-preview.last-visible::after {
+        display: none;
+      }
+    }
+  </style><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css><style>:root{--fs:1}.to-posts-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 18px;border:1px solid #e5e7eb;border-radius:12px;color:#374151;font-size:.95rem;text-decoration:none;transition:background-color .15s}.dark .to-posts-btn{border-color:#1f2937;color:#d1d5db}.to-posts-btn:hover{background:#f9fafb}.dark .to-posts-btn:hover{background:#131a26}.to-posts-btn:active{background:#f3f4f6}.dark .to-posts-btn:active{background:#1c2533}@media(max-width:767px){.prose{font-size:calc(1rem * var(--fs))!important}.prose h2{font-size:calc(1.125rem * var(--fs))!important}.post-body{font-size:calc(18px * var(--fs))!important;line-height:calc(28px * var(--fs))!important}.footnote{font-size:calc(.85rem * var(--fs))!important}.post-preview h2{font-size:calc(.95rem * var(--fs))!important}.post-card-desc{font-size:calc(.95rem * var(--fs))!important}.post-preview time{font-size:calc(.75rem * var(--fs))!important}#load-more-btn{font-size:calc(.875rem * var(--fs))!important}#empty-state p,#filter-status{font-size:calc(.95rem * var(--fs))!important}article.single-post>header time,article.single-post time.block{font-size:calc(.8rem * var(--fs))!important}.related-posts h3{font-size:calc(.95rem * var(--fs))!important}.related-posts .rel-title{font-size:calc(1rem * var(--fs))!important}.related-posts .rel-snippet{font-size:calc(.9rem * var(--fs))!important}.related-posts .rel-date{font-size:calc(.7rem * var(--fs))!important}.tag-link,.tag-item,.tag-filter,.post-tags a,.sidebar-tags a,.sidebar-tags button{font-size:calc(.75rem * var(--fs))!important}.tags-cloud .tag-link{font-size:calc(.8rem * var(--fs))!important}.post-preview .tag-item{font-size:calc(.7rem * var(--fs))!important}.tag-count{font-size:calc(.7rem * var(--fs))!important}}</style><link rel=preconnect href=https://plausible.io><script defer data-domain=pi-ru.org src=https://plausible.io/js/script.js></script><script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script><script></script></head><body class=font-sans><header class="w-full border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50 bg-white dark:bg-black"><div class="mx-auto px-4 md:px-12 h-full flex items-center gap-3 md:gap-6 max-w-7xl"><a href=/ class="flex items-center gap-2 md:gap-3 flex-shrink-0" aria-label="На главную"><img src=/logo-light-mode.svg class="w-8 h-8 block dark:hidden" alt>
+<img src=/logo-dark-mode.svg class="w-8 h-8 hidden dark:block" alt>
+<span class="md:hidden font-semibold text-[0.85rem] leading-tight text-gray-900 dark:text-gray-100">Политический ислам.<br>Россия
+</span><span class="hidden md:block font-semibold text-lg text-gray-900 dark:text-gray-100">Политический ислам. Россия.</span></a><div class=flex-1></div><nav class="flex md:hidden items-center"><button id=mobile-menu-toggle class="w-11 h-11 flex items-center justify-center text-gray-600 dark:text-gray-400" aria-label=Меню>
+<svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+<svg id="close-menu-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"/></svg></button></nav><nav class="hidden md:flex items-center gap-4"><div class=relative><input type=text id=search-input placeholder="Поиск публикаций" class="w-64 px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 text-sm">
+<button id=search-icon-btn class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-label="Очистить поиск">
+<svg id="search-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5A7 7 0 113 10a7 7 0 0114 0z"/></svg>
+<svg id="clear-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"/></svg></button><div id=search-results class="hidden absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto"></div></div><div class=relative><button id=calendar-toggle class="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded-lg" aria-label=Календарь>
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2"/><line x1="16" y1="2" x2="16" y2="6" stroke-width="2"/><line x1="8" y1="2" x2="8" y2="6" stroke-width="2"/><line x1="3" y1="10" x2="21" y2="10" stroke-width="2"/></svg></button><div id=calendar-dropdown class="hidden absolute right-0 mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50 p-4 w-72"><div id=calendar-grid></div></div></div><a href=/about/ class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded px-2 py-1">О проекте</a></nav></div><div id=mobile-search-panel class="hidden md:hidden border-t border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-black"><div class=relative><input type=text id=mobile-search-input placeholder="Поиск публикаций" class="w-full pl-4 pr-12 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 text-base">
+<button id=mobile-calendar-toggle class="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none rounded-lg" aria-label=Календарь>
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2"/><line x1="16" y1="2" x2="16" y2="6" stroke-width="2"/><line x1="8" y1="2" x2="8" y2="6" stroke-width="2"/><line x1="3" y1="10" x2="21" y2="10" stroke-width="2"/></svg></button><div id=mobile-search-results class="hidden absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto"></div><div id=mobile-calendar-dropdown class="hidden absolute right-0 top-full mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50 p-4 w-72"><div id=mobile-calendar-grid></div></div></div></div></header><div id=mobile-menu-overlay class="fixed inset-0 bg-black/50 z-[60] hidden md:hidden opacity-0 transition-opacity duration-300"></div><div id=mobile-menu-panel class="fixed top-0 right-0 h-full w-[70%] max-w-[280px] bg-white dark:bg-gray-900 z-[70] transform translate-x-full transition-transform duration-300 md:hidden shadow-xl"><nav class="flex flex-col pt-4"><button id=mobile-menu-search class="flex items-center gap-3 px-5 py-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 border-b border-gray-100 dark:border-gray-800">
+<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5A7 7 0 113 10a7 7 0 0114 0z"/></svg>
+<span class=text-sm>Поиск</span>
+</button>
+<a href=/tags/ class="flex items-center gap-3 px-5 py-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 border-b border-gray-100 dark:border-gray-800"><svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5a1.99 1.99.0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828.0l-7-7A1.99 1.99.0 013 12V7a4 4 0 014-4z"/></svg>
+<span class=text-sm>Теги</span>
+</a><a href=/appearance/ class="flex items-center gap-3 px-5 py-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 border-b border-gray-100 dark:border-gray-800"><svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+<span class=text-sm>Оформление</span>
+</a><a href=/about/ class="flex items-center gap-3 px-5 py-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 border-b border-gray-100 dark:border-gray-800"><svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12A9 9 0 113 12a9 9 0 0118 0z"/></svg>
+<span class=text-sm>О проекте</span>
+</a><a href=/privacy/ class="flex items-center gap-3 px-5 py-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"><svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955.0 0112 2.944a11.955 11.955.0 01-8.618 3.04A12.02 12.02.0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622.0-1.042-.133-2.052-.382-3.016z"/></svg>
+<span class=text-sm>Конфиденциальность</span></a></nav></div><script>(function(){var o=document.getElementById("mobile-menu-toggle"),n=document.getElementById("hamburger-icon"),s=document.getElementById("close-menu-icon"),e=document.getElementById("mobile-menu-overlay"),t=document.getElementById("mobile-menu-panel"),i=document.getElementById("mobile-menu-search"),a=document.getElementById("mobile-search-panel");if(!o||!t||!e)return;window.openMobileMenu=function(){e.classList.remove("hidden"),setTimeout(function(){e.classList.remove("opacity-0"),e.classList.add("opacity-100"),t.classList.remove("translate-x-full"),t.classList.add("translate-x-0")},10),n&&n.classList.add("hidden"),s&&s.classList.remove("hidden"),document.body.style.overflow="hidden"},window.closeMobileMenu=function(){e.classList.remove("opacity-100"),e.classList.add("opacity-0"),t.classList.remove("translate-x-0"),t.classList.add("translate-x-full"),n&&n.classList.remove("hidden"),s&&s.classList.add("hidden"),document.body.style.overflow="",setTimeout(function(){e.classList.add("hidden")},300)},o.addEventListener("click",function(){var e=!t.classList.contains("translate-x-full");e?closeMobileMenu():openMobileMenu()}),e.addEventListener("click",closeMobileMenu),i&&a&&i.addEventListener("click",function(){closeMobileMenu(),a.classList.remove("hidden");var e=document.getElementById("mobile-search-input");e&&setTimeout(function(){e.focus()},100)})})()</script><div class="max-w-layout mx-auto px-4 pt-7 pb-4 md:py-12"><div class="max-w-content mx-auto"><a href=/ class=back-link><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="md:w-5 md:h-5"><path d="M19 12H5m7 7-7-7 7-7"/></svg>
+Все публикации</a><article class=single-post><div class=mb-6><h1 class="text-[1.25rem] leading-[1.4] md:text-4xl md:leading-[1.35] font-bold mb-2 md:mb-4 text-primary dark:text-stone-100">Продолжаем анализировать процесс распространения исламских организаций по территории России</h1><time class="block text-gray-500 text-[0.8rem] md:text-base">16 июл 2026</time></div><div class="prose prose-stone dark:prose-invert text-primary/90 dark:text-stone-300"><p><a href=/images/2026-07-16-438-1.jpg class=glightbox data-gallery=post-gallery><img src=/images/2026-07-16-438-1.jpg alt loading=lazy></a></p><p><a href=/images/2026-07-16-438-2.jpg class=glightbox data-gallery=post-gallery><img src=/images/2026-07-16-438-2.jpg alt loading=lazy></a></p><p>Сегодня взглянем на один из Сибирских регионов – Томскую область, где политический ислам продвигается всё активнее. Мы уже писали о хиджре, исламской миграции, и презентации <a href=/posts/2025-09-08-312/>возможностей Томской области по приёму граждан Таджикистана</a> в 2025 году, а также о <a href=/posts/2026-05-20-418/>соглашении о сотрудничестве в сфере туризма</a> между Департаментом лицензирования и регионального государственного контроля <a href=https://islamnews.ru/2026/5/4/vlasti-tomskoy-oblasti-budut-razvivat-musulmanskiy-turizm>Томской области</a> и региональным духовным управлением мусульман.
+Теперь посмотрим, каким образом расширяется исламская организационная структура области. Всего в Томской области было зарегистрировано 25 исламских организаций, из них 11 ликвидировано, а 14 действуют. Первая исламская организация, зарегистрированная Единым государственным реестром юридических лиц РФ (ЕГРЮЛ) в Томске, открылась в 1991 г. и действует по сей день. Всего в Томске было 13 исламских организаций, из них 8 ликвидированы и 5 действуют.
+Кроме Томска, зарегистрированы исламские организации еще в 11 населенных пунктах:
+Черная Речка – одна исламская организация с 1994 г. и еще одна с 2011 г.
+Стрежевой – 3 исламских организации: ликвидированная организация с 1998 по 2019 гг., фонд строительства мечети с 2006 по 2020 (мечеть открылась в 2017 г.) и действующая организация с 2017 г.
+Кривошеино – с 1998 по 2007 гг.
+Эушта – открылась и сразу закрылась в 2004 г.
+Барабинка – с 2009 г.
+Воронино – с 2009 г.
+Северск – с 2009 г.
+Тахтамышево – с 2009 г.
+Тимирязевское – с 2014 по 2018 гг.
+Вершинино – с 2017 г.
+Парабель – с 2017 г.
+Как видим, политический ислам всё шире распространяется по территории нашей страны. Не последнюю роль в управлении этим процессом играют организации Духовного управления мусульман. В Томске три таких централизованных организации: одна действовала с 2000 по 2004, вторая появилась в 2009 г. и последняя открылась в 2021 г.
+Обратите внимание, что исламское влияние не ограничивается религией, и организации внедряются также в экономику, образование и другие сферы жизни. Так, в экономике Томска ООО «Халял продукт» продержался всего один год, с 2009 по 2010. В сфере образования в Томске работали Сибирский исламский колледж с 2002 по 2008, Сибирский исламский экономический институт с 2002 по 2009 и Сибирский исламский мадраса с 2004 по 2008, все они ликвидированы.
+<a href=https://www.datawrapper.de/_/Cvt2X/>Интерактивная карта</a> исламских организаций в Томской области.
+Исламские организации в других российских регионах <a href=https://t.me/politicalislam_russia/602>здесь</a>.</p><p><strong>Обратная связь:</strong> <a href=https://t.me/pi_feedback_bot>https://t.me/pi_feedback_bot</a></p><p>Продолжаем анализировать процесс распространения исламских организаций по территории России.</p><p>Сегодня взглянем на один из Сибирских регионов – Томскую область, где политический ислам продвигается всё активнее. Мы уже писали о хиджре, исламской миграции, и презентации <a href=/posts/2025-09-08-312/>возможностей Томской области по приёму граждан Таджикистана</a> в 2025 году, а также о <a href=/posts/2026-05-20-418/>соглашении о сотрудничестве в сфере туризма</a> между Департаментом лицензирования и регионального государственного контроля <a href=https://islamnews.ru/2026/5/4/vlasti-tomskoy-oblasti-budut-razvivat-musulmanskiy-turizm>Томской области</a> и региональным духовным управлением мусульман.</p><p>Теперь посмотрим, каким образом расширяется исламская организационная структура области. Всего в Томской области было зарегистрировано 25 исламских организаций, из них 11 ликвидировано, а 14 действуют. Первая исламская организация, зарегистрированная Единым государственным реестром юридических лиц РФ (ЕГРЮЛ) в Томске, открылась в 1991 г. и действует по сей день. Всего в Томске было 13 исламских организаций, из них 8 ликвидированы и 5 действуют.</p><p>Кроме Томска, зарегистрированы исламские организации еще в 11 населенных пунктах:</p><p>Черная Речка – одна исламская организация с 1994 г. и еще одна с 2011 г.
+Стрежевой – 3 исламских организации: ликвидированная организация с 1998 по 2019 гг., фонд строительства мечети с 2006 по 2020 (мечеть открылась в 2017 г.) и действующая организация с 2017 г.
+Кривошеино – с 1998 по 2007 гг.
+Эушта – открылась и сразу закрылась в 2004 г.
+Барабинка – с 2009 г.
+Воронино – с 2009 г.
+Северск – с 2009 г.
+Тахтамышево – с 2009 г.
+Тимирязевское – с 2014 по 2018 гг.
+Вершинино – с 2017 г.
+Парабель – с 2017 г.</p><p>Как видим, политический ислам всё шире распространяется по территории нашей страны. Не последнюю роль в управлении этим процессом играют организации Духовного управления мусульман. В Томске три таких централизованных организации: одна действовала с 2000 по 2004, вторая появилась в 2009 г. и последняя открылась в 2021 г.</p><p>Обратите внимание, что исламское влияние не ограничивается религией, и организации внедряются также в экономику, образование и другие сферы жизни. Так, в экономике Томска ООО «Халял продукт» продержался всего один год, с 2009 по 2010. В сфере образования в Томске работали Сибирский исламский колледж с 2002 по 2008, Сибирский исламский экономический институт с 2002 по 2009 и Сибирский исламский мадраса с 2004 по 2008, все они ликвидированы.</p><p><a href=https://www.datawrapper.de/_/Cvt2X/>Интерактивная карта</a> исламских организаций в Томской области.
+Исламские организации в других российских регионах <a href=https://t.me/politicalislam_russia/602>здесь</a>.</p><p><strong>Обратная связь:</strong> <a href=https://t.me/pi_feedback_bot>https://t.me/pi_feedback_bot</a></p></div><div class=post-tags><a href="/?tag=%d0%bf%d0%be%d0%bb%d0%b8%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9_%d0%b8%d1%81%d0%bb%d0%b0%d0%bc" class=tag-link>политический ислам</a>
+<a href="/?tag=%d0%ba%d0%b0%d1%80%d1%82%d1%8b" class=tag-link>карты</a>
+<a href="/?tag=%d0%be%d1%80%d0%b3%d0%b0%d0%bd%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d0%b8" class=tag-link>организации</a></div><div class="related-posts mt-8 md:mt-12"><h3 class="text-[0.95rem] md:text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Похожие публикации</h3><div class=space-y-3><a href=/posts/2026-03-10-352/ class="block p-5 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-colors no-underline"><div class="rel-title text-[1rem] md:text-base font-medium text-gray-900 dark:text-gray-100 mb-2">Забайкальский край: распространение исламской инфраструктуры</div><div class="rel-snippet text-[0.9rem] md:text-[0.85rem] text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 mb-2">Мы уже писали о ситуации в Чите в связи с планами строительства второй мечети. Следует отметить, что Забайкальский край не граничит с традиционными исламскими регионами.</div><div class="rel-date text-[0.7rem] md:text-xs text-gray-400 dark:text-gray-500">10 мар 2026</div></a><a href=/posts/2026-01-19-373/ class="block p-5 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-colors no-underline"><div class="rel-title text-[1rem] md:text-base font-medium text-gray-900 dark:text-gray-100 mb-2">Распространение исламской инфраструктуры в Астраханской области</div><div class="rel-snippet text-[0.9rem] md:text-[0.85rem] text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 mb-2">Один из наших подписчиков обратился к нам с просьбой сделать карту исламских организаций в Астраханской области. Мы провели исследование и представляем вам результаты ниже.</div><div class="rel-date text-[0.7rem] md:text-xs text-gray-400 dark:text-gray-500">19 янв 2026</div></a><a href=/posts/2025-10-02-325/ class="block p-5 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-colors no-underline"><div class="rel-title text-[1rem] md:text-base font-medium text-gray-900 dark:text-gray-100 mb-2">ДУМ РФ отчитывается о своих достижениях и расширении деятельности в России: 62 субъекта, 40 новых общин и 10 объектов инфраструктуры</div><div class="rel-snippet text-[0.9rem] md:text-[0.85rem] text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 mb-2">И это за год. Например, восемь новых исламских организаций появилось только в Омской области с начала 2025 года.</div><div class="rel-date text-[0.7rem] md:text-xs text-gray-400 dark:text-gray-500">2 окт 2025</div></a><a href=/posts/2025-07-31-292/ class="block p-5 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-colors no-underline"><div class="rel-title text-[1rem] md:text-base font-medium text-gray-900 dark:text-gray-100 mb-2">Ульяновская область находится в пятёрке регионов России с наибольшим числом исламских организаций</div><div class="rel-snippet text-[0.9rem] md:text-[0.85rem] text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 mb-2">Ульяновская область граничит с Республикой Татарстан и испытывает значительный рост исламской организационной инфраструктуры, как и другие области Приволжского федерального округа.</div><div class="rel-date text-[0.7rem] md:text-xs text-gray-400 dark:text-gray-500">31 июл 2025</div></a><a href=/posts/2025-07-15-283/ class="block p-5 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-colors no-underline"><div class="rel-title text-[1rem] md:text-base font-medium text-gray-900 dark:text-gray-100 mb-2">Исламская стратегическая инфраструктура</div><div class="rel-snippet text-[0.9rem] md:text-[0.85rem] text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 mb-2">Исламские организации, зарегистрированные в России, действуют в различных сферах и имеют очень разнообразные названия, зачастую на иностранных языках.</div><div class="rel-date text-[0.7rem] md:text-xs text-gray-400 dark:text-gray-500">15 июл 2025</div></a></div></div></article></div></div><footer class="w-full border-t border-gray-200 dark:border-gray-800 py-6 md:py-8"><div class="max-w-layout mx-auto px-4 text-center"><nav class="text-xs text-gray-400 dark:text-gray-500 flex flex-col gap-5 md:flex-row md:gap-0 md:justify-center md:items-center"><a href=/ class="hover:text-gray-600 dark:hover:text-gray-300">Политический ислам. Россия</a>
+<span class="hidden md:inline mx-2">·</span>
+<a href=/about/ class="hover:text-gray-600 dark:hover:text-gray-300">О проекте</a>
+<span class="hidden md:inline mx-2">·</span>
+<a href=/privacy/ class="hover:text-gray-600 dark:hover:text-gray-300">Политика конфиденциальности</a></nav></div></footer><button id=scroll-to-top class="fixed bottom-4 right-4 w-11 h-11 bg-stone-800 dark:bg-stone-200 text-white dark:text-stone-800 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-stone-700 dark:hover:bg-stone-300 focus:outline-none z-40" aria-label=Наверх>
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+</button>
+<script>window.POST_DATES={"2024-08-04":1,"2024-08-05":1,"2024-08-21":1,"2024-08-22":1,"2024-08-24":2,"2024-08-25":1,"2024-08-26":2,"2024-08-27":2,"2024-08-28":1,"2024-08-29":1,"2024-08-30":2,"2024-08-31":1,"2024-09-01":1,"2024-09-02":2,"2024-09-03":1,"2024-09-04":1,"2024-09-05":2,"2024-09-06":1,"2024-09-07":1,"2024-09-09":2,"2024-09-10":1,"2024-09-11":1,"2024-09-12":1,"2024-09-13":1,"2024-09-15":1,"2024-09-16":1,"2024-09-17":1,"2024-09-19":1,"2024-09-20":1,"2024-09-23":2,"2024-09-24":1,"2024-09-25":2,"2024-09-26":1,"2024-09-27":1,"2024-09-30":2,"2024-10-01":1,"2024-10-02":1,"2024-10-03":1,"2024-10-04":2,"2024-10-07":1,"2024-10-08":1,"2024-10-09":1,"2024-10-10":1,"2024-10-11":1,"2024-10-14":1,"2024-10-15":1,"2024-10-16":1,"2024-10-18":1,"2024-10-21":1,"2024-10-22":1,"2024-10-23":1,"2024-10-24":1,"2024-10-28":1,"2024-10-29":1,"2024-10-30":2,"2024-10-31":1,"2024-11-05":1,"2024-11-06":1,"2024-11-07":1,"2024-11-11":1,"2024-11-12":1,"2024-11-13":1,"2024-11-14":1,"2024-11-18":1,"2024-11-19":1,"2024-11-20":1,"2024-11-21":1,"2024-11-22":1,"2024-11-25":1,"2024-11-26":1,"2024-11-27":1,"2024-11-28":2,"2024-12-02":1,"2024-12-03":1,"2024-12-04":1,"2024-12-05":1,"2024-12-09":2,"2024-12-10":1,"2024-12-11":1,"2024-12-12":1,"2024-12-13":1,"2024-12-16":1,"2024-12-17":1,"2024-12-18":1,"2024-12-19":1,"2024-12-20":1,"2024-12-23":1,"2024-12-24":1,"2024-12-25":2,"2024-12-26":1,"2024-12-29":1,"2024-12-30":1,"2024-12-31":1,"2025-01-06":2,"2025-01-07":2,"2025-01-08":2,"2025-01-09":1,"2025-01-10":1,"2025-01-13":1,"2025-01-14":1,"2025-01-15":2,"2025-01-16":2,"2025-01-18":1,"2025-01-20":2,"2025-01-21":1,"2025-01-22":1,"2025-01-23":1,"2025-01-24":1,"2025-01-27":1,"2025-01-28":2,"2025-01-29":1,"2025-01-31":1,"2025-02-03":1,"2025-02-04":2,"2025-02-05":1,"2025-02-06":2,"2025-02-10":2,"2025-02-11":2,"2025-02-12":1,"2025-02-13":1,"2025-02-17":1,"2025-02-18":1,"2025-02-19":1,"2025-02-20":2,"2025-02-21":1,"2025-02-23":1,"2025-02-24":1,"2025-02-25":1,"2025-02-26":1,"2025-03-03":1,"2025-03-04":1,"2025-03-05":1,"2025-03-06":1,"2025-03-10":1,"2025-03-12":1,"2025-03-17":1,"2025-03-18":1,"2025-03-19":1,"2025-03-20":1,"2025-03-21":1,"2025-03-22":1,"2025-03-24":1,"2025-03-25":1,"2025-03-26":1,"2025-03-27":1,"2025-03-28":1,"2025-03-31":1,"2025-04-01":1,"2025-04-02":2,"2025-04-03":1,"2025-04-07":1,"2025-04-10":1,"2025-04-14":1,"2025-04-15":1,"2025-04-16":1,"2025-04-17":1,"2025-04-18":1,"2025-04-21":2,"2025-04-22":1,"2025-04-23":1,"2025-04-24":1,"2025-04-25":1,"2025-04-28":1,"2025-04-29":1,"2025-04-30":1,"2025-05-02":1,"2025-05-05":1,"2025-05-06":1,"2025-05-08":1,"2025-05-09":1,"2025-05-12":2,"2025-05-13":1,"2025-05-14":1,"2025-05-15":1,"2025-05-16":1,"2025-05-17":1,"2025-05-19":1,"2025-05-20":1,"2025-05-21":1,"2025-05-22":1,"2025-05-27":1,"2025-05-28":1,"2025-05-29":2,"2025-06-03":1,"2025-06-04":1,"2025-06-06":1,"2025-06-10":1,"2025-06-11":1,"2025-06-13":1,"2025-06-16":1,"2025-06-17":1,"2025-06-18":1,"2025-06-19":1,"2025-06-20":1,"2025-06-23":2,"2025-06-24":1,"2025-06-25":1,"2025-06-26":2,"2025-06-30":1,"2025-07-01":1,"2025-07-02":1,"2025-07-03":2,"2025-07-07":1,"2025-07-08":2,"2025-07-09":1,"2025-07-10":2,"2025-07-14":1,"2025-07-15":1,"2025-07-17":1,"2025-07-21":1,"2025-07-24":1,"2025-07-25":1,"2025-07-28":1,"2025-07-29":1,"2025-07-30":1,"2025-07-31":1,"2025-08-01":1,"2025-08-04":1,"2025-08-05":1,"2025-08-07":1,"2025-08-09":1,"2025-08-11":1,"2025-08-21":1,"2025-08-25":1,"2025-08-26":1,"2025-08-27":1,"2025-08-28":1,"2025-09-01":1,"2025-09-02":2,"2025-09-03":2,"2025-09-04":1,"2025-09-05":1,"2025-09-08":2,"2025-09-09":2,"2025-09-11":1,"2025-09-15":1,"2025-09-16":1,"2025-09-17":1,"2025-09-22":1,"2025-09-25":1,"2025-09-29":1,"2025-09-30":1,"2025-10-01":1,"2025-10-02":1,"2025-10-06":1,"2025-10-07":1,"2025-10-08":1,"2025-10-09":1,"2025-10-10":1,"2025-10-21":1,"2025-10-22":1,"2025-11-03":1,"2025-11-05":1,"2025-11-06":1,"2025-11-07":1,"2025-11-10":1,"2025-11-13":1,"2025-11-14":1,"2025-11-17":1,"2025-11-19":1,"2025-11-20":1,"2025-11-24":1,"2025-11-25":1,"2025-11-26":1,"2025-11-27":1,"2025-11-28":1,"2025-12-01":1,"2025-12-03":1,"2025-12-04":1,"2025-12-08":1,"2025-12-10":1,"2025-12-11":1,"2025-12-12":1,"2025-12-16":1,"2025-12-22":1,"2025-12-23":1,"2025-12-24":1,"2025-12-25":1,"2025-12-30":1,"2025-12-31":1,"2026-01-12":1,"2026-01-14":1,"2026-01-15":1,"2026-01-16":1,"2026-01-19":1,"2026-01-21":1,"2026-01-22":1,"2026-01-26":2,"2026-01-27":1,"2026-01-28":2,"2026-02-02":1,"2026-02-03":1,"2026-02-05":1,"2026-02-09":1,"2026-02-10":2,"2026-02-12":1,"2026-02-16":1,"2026-02-17":1,"2026-02-18":1,"2026-02-19":1,"2026-02-25":1,"2026-02-26":1,"2026-03-03":1,"2026-03-04":1,"2026-03-05":1,"2026-03-10":1,"2026-03-12":1,"2026-03-13":1,"2026-03-16":1,"2026-03-17":1,"2026-03-18":1,"2026-03-20":1,"2026-03-24":1,"2026-03-25":1,"2026-03-27":1,"2026-03-31":1,"2026-04-06":1,"2026-04-07":1,"2026-04-08":1,"2026-04-09":1,"2026-04-13":1,"2026-04-14":1,"2026-04-15":1,"2026-04-28":1,"2026-04-29":1,"2026-04-30":1,"2026-05-01":1,"2026-05-04":1,"2026-05-05":1,"2026-05-06":2,"2026-05-12":2,"2026-05-13":1,"2026-05-14":1,"2026-05-18":1,"2026-05-19":1,"2026-05-20":1,"2026-05-25":1,"2026-06-23":1,"2026-06-24":1,"2026-06-25":1,"2026-06-26":1,"2026-06-29":2,"2026-06-30":1,"2026-07-01":1,"2026-07-02":2,"2026-07-03":1,"2026-07-06":2,"2026-07-07":1,"2026-07-08":1,"2026-07-10":1,"2026-07-13":1,"2026-07-14":1,"2026-07-16":1}</script><script src="/js/theme.js?v=01eb3a08"></script><script src="/js/filter.js?v=6286691a"></script><script src="/js/calendar.js?v=5b9b3811"></script><script src=https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".prose").forEach(function(e){const s=e.querySelectorAll("p > a.glightbox");let t=null,n=[];s.forEach(function(e){const o=e.parentElement;o.tagName==="P"&&o.children.length===1&&(t||(t=document.createElement("div"),t.className="post-images",o.parentNode.insertBefore(t,o),n=[]),t.appendChild(e),n.push(e),o.remove())}),document.querySelectorAll(".post-images").forEach(function(e){e.children.length===1&&e.classList.add("single-image")})}),GLightbox({selector:".glightbox"})}),function(){const e=document.getElementById("scroll-to-top");if(!e)return;const t=1500;function n(){window.scrollY>t?(e.classList.remove("opacity-0","invisible"),e.classList.add("opacity-100","visible")):(e.classList.remove("opacity-100","visible"),e.classList.add("opacity-0","invisible"))}window.addEventListener("scroll",n,{passive:!0}),e.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})})}()</script></body></html>
