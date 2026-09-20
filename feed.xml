@@ -1459,4 +1459,81 @@ Azərbaycan tarixi: dərslik (11 sinif). – Bakı: «Şərq-Qərb» ASC, 2020.
 &lt;p&gt;Ещё одна характерная особенность исламской логики – ислам не может быть причиной личных, социальных, политических и иных проблем. Поскольку ислам считается совершенным, он всегда подаётся как единственное верное решение. В то время как источник проблем – это отступление от ислама, неверие. Так проявляется &lt;strong&gt;политическая поляризация&lt;/strong&gt; – всё неисламское есть проблемное и требующее исправления, всё исламское является решением.&lt;/p&gt;</description></item><item><title>Подчинение</title><link>/posts/2024-08-21-003/</link><pubDate>Wed, 21 Aug 2024 05:36:37 +0300</pubDate><guid>/posts/2024-08-21-003/</guid><description>&lt;p&gt;Политический ислам содержится в Коране, Сире (биографии Мухаммеда) и хадисах (собрании коротких историй о словах и поступках Мухаммеда).&lt;/p&gt;
 &lt;p&gt;Политический ислам основан на двух принципах: &lt;strong&gt;подчинение и двойственность&lt;/strong&gt;. Согласно этой доктрине, все без исключения должны подчиниться Аллаху и Мухаммеду (Коран 33:26), подражая ему в поведении, так как он считается совершенным примером человеческой жизни (Коран 33:21). &lt;strong&gt;Подчинение&lt;/strong&gt; в случае последователей ислама означает &lt;strong&gt;точное следование&lt;/strong&gt; Корану и примеру Мухаммеда.&lt;/p&gt;</description></item><item><title>Кто такие кафиры?</title><link>/posts/2024-08-05-002/</link><pubDate>Mon, 05 Aug 2024 11:10:10 +0300</pubDate><guid>/posts/2024-08-05-002/</guid><description>&lt;p&gt;Разделение человечества на группы людей по модели «СВОИ — ЧУЖИЕ», где у своих положительный образ, а у чужих — отрицательный, является одним из признаков политической идеологии. Присутствие этих смыслов выявляется с помощью метода политического дискурс-анализа.&lt;/p&gt;
 &lt;p&gt;Характерная особенность исламских основополагающих текстов — обилие текста, посвященного кафирам. Он составляет 51%. Уже сам по себе этот факт указывает на политическую природу ислама.&lt;/p&gt;</description></item><item><title>Почему мы изучаем политический ислам?</title><link>/posts/2024-08-04-001/</link><pubDate>Sun, 04 Aug 2024 16:03:08 +0300</pubDate><guid>/posts/2024-08-04-001/</guid><description>&lt;p&gt;Ислам — это целостная цивилизация, с своей культурой, религиозной, политической и правовой системой. &lt;strong&gt;Она включает в себя обширный свод правил, норм и законов, регулирующих поведение как отдельных людей, так и всего общества&lt;/strong&gt;. Поэтому было бы большой ошибкой называть и описывать ислам только как религию.&lt;/p&gt;
-&lt;p&gt;Растущее влияние &lt;a href="https://t.me/c/2154518278/8"&gt;политического ислама&lt;/a&gt; на нашу повседневную жизнь представляет значительную угрозу основам неисламского общества. Каждый день мы становимся свидетелями насилия на улицах наших городов, а также роста числа исламских политических требований. Это – угроза национальной безопасности.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Растущее влияние &lt;a href="https://t.me/c/2154518278/8"&gt;политического ислама&lt;/a&gt; на нашу повседневную жизнь представляет значительную угрозу основам неисламского общества. Каждый день мы становимся свидетелями насилия на улицах наших городов, а также роста числа исламских политических требований. Это – угроза национальной безопасности.&lt;/p&gt;</description></item><item><title>Подписка через Brevo</title><link>/subscribe-brevo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/subscribe-brevo/</guid><description>&lt;div class="max-w-xl mx-auto px-4 py-10 md:py-16"&gt;
+ &lt;div class="rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-sm"&gt;
+ &lt;div class="p-6 md:p-8"&gt;
+ &lt;p class="mb-3 text-xs font-medium uppercase tracking-[0.12em] text-stone-500 dark:text-stone-400"&gt;
+ Тестовая подписка
+ &lt;/p&gt;
+ &lt;h1 class="text-2xl md:text-3xl font-bold text-stone-900 dark:text-stone-100 mb-3"&gt;
+ Подписка через Brevo
+ &lt;/h1&gt;
+ &lt;p class="text-sm md:text-base text-stone-600 dark:text-stone-300 mb-6"&gt;
+ Это отдельная тестовая страница для проверки подписки в Brevo. 
+ &lt;/p&gt;
+
+ &lt;form class="space-y-4" action="https://example.com/brevo-test" method="post"&gt;
+ &lt;div&gt;
+ &lt;label for="email-brevo" class="block text-sm font-medium text-stone-700 dark:text-stone-200 mb-2"&gt;
+ Email
+ &lt;/label&gt;
+ &lt;input
+ id="email-brevo"
+ name="email"
+ type="email"
+ required
+ placeholder="example@email.com"
+ class="w-full rounded-xl border border-stone-300 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 px-4 py-3 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-stone-400"
+ &gt;
+ &lt;/div&gt;
+
+ &lt;div class="flex items-start gap-3"&gt;
+ &lt;input id="consent-brevo" name="consent" type="checkbox" required class="mt-1 h-4 w-4 rounded border-stone-300 text-stone-900 focus:ring-stone-400"&gt;
+ &lt;label for="consent-brevo" class="text-sm text-stone-600 dark:text-stone-300"&gt;
+ Я согласен получать новости и подтверждаю, что ознакомился с политикой конфиденциальности.
+ &lt;/label&gt;
+ &lt;/div&gt;
+
+ &lt;button type="submit" class="w-full rounded-xl bg-stone-900 dark:bg-stone-100 px-4 py-3 text-sm font-medium text-white dark:text-stone-900 transition hover:bg-stone-700 dark:hover:bg-stone-300"&gt;
+ Подписаться
+ &lt;/button&gt;
+ &lt;/form&gt;
+
+ &lt;div class="mt-6 border-t border-stone-200 dark:border-stone-800 pt-4 text-xs text-stone-500 dark:text-stone-400"&gt;
+ Это тестовый шаблон. В рабочем варианте здесь будет реальный endpoint Brevo.
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="max-w-xl mx-auto px-4 pb-10"&gt;
+ &lt;a href="/" class="inline-flex items-center gap-2 text-sm text-stone-600 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100"&gt;
+ ← Вернуться на главную
+ &lt;/a&gt;
+&lt;/div&gt;</description></item><item><title>Подписка через MailerLite</title><link>/subscribe-mailerlite/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/subscribe-mailerlite/</guid><description>&lt;div class="max-w-xl mx-auto px-4 py-10 md:py-16"&gt;
+ &lt;div class="rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-sm"&gt;
+ &lt;div class="p-6 md:p-8"&gt;
+ &lt;p class="mb-3 text-xs font-medium uppercase tracking-[0.12em] text-stone-500 dark:text-stone-400"&gt;
+ Тестовая подписка
+ &lt;/p&gt;
+ &lt;h1 class="text-2xl md:text-3xl font-bold text-stone-900 dark:text-stone-100 mb-3"&gt;
+ Подписка через MailerLite
+ &lt;/h1&gt;
+ &lt;p class="text-sm md:text-base text-stone-600 dark:text-stone-300 mb-6"&gt;
+ Это отдельная тестовая страница для проверки подписки в MailerLite.
+ &lt;/p&gt;
+
+ &lt;div class="ml-embedded" data-form="MMvcCh"&gt;&lt;/div&gt;
+
+ &lt;div class="mt-6 border-t border-stone-200 dark:border-stone-800 pt-4 text-xs text-stone-500 dark:text-stone-400"&gt;
+ Это тестовая форма MailerLite.
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="max-w-xl mx-auto px-4 pb-10"&gt;
+ &lt;a href="/" class="inline-flex items-center gap-2 text-sm text-stone-600 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100"&gt;
+ ← Вернуться на главную
+ &lt;/a&gt;
+&lt;/div&gt;</description></item></channel></rss>
