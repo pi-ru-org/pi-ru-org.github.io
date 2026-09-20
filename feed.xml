@@ -1469,39 +1469,20 @@ Azərbaycan tarixi: dərslik (11 sinif). – Bakı: «Şərq-Qərb» ASC, 2020.
  Подписка через Brevo
  &lt;/h1&gt;
  &lt;p class="text-sm md:text-base text-stone-600 dark:text-stone-300 mb-6"&gt;
- Это отдельная тестовая страница для проверки подписки в Brevo. 
+ Это отдельная тестовая страница для проверки подписки через Brevo.
  &lt;/p&gt;
 
- &lt;form class="space-y-4" action="https://example.com/brevo-test" method="post"&gt;
- &lt;div&gt;
- &lt;label for="email-brevo" class="block text-sm font-medium text-stone-700 dark:text-stone-200 mb-2"&gt;
- Email
- &lt;/label&gt;
- &lt;input
- id="email-brevo"
- name="email"
- type="email"
- required
- placeholder="example@email.com"
- class="w-full rounded-xl border border-stone-300 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 px-4 py-3 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-stone-400"
- &gt;
- &lt;/div&gt;
-
- &lt;div class="flex items-start gap-3"&gt;
- &lt;input id="consent-brevo" name="consent" type="checkbox" required class="mt-1 h-4 w-4 rounded border-stone-300 text-stone-900 focus:ring-stone-400"&gt;
- &lt;label for="consent-brevo" class="text-sm text-stone-600 dark:text-stone-300"&gt;
- Я согласен получать новости и подтверждаю, что ознакомился с политикой конфиденциальности.
- &lt;/label&gt;
- &lt;/div&gt;
-
- &lt;button type="submit" class="w-full rounded-xl bg-stone-900 dark:bg-stone-100 px-4 py-3 text-sm font-medium text-white dark:text-stone-900 transition hover:bg-stone-700 dark:hover:bg-stone-300"&gt;
- Подписаться
- &lt;/button&gt;
- &lt;/form&gt;
-
- &lt;div class="mt-6 border-t border-stone-200 dark:border-stone-800 pt-4 text-xs text-stone-500 dark:text-stone-400"&gt;
- Это тестовый шаблон. В рабочем варианте здесь будет реальный endpoint Brevo.
- &lt;/div&gt;
+ 
+ &lt;iframe
+ width="540"
+ height="650"
+ src="https://55b0cb31.sibforms.com/v2/serve/MUIFAHM9vq5vm1CIQFoSescnzz90TioXoAeazLTE1YjjQzY3tN2ioKHVvLQutH4LSTIhx4bm-S_VlM0SZEefFLo1q0puACPYdn_2pEp5znTxfyCmpDFPu2b5IbM2-sHKsour01zxp6QkrPy64HPy2NQ7Tj97xlvyg3FJDYvXMDdXkzCzRfyJdTsXNcq7bA7XkWnxl20hz-bDtswlaw=="
+ frameborder="0"
+ scrolling="auto"
+ allowfullscreen
+ style="display: block; margin-left: auto; margin-right: auto; max-width: 100%;"
+ title="Форма подписки Brevo"
+ &gt;&lt;/iframe&gt;
  &lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;
