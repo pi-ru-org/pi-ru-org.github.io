@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" width="200" height="140">
+  <rect width="200" height="140" fill="#eae4d8"/>
+  <g stroke="#cbbfa8" stroke-width="2" fill="none" opacity="0.7">
+    <path d="M0 40 H200 M0 80 H200 M0 110 H200 M50 0 V140 M110 0 V140 M160 0 V140"/>
+  </g>
+  <path d="M20 95 C50 70 70 100 110 75 C140 55 170 85 196 60" stroke="#9fae8f" stroke-width="6" fill="none" opacity="0.8"/>
+  <!-- метка региона -->
+  <g transform="translate(118,44)">
+    <path d="M0 40 C-16 18 -16 0 0 0 C16 0 16 18 0 40 Z" fill="#E76363"/>
+    <circle cx="0" cy="15" r="7" fill="#eae4d8"/>
+  </g>
+</svg>
